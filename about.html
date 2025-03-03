@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>About Me</title>
+    <style>
+        /* General Styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: #fff;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #111;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 2px solid #444;
+        }
+        header h1 {
+            margin: 0;
+            color: #fff;
+            font-size: 2.5rem;
+        }
+
+        .container {
+            padding: 20px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .about-section {
+            text-align: center;
+        }
+        .about-section img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border: 3px solid #fff;
+        }
+        .about-section h2 {
+            font-size: 2rem;
+            margin-top: 15px;
+        }
+        .about-section p {
+            font-size: 1.1rem;
+            margin: 10px auto;
+            max-width: 700px;
+        }
+
+        .skills-section {
+            text-align: center;
+            margin-top: 40px;
+        }
+        .skills-section h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+        .skills-list {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .skills-list .skill {
+            background-color: #111;
+            margin: 10px;
+            padding: 15px;
+            border-radius: 5px;
+            width: 150px;
+            text-align: center;
+            border: 2px solid #333;
+        }
+
+        footer {
+            background-color: #111;
+            padding: 20px;
+            text-align: center;
+            border-top: 2px solid #444;
+            margin-top: 40px;
+        }
+        footer p {
+            color: #777;
+        }
+
+        /* Button for interactivity */
+        .show-more {
+            background-color: #fff;
+            color: #000;
+            border: none;
+            padding: 10px 20px;
+            margin-top: 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: 0.3s ease;
+        }
+        .show-more:hover {
+            background-color: #ddd;
+        }
+
+        .extra-info {
+            display: none;
+            margin-top: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>About Me</h1>
+    </header>
+
+    <div class="container">
+        <section class="about-section">
+            <img src="https://via.placeholder.com/150" alt="Profile Picture">
+            <h2>Aamir Ali</h2>
+            <p>
+                Hi, I'm Aamir, a passionate software developer and tech enthusiast. I have extensive experience in web development, UI/UX design, and leading multiple tech projects. I thrive on innovation and creating solutions that make a difference.
+            </p>
+        </section>
+
+        <section class="skills-section">
+            <h3>Skills</h3>
+            <div class="skills-list">
+                <div class="skill">HTML & CSS</div>
+                <div class="skill">JavaScript</div>
+                <div class="skill">Python</div>
+                <div class="skill">Node.js</div>
+                <div class="skill">SQL</div>
+                <div class="skill">UI/UX Design</div>
+            </div>
+        </section>
+
+        <section class="extra-info" id="extraInfo">
+            <h3>Additional Information</h3>
+            <p>
+                In addition to my technical skills, I've worked with over 50 clients as a freelancer, gaining experience in diverse industries. I'm always looking for new challenges and love expanding my knowledge in new areas like AI and machine learning.
+            </p>
+        </section>
+
+        <div style="text-align: center;">
+            <button class="show-more" id="showMoreBtn">Show More</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Aamir Ali. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // JavaScript for Show More/Show Less Functionality
+        const showMoreBtn = document.getElementById("showMoreBtn");
+        const extraInfo = document.getElementById("extraInfo");
+
+        showMoreBtn.addEventListener("click", function () {
+            if (extraInfo.style.display === "none") {
+                extraInfo.style.display = "block";
+                showMoreBtn.textContent = "Show Less";
+            } else {
+                extraInfo.style.display = "none";
+                showMoreBtn.textContent = "Show More";
+            }
+        });
+    </script>
+</body>
+</html>

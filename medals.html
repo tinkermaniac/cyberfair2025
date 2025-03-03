@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olympic Athletes Profiles 2024</title>
+    <style>
+        body {
+            background-color: #000; /* Black background */
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            margin-bottom: 20px;
+            font-size: 2.5em;
+        }
+        .athlete-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .athlete-card {
+            background-color: #222; /* Darker card background */
+            border-radius: 10px;
+            padding: 20px;
+            width: 200px;
+            transition: transform 0.2s;
+        }
+        .athlete-card img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .athlete-name {
+            font-size: 1.5em;
+            margin: 10px 0;
+        }
+        .athlete-sport {
+            font-size: 1em;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Olympic Athletes Profiles 2024</h1>
+<div class="athlete-container" id="athleteContainer">
+    <!-- Athlete Cards will be injected here -->
+</div>
+
+<script>
+    const athletes = [
+        { name: "Summer McIntosh", sport: "Swimming", image: "https://i.imgur.com/fD0DoxR.jpg" },
+        { name: "Katie Ledecky", sport: "Swimming", image: "https://i.imgur.com/N3U4EYo.jpg" },
+        { name: "Simone Biles", sport: "Gymnastics", image: "https://i.imgur.com/SICNTPd.jpg" },
+        { name: "Michael Phelps", sport: "Swimming", image: "https://i.imgur.com/30yk9y8.jpg" },
+        { name: "Usain Bolt", sport: "Athletics", image: "https://i.imgur.com/wERIBU1.jpg" },
+        { name: "Allyson Felix", sport: "Athletics", image: "https://i.imgur.com/vpBvgsf.jpg" },
+        { name: "Mohamed Farah", sport: "Athletics", image: "https://i.imgur.com/lkvl5GF.jpg" },
+        { name: "Carl Lewis", sport: "Athletics", image: "https://i.imgur.com/7K0EXyP.jpg" },
+        { name: "Marcell Jacobs", sport: "Athletics", image: "https://i.imgur.com/6Jz77D3.jpg" },
+        { name: "Jessica Ennis-Hill", sport: "Athletics", image: "https://i.imgur.com/rIyRTk0.jpg" },
+        { name: "Tom Daley", sport: "Diving", image: "https://i.imgur.com/YdEO0yF.jpg" },
+        { name: "Hope Solo", sport: "Football", image: "https://i.imgur.com/UCtB64n.jpg" },
+        { name: "Lionel Messi", sport: "Football", image: "https://i.imgur.com/zxPS8Zm.jpg" },
+        { name: "Serena Williams", sport: "Tennis", image: "https://i.imgur.com/qT3OBml.jpg" },
+        { name: "Roger Federer", sport: "Tennis", image: "https://i.imgur.com/OZWZnQ3.jpg" },
+        { name: "Misty May-Treanor", sport: "Beach Volleyball", image: "https://i.imgur.com/qctNSD2.jpg" },
+        { name: "Kerri Walsh Jennings", sport: "Beach Volleyball", image: "https://i.imgur.com/wD9k0y9.jpg" },
+        { name: "Nadia Comaneci", sport: "Gymnastics", image: "https://i.imgur.com/V3TZs95.jpg" },
+        { name: "Ryan Lochte", sport: "Swimming", image: "https://i.imgur.com/2f8tFhh.jpg" },
+        { name: "Katherine Reutter", sport: "Speed Skating", image: "https://i.imgur.com/G24T2mE.jpg" },
+        { name: "Brittney Griner", sport: "Basketball", image: "https://i.imgur.com/cifChUu.jpg" },
+        { name: "Derrick Adkins", sport: "Athletics", image: "https://i.imgur.com/j5p3qAi.jpg" },
+        { name: "Rafael Nadal", sport: "Tennis", image: "https://i.imgur.com/hQQxW9u.jpg" },
+        { name: "Tony Hawk", sport: "Skateboarding", image: "https://i.imgur.com/tDsskkA.jpg" },
+        { name: "Virat Kohli", sport: "Cricket", image: "https://i.imgur.com/H5dGq5N.jpg" },
+        { name: "LeBron James", sport: "Basketball", image: "https://i.imgur.com/WC0K8Ip.jpg" },
+        { name: "Bobby Finke", sport: "Swimming", image: "https://i.imgur.com/Z5eL9SU.jpg" },
+        { name: "Dina Asher-Smith", sport: "Athletics", image: "https://i.imgur.com/8xzRVF2.jpg" },
+        { name: "Lydia Ko", sport: "Golf", image: "https://i.imgur.com/5t4OzWb.jpg" },
+        { name: "Tom Brady", sport: "American Football", image: "https://i.imgur.com/Nn3KdcL.jpg" },
+        { name: "Shawn Johnson", sport: "Gymnastics", image: "https://i.imgur.com/DCRWpfO.jpg" },
+        { name: "Jesse Owens", sport: "Athletics", image: "https://i.imgur.com/KHc8tEw.jpg" },
+        { name: "Penny Oleksiak", sport: "Swimming", image: "https://i.imgur.com/Lv41SYc.jpg" },
+        { name: "Greg Louganis", sport: "Diving", image: "https://i.imgur.com/MzR8dmw.jpg" },
+        { name: "Alex Morgan", sport: "Football", image: "https://i.imgur.com/tn1wxWn.jpg" },
+        { name: "Maggie Steffens", sport: "Water Polo", image: "https://i.imgur.com/Gc8qzqY.jpg" },
+        { name: "Kendrick Farris", sport: "Weightlifting", image: "https://i.imgur.com/NiS49uK.jpg" },
+        { name: "Danell Leyva", sport: "Gymnastics", image: "https://i.imgur.com/xVHRZgr.jpg" },
+        { name: "Tony Parker", sport: "Basketball", image: "https://i.imgur.com/30ExwqY.jpg" },
+        { name: "Bobby Wagner", sport: "American Football", image: "https://i.imgur.com/F3B0MS5.jpg" },
+        { name: "Dwyane Wade", sport: "Basketball", image: "https://i.imgur.com/VYfPUed.jpg" },
+        { name: "Natasha Hastings", sport: "Athletics", image: "https://i.imgur.com/YcGtbCz.jpg" },
+        { name: "Eliud Kipchoge", sport: "Athletics", image: "https://i.imgur.com/v7WCE2u.jpg" },
+        { name: "Brady Ellison", sport: "Archery", image: "https://i.imgur.com/7T1BeJ6.jpg" },
+        { name: "Yelena Isinbayeva", sport: "Pole Vault", image: "https://i.imgur.com/h3krE44.jpg" },
+        { name: "Vera Zvonareva", sport: "Tennis", image: "https://i.imgur.com/yD5gu7x.jpg" },
+        { name: "Kendra Harrison", sport: "Athletics", image: "https://i.imgur.com/2FL9MNH.jpg" },
+        { name: "Carmelo Anthony", sport: "Basketball", image: "https://i.imgur.com/hPKf2sZ.jpg" },
+        { name: "Jade Jones", sport: "Taekwondo", image: "https://i.imgur.com/FQ2whG8.jpg" },
+        { name: "Caroline Wozniacki", sport: "Tennis", image: "https://i.imgur.com/GlMTONF.jpg" },
+        { name: "Shawn White", sport: "Snowboarding", image: "https://i.imgur.com/FI6qPgb.jpg" },
+        { name: "Misty Copeland", sport: "Ballet", image: "https://i.imgur.com/r9bUCqk.jpg" },
+        { name: "Michael Johnson", sport: "Athletics", image: "https://i.imgur.com/fD0DoxR.jpg" }
+    ];
+
+    const athleteContainer = document.getElementById('athleteContainer');
+
+    athletes.forEach(athlete => {
+        const athleteCard = document.createElement('div');
+        athleteCard.classList.add('athlete-card');
+
+        athleteCard.innerHTML = `
+            <img src="${athlete.image}" alt="${athlete.name}">
+            <div class="athlete-name">${athlete.name}</div>
+            <div class="athlete-sport">${athlete.sport}</div>
+        `;
+
+        athleteContainer.appendChild(athleteCard);
+    });
+</script>
+</body>
+</html>
