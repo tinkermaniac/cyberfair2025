@@ -210,3 +210,16 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const menuButton = document.querySelector(".menu-container");
+  const dropdown = document.querySelector(".dropdown");
+
+  menuButton.addEventListener("mouseenter", () => {
+    dropdown.style.display = "flex";
+  });
+
+  menuButton.addEventListener("mouseleave", () => {
+    dropdown.style.display = "none";
+  });
+});

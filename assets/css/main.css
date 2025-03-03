@@ -280,29 +280,112 @@ section {
 # Header
 --------------------------------------------------------------*/
 .header {
-  z-index: 997;
-  position: absolute;
-  padding: 30px 0;
+  position: fixed;
   top: 0;
   left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  height: 13%;
+}
+
+/* Logo */
+.logo {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Button Container */
+.nav-buttons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Buttons */
+button {
+  padding: 10px 18px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 20px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+/* Icon Button */
+.icon-button {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  font-size: 20px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+/* Talk Button */
+.talk-button {
+  background: #222;
+  color: white;
+}
+
+/* Menu Button */
+.menu-button {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* Hover Effects */
+#button:hover {
+  background: blue;
+  transform: scale(1.1);
+}
+
+/* Dropdown Styles */
+.menu-container {
+  position: relative;
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%;
   right: 0;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 8px;
+  display: none;
+  flex-direction: column;
+  min-width: 150px;
+  padding: 10px;
 }
 
-.header .logo img {
-  max-height: 40px;
-  margin-right: 6px;
+.dropdown a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 12px;
+  display: block;
+  transition: background 0.3s;
 }
 
-.header .logo h1 {
-  font-size: 24px;
-  font-weight: 700;
-  color: #fff;
-  margin-bottom: 0;
-  font-family: var(--font-primary);
+.dropdown a:hover {
+  background: blue;
 }
 
-.header .logo h1 span {
-  color: var(--color-primary);
+/* Show dropdown on hover */
+.menu-container:hover .dropdown {
+  display: flex;
 }
 
 /*--------------------------------------------------------------
