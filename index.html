@@ -1,186 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dark Theme Website</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: #eee;
-            background-color: #121212;
-            overflow: hidden;
-        }
 
-        #video-container {
-            position: absolute;
-            width: 110vw;
-            height: 110vh;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta http-equiv = "refresh" content = "2; url = https://tinkermaniac.github.io/cyberfair/homepg.html" />
+  <title>********</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+  <!-- Template Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
 
-        #video-background {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        nav {
-            background-color: rgba(0, 0, 0, 0.5);
-            padding: 10px 0;
-            text-align: center;
-            position: relative;
-            z-index: 10;
-        }
-
-        nav ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: inline-block;
-        }
-
-        nav li {
-            display: inline-block;
-            margin: 0 15px;
-            position: relative;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: #eee;
-            padding: 5px 10px;
-            transition: color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        nav a:hover {
-            color: #bbb;
-            transform: translateY(-5px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); /* Added shadow on hover */
-        }
-
-        nav .hindi-text {
-            font-size: 0.7em;
-            color: #888;
-        }
-
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: rgba(0, 0, 0, 0.8);
-            min-width: 160px;
-            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-            z-index: 1;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-
-        .dropdown-content a {
-            color: #eee;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-        }
-
-        .dropdown-content a:hover {
-            background-color: #333;
-        }
-
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-
-        .content {
-            position: relative;
-            z-index: 1;
-            text-align: center;
-            padding: 50px;
-        }
-
-        nav a {
-            transition: transform 0.3s ease;
-            box-shadow: 0.3s ease;
-        }
-
-        nav a:hover {
-            transform: scale(1.1);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
-        }
-    </style>
+  
 </head>
-<body>
-    <div id="video-container">
-    <video id="video-background" autoplay muted loop>
-        <source src="bgvid.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-    </div>
 
-    <nav>
-        <ul>
-            <li><a href="home.html">Home<span class="hindi-text">घर</span></a></li>
-            <li><a href="about.html">About<span class="hindi-text">के बारे में</span></a></li>
-            <li class="dropdown">
-                <a href="#">Services<span class="hindi-text">सेवाएँ</span></a>
-                <div class="dropdown-content">
-                    <a href="service1.html">Service 1<span class="hindi-text">सेवा 1</span></a>
-                    <a href="service2.html">Service 2<span class="hindi-text">सेवा 2</span></a>
-                </div>
-            </li>
-            <li><a href="portfolio.html">Portfolio<span class="hindi-text">पोर्टफोलियो</span></a></li>
-            <li><a href="team.html">Team<span class="hindi-text">टीम</span></a></li>
-            <li><a href="contact.html">Contact<span class="hindi-text">संपर्क</span></a></li>
-            <li><a href="blog.html">Blog<span class="hindi-text">ब्लॉग</span></a></li>
-            <li class="dropdown">
-                <a href="#">More<span class="hindi-text">अधिक</span></a>
-                <div class="dropdown-content">
-                    <a href="more1.html">More 1<span class="hindi-text">अधिक 1</span></a>
-                    <a href="more2.html">More 2<span class="hindi-text">अधिक 2</span></a>
-                </div>
-            </li>
-            <li><a href="faq.html">FAQ<span class="hindi-text">सामान्य प्रश्न</span></a></li>
-        </ul>
-    </nav>
+<body id="page" style="background-color:black;">
 
-    <div class="content">
-        <h1>Welcome to My Website</h1>
-        <p>This is a dark-themed website with a video background.</p>
-    </div>
+	<img  src="assets/img/tmcs.png" alt="**********" style="width:300px;height:300px; margin-left: auto; margin-right: auto;">
 
-    <script>
-        let videoContainer = document.getElementById("video-container");
-            let scrollX = (videoContainer.offsetWidth - window.innerWidth) / 2;
-            let scrollY = (videoContainer.offsetHeight - window.innerHeight) / 2;
-            let easing = 0.05;
-
-            document.addEventListener("mousemove", (event) => {
-                let edgeThreshold = 100;
-                let speed = 5;
-                let containerRect = videoContainer.getBoundingClientRect();
-
-                let centerX = window.innerWidth / 2;
-                let centerY = window.innerHeight / 2;
-                let offsetX = (event.clientX - centerX) / centerX;
-                let offsetY = (event.clientY - centerY) / centerY;
-
-                let targetX = (containerRect.width - window.innerWidth) * offsetX * 0.5;
-                let targetY = (containerRect.height - window.innerHeight) * offsetY * 0.5;
-
-                scrollX += (targetX - scrollX) * easing;
-                scrollY += (targetY - scrollY) * easing;
-            });
-
-            function smoothScroll() {
-                videoContainer.style.transform = `translate(calc(-50% + ${-scrollX}px), calc(-50% + ${-scrollY}px))`;
-                requestAnimationFrame(smoothScroll);
-            }
-
-            smoothScroll();    </script>
 </body>
 
 
