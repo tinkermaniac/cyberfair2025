@@ -247,7 +247,7 @@ document.addEventListener("mousemove", (event) => {
 });
 
 function smoothScroll() {
-  videoContainer.style.transform = `translate(calc(-2% + ${-scrollX}px), calc(-5% + ${-scrollY}px))`;
+  videoContainer.style.transform = `translate(calc(-5% + ${-scrollX}px), calc(-5% + ${-scrollY}px))`;
   requestAnimationFrame(smoothScroll);
 }
 

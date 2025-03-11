@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Umeed Gallery</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            background: #000000;
+            color: #ffffff;
+        }
+
+        .header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 1.5rem;
+            background: rgba(0, 0, 0, 0.97);
+            backdrop-filter: blur(15px);
+            display: flex;
+            align-items: center;
+            box-shadow: 0 2px 30px rgba(255, 255, 255, 0.05);
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            background: linear-gradient(45deg, #ffffff, #cccccc);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .gallery-section {
+            padding: 7rem 2rem 3rem;
+        }
+
+        .section-title {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            padding-left: 1rem;
+            letter-spacing: 0.5px;
+            font-weight: 500;
+            opacity: 0.9;
+            color: #ffffff;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            padding: 0 1rem;
+        }
+
+        .media-item {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            aspect-ratio: 1;
+            background: #000000;
+            box-shadow: 0 5px 25px rgba(255, 255, 255, 0.03);
+        }
+
+        .media-item:hover {
+            transform: scale(0.98);
+            box-shadow: 0 5px 25px rgba(255, 255, 255, 0.08);
+        }
+
+        .media-item img, .media-item video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .video-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 1;
+        }
+
+        .play-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 60px;
+            height: 60px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            z-index: 2;
+            opacity: 0.9;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(4px);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .play-icon::after {
+            content: '';
+            position: absolute;
+            left: 52%;
+            top: 50%;
+            transform: translate(-40%, -50%);
+            border-width: 12px 0 12px 20px;
+            border-style: solid;
+            border-color: transparent transparent transparent #ffffff;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.98);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .modal.active {
+            display: flex;
+        }
+
+        .modal-content {
+            max-width: 90vw;
+            max-height: 90vh;
+            border-radius: 12px;
+            overflow: hidden;
+            animation: scaleUp 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            background: #000000;
+        }
+
+        .modal-content img {
+            width: 100%;
+            height: auto;
+            max-height: 90vh;
+            object-fit: contain;
+        }
+
+        .modal-content video {
+            width: 100%;
+            height: 100%;
+            max-width: 90vw;
+            max-height: 90vh;
+            object-fit: contain;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes scaleUp {
+            from { transform: scale(0.8); }
+            to { transform: scale(1); }
+        }
+
+        @media (max-width: 768px) {
+            .grid {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+                gap: 1rem;
+            }
+            
+            .header {
+                padding: 1.2rem;
+            }
+            
+            .logo {
+                font-size: 1.5rem;
+            }
+
+            .play-icon {
+                width: 40px;
+                height: 40px;
+            }
+
+            .play-icon::after {
+                border-width: 8px 0 8px 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">Umeed</div>
+    </header>
+
+    <section class="gallery-section">
+        <h2 class="section-title">Photos</h2>
+        <div class="grid" id="photo-grid">
+            <!-- Photo items -->
+            <div class="media-item">
+                <img src="visit1.jpg" alt="Gallery item">
+            </div>
+
+            <div class="media-item">
+                <img src="visit2.jpg" alt="Gallery item">
+            </div>
+
+
+            <div class="media-item">
+                <img src="visit3.jpg" alt="Gallery item">
+            </div>
+
+
+            <div class="media-item">
+                <img src="visit4.jpg" alt="Gallery item">
+            </div>
+
+
+            <div class="media-item">
+                <img src="visit5.jpg" alt="Gallery item">
+            </div>
+
+
+            <div class="media-item">
+                <img src="visit6.jpg" alt="Gallery item">
+            </div>
+
+
+            <div class="media-item">
+                <img src="visit7.jpg" alt="Gallery item">
+            </div>
+
+
+            <div class="media-item">
+                <img src="visit8.jpg" alt="Gallery item">
+            </div>
+            <!-- Add more photos -->
+        </div>
+    </section>
+
+    <section class="gallery-section">
+        <h2 class="section-title">Videos</h2>
+        <div class="grid" id="video-grid">
+            <!-- Video items -->
+            <div class="media-item video-item">
+                <div class="play-icon"></div>
+                <video muted>
+                    <source src="visitvid1.mp4" type="video/mp4">
+                </video>
+            </div>
+
+            <div class="media-item video-item">
+                <div class="play-icon"></div>
+                <video muted>
+                    <source src="visitvid1.mp4" type="video/mp4">
+                </video>
+            </div>
+
+
+            <div class="media-item video-item">
+                <div class="play-icon"></div>
+                <video muted>
+                    <source src="visitvid1.mp4" type="video/mp4">
+                </video>
+            </div>
+
+
+            <div class="media-item video-item">
+                <div class="play-icon"></div>
+                <video muted>
+                    <source src="visitvid1.mp4" type="video/mp4">
+                </video>
+            </div>
+
+
+            <div class="media-item video-item">
+                <div class="play-icon"></div>
+                <video muted>
+                    <source src="visitvid1.mp4" type="video/mp4">
+                </video>
+            </div>
+
+
+
+            <div class="media-item video-item">
+                <div class="play-icon"></div>
+                <video muted>
+                    <source src="visitvid1.mp4" type="video/mp4">
+                </video>
+            </div>
+
+
+
+            <div class="media-item video-item">
+                <div class="play-icon"></div>
+                <video muted>
+                    <source src="visitvid1.mp4" type="video/mp4">
+                </video>
+            </div>
+            <!-- Add more videos -->
+        </div>
+    </section>
+
+    <div class="modal" id="modal">
+        <div class="modal-content" id="modal-content"></div>
+    </div>
+
+    <script>
+        const mediaItems = document.querySelectorAll('.media-item');
+        const modal = document.getElementById('modal');
+        const modalContent = document.getElementById('modal-content');
+
+        // Load video thumbnails
+        document.querySelectorAll('video').forEach(video => {
+            video.addEventListener('loadeddata', () => {
+                video.currentTime = 0.1; // Capture first frame
+            });
+        });
+
+        mediaItems.forEach(item => {
+            item.addEventListener('click', () => {
+                const media = item.querySelector('img, video');
+                const clone = media.cloneNode(true);
+                
+                if (media.tagName === 'VIDEO') {
+                    clone.controls = true;
+                    clone.muted = false;
+                    clone.play();
+                }
+
+                modalContent.innerHTML = '';
+                modalContent.appendChild(clone);
+                modal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal || e.target === modalContent) {
+                const video = modalContent.querySelector('video');
+                if (video) {
+                    video.pause();
+                    video.controls = false;
+                }
+                modal.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && modal.classList.contains('active')) {
+                modal.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        });
+    </script>
+</body>
+</html>

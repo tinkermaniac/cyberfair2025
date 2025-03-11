@@ -19,8 +19,8 @@ ttps://bootstrapmade.com/upconstruction-bootstrap-construction-website-template/
 
 /* Colors */
 :root {
-  --color-default: #CC6B04;
-  --color-primary: #db8400;
+  --color-default: #ffffff;
+  --color-primary: #c7c7c7;
   --color-secondary: #8C8984;
 }
 
@@ -37,7 +37,6 @@ body {
     color: var(--color-default);
     overflow-x: hidden;
     text-align: justify;
-    min-height: 500vh;
 }
 
 a {
@@ -46,7 +45,7 @@ a {
 }
 
 a:hover {
-  color: #ffc732;
+  color: #454340;
   text-decoration: none;
 }
 
@@ -195,7 +194,7 @@ section {
 }
 
 .scroll-top:hover {
-  background: #ffc732;
+  background: #887f66;
   color: #fff;
 }
 
@@ -350,7 +349,7 @@ button {
 
 /* Hover Effects */
 #button:hover {
-  background: blue;
+  background: rgb(114, 110, 110);
   transform: scale(1.1);
 }
 
@@ -363,7 +362,7 @@ button {
   position: absolute;
   top: 100%;
   right: 0;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(53, 51, 51, 0.8);
   backdrop-filter: blur(10px);
   border-radius: 8px;
   display: none;
@@ -381,7 +380,7 @@ button {
 }
 
 .dropdown a:hover {
-  background: blue;
+  background: rgb(114, 110, 110);
 }
 
 /* Show dropdown on hover */
@@ -768,7 +767,7 @@ button {
 }
 
 .get-started .php-email-form button[type=submit]:hover {
-  background: rgba(254, 185, 0, 0.8);
+  background: rgba(255, 255, 255, 0.8);
 }
 
 @-webkit-keyframes animate-loading {
@@ -1144,13 +1143,13 @@ button {
 }
 
 .testimonials .testimonial-item .stars i {
-  color: #ffc107;
+  color: #ffffff;
   margin: 0 1px;
 }
 
 .testimonials .testimonial-item .quote-icon-left,
 .testimonials .testimonial-item .quote-icon-right {
-  color: #ffd565;
+  color: #ffffff;
   font-size: 26px;
   line-height: 0;
 }
