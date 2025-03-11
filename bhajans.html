@@ -123,55 +123,62 @@
 <body style="color: black;">
 
 	 <!-- ======= Header ======= -->
-     <header class="header">
-        <h1 class="logo">Curry Katha</h1>
-        <div class="nav-buttons">
-          <button id="button" class="talk-button">Home•</button>
-          <div class="menu-container">
-            <button class="menu-button">Project Summary <span>⋯</span></button>
-            <div class="dropdown">
-              <a href="#">Home</a>
-              <a href="#">About</a>
-              <a href="#">Services</a>
-              <a href="#">Contact</a>
-            </div>
-          </div>
-          <button id="button" class="talk-button">Umeed •</button>
-          <button id="button" class="talk-button">Initiatives •</button>
-          <div class="menu-container">
-            <button class="menu-button">Untold <span>⋯</span></button>
-            <div class="dropdown">
-              <a href="#">Home</a>
-              <a href="#">About</a>
-              <a href="#">Services</a>
-              <a href="#">Contact</a>
-            </div>
-          </div>
-          <button id="button" class="talk-button">Rejuvenation •</button>
-          <button id="button" class="talk-button">Research •</button>
-          <div class="menu-container">
-            <button class="menu-button">Collaborators <span>⋯</span></button>
-            <div class="dropdown">
-              <a href="#">Home</a>
-              <a href="#">About</a>
-              <a href="#">Services</a>
-              <a href="#">Contact</a>
-            </div>
-          </div>
-          <div class="menu-container">
-            <button class="menu-button">Palette <span>⋯</span></button>
-            <div class="dropdown">
-              <a href="#">Palate Panache</a>
-              <a href="#">Impressions</a>
-              <a href="#">downloads</a>
-              <a href="#"></a>
-            </div>
-          </div>
-          
-          
-          
+<header class="header" onclick="closeDropdowns()">
+  
+    <a href="index.html">
+        <img height="70px" style="border-radius: 10px;" src="assets/img/topleftcyberfairlogo.jpeg" alt="Logo">
+    </a> 
+    <div class="nav-buttons">
+      <button id="button" class="talk-button" onclick="location.href='index.html'">Home•</button>
+      <div class="menu-container">
+        <button class="menu-button" onclick="toggleDropdown(this)">Project Summary <span>⋯</span></button>
+        <div class="dropdown">
+          <a href="narrative.html">Narrative</a>
+          <a href="learning.html">Learning</a>
+          <a href="layout.html">Layout</a>
         </div>
-      </header>
+      </div>
+      <button id="button" class="talk-button" onclick="location.href='umeed.html'">Umeed •</button>
+      <button id="button" class="talk-button" onclick="location.href='initiatives.html'">Initiatives •</button>
+      <div class="menu-container">
+        <button class="menu-button" onclick="toggleDropdown(this)">Untold <span>⋯</span></button>
+        <div class="dropdown">
+          <a href="echoes.html">Echoes</a>
+          <a href="resonance.html">Resonance</a>
+        </div>
+      </div>
+      <button id="button" class="talk-button" onclick="location.href='rejuvenation.html'">Rejuvenation •</button>
+      <button id="button" class="talk-button" onclick="location.href='research.html'">Research •</button>
+      <div class="menu-container">
+        <button class="menu-button" onclick="toggleDropdown(this)">Collaborators <span>⋯</span></button>
+        <div class="dropdown">
+          <a href="students.html">Students</a>
+          <a href="fecilitators.html">Facilitators</a>
+        </div>
+      </div>
+      <div class="menu-container">
+        <button class="menu-button" onclick="toggleDropdown(this)">Palette <span>⋯</span></button>
+        <div class="dropdown">
+          <a href="palette_panache.html">Palette Panache</a>
+          <a href="impressions.html">Impressions</a>
+          <a href="#">Downloads</a>
+        </div>
+      </div>
+      <div class="menu-container">
+        <button class="menu-button" onclick="toggleDropdown(this)">Downloads <span>⋯</span></button>
+        <div class="dropdown">
+          <a href="bhajans.html">Bhajans</a>
+          <a href="worksheets.html">Worksheets</a>
+          <a href="board_games.html">Board Games</a>
+          <a href="yoga.html">Yoga videos</a>
+          <a href="food_recipes.html">Food recipes</a>
+          <a href="activities.html">Activities</a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- End Header -->
+	
     
 	<!-- ======= Breadcrumbs ======= -->
 	<div class="breadcrumbs d-flex align-items-center" style="background-image: url('assets/img/food-collage.webp');">
