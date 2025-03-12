@@ -120,77 +120,73 @@
 	 <!-- ======= Header ======= -->
 	 <header class="header" onclick="closeDropdowns()">
   
-		<h1 class="logo">UMEED</h1>
+		<a href="index.html">
+			<img height="70px" style="border-radius: 10px;" src="assets/img/topleftcyberfairlogo.jpeg" alt="Logo">
+		</a> 
 		<div class="nav-buttons">
-		  <button id="button" class="talk-button" onclick="location.href='file:///Users/ritwik/Code/cyberfair2025/index.html'">Home</button>
+		  <button id="button" class="talk-button" onclick="location.href='index.html'">Home•</button>
 		  <div class="menu-container">
-			<button class="menu-button">Project Summary <span>⋯</span></button>
+			<button class="menu-button" onclick="toggleDropdown(this)">Project Summary <span>⋯</span></button>
 			<div class="dropdown">
-			  <a href="file:///Users/ritwik/Code/cyberfair2025/narrative.html">Narrative</a>
-			  <a href="file:///Users/ritwik/Code/cyberfair2025/learning.html">Learning</a>
-			  <a href="file:///Users/ritwik/Code/cyberfair2025/layout.html">Layout</a>
-	  
+			  <a href="narrative.html">Narrative</a>
+			  <a href="learning.html">Learning</a>
+			  <a href="layout.html">Layout</a>
 			</div>
 		  </div>
-		  <button id="button" class="talk-button" onclick="location.href='file:///Users/ritwik/Code/cyberfair2025/umeed.html'">Umeed </button>
+		  <button id="button" class="talk-button" onclick="location.href='umeed.html'">Umeed •</button>
 		  <div class="menu-container">
-			<button class="menu-button">Initiatives <span>⋯</span></button>
+			<button class="menu-button" onclick="toggleDropdown(this)">Initiatives <span>⋯</span></button>
 			<div class="dropdown">
-			  <a href="file:///Users/ritwik/Code/cyberfair2025/old_age_home_connect.html">OldAge Home Connect</a>
-			  <a href="file:///Users/ritwik/Code/cyberfair2025/orphanage_connect.html">Orphanage Connect</a>
-			  <a href="file:///Users/ritwik/Code/cyberfair2025/joy_of_giving.html">Joy of Giving</a>
-			  <a href="file:///Users/ritwik/Code/cyberfair2025/volunteering.html">Volunteering</a>
-			</div>
-		  </div>
-		  <div class="menu-container">
-			<button class="menu-button" >Untold <span>⋯</span></button>
-			<div class="dropdown">
-			  <a href="file:///Users/ritwik/Code/cyberfair2025/echoes.html">Echoes</a>
-			  <a href="file:///Users/ritwik/Code/cyberfair2025/resonance.html">Resonance</a>
-			</div>
-		  </div>
-		  <button id="button" class="talk-button" onclick="location.href='file:///Users/ritwik/Code/cyberfair2025/rejuvenation.html'">Rejuvenation</button>
-		  <div class="menu-container">
-			<button class="menu-button">Research <span>⋯</span></button>
-			<div class="dropdown">
-			  <a href="file:///Users/ritwik/Code/cyberfair2025/bhajans.html">Indian Culture</a>
-			  <a href="file:///Users/ritwik/Code/cyberfair2025/worksheets.html">Interaction 1</a>
-			  <a href="file:///Users/ritwik/Code/cyberfair2025/board_games.html">Interaction  2</a>
-			  <a href="file:///Users/ritwik/Code/cyberfair2025/yoga.html">Interaction 3</a>
-			  <a href="file:///Users/ritwik/Code/cyberfair2025/food_recipes.html">Analysis</a>
-			  <a href="file:///Users/ritwik/Code/cyberfair2025/yoga.html">Bibliography</a>
+			  <a href="old_age_home_connect.html">OldAge Home Connect</a>
+			  <a href="orphanage_connect.html">Orphanage Connect</a>
+			  <a href="joy_of_giving.html">Joy of Giving</a>
+			  <a href="volunteering.html">Volunteering</a>
 			</div>
 		  </div>
 		  <div class="menu-container">
-			<button class="menu-button">Collaborators <span>⋯</span></button>
+			<button class="menu-button" onclick="toggleDropdown(this)">Untold <span>⋯</span></button>
 			<div class="dropdown">
-			  <a href="file:///Users/ritwik/Code/cyberfair2025/students.html">Students</a>
-			  <a href="file:///Users/ritwik/Code/cyberfair2025/fecilitators.html">Fecilitators</a>
-	  
+			  <a href="echoes.html">Echoes</a>
+			  <a href="resonance.html">Resonance</a>
 			</div>
 		  </div>
-		  
-		 
+		  <button id="button" class="talk-button" onclick="location.href='rejuvenation.html'">Rejuvenation •</button>
 		  <div class="menu-container">
-			<button class="menu-button">Palette <span>⋯</span></button>
+			<button class="menu-button" onclick="toggleDropdown(this)">Research <span>⋯</span></button>
 			<div class="dropdown">
-			  <a href="file:///Users/ritwik/Code/cyberfair2025/palette_panache.html">Palate Panache</a>
-			  <a href="file:///Users/ritwik/Code/cyberfair2025/impressions.html">Impressions</a>
+			  <a href="bhajans.html">Indian Culture</a>
+			  <a href="worksheets.html">Interaction 1</a>
+			  <a href="board_games.html">Interaction 2</a>
+			  <a href="yoga.html">Interaction 3</a>
+			  <a href="food_recipes.html">Analysis</a>
+			  <a href="#">Bibliography</a>
 			</div>
 		  </div>
 		  <div class="menu-container">
-			<button class="menu-button">Downloads <span>⋯</span></button>
+			<button class="menu-button" onclick="toggleDropdown(this)">Collaborators <span>⋯</span></button>
 			<div class="dropdown">
-			  <a href="file:///Users/ritwik/Code/cyberfair2025/bhajans.html">Bhajans</a>
-			  <a href="file:///Users/ritwik/Code/cyberfair2025/worksheets.html">Worksheets</a>
-			  <a href="file:///Users/ritwik/Code/cyberfair2025/board_games.html">Board Games</a>
-			  <a href="file:///Users/ritwik/Code/cyberfair2025/yoga.html">Yoga videos</a>
-			  <a href="file:///Users/ritwik/Code/cyberfair2025/food_recipes.html" >Food recipes</a>
-			  <a href="file:///Users/ritwik/Code/cyberfair2025/yoga.html">Board Games</a>
-			  <a href="file:///Users/ritwik/Code/cyberfair2025/activities.html">Activities</a>
+			  <a href="students.html">Students</a>
+			  <a href="fecilitators.html">Facilitators</a>
 			</div>
 		  </div>
-	  
+		  <div class="menu-container">
+			<button class="menu-button" onclick="toggleDropdown(this)">Palette <span>⋯</span></button>
+			<div class="dropdown">
+			  <a href="palette_panache.html">Palette Panache</a>
+			  <a href="impressions.html">Impressions</a>
+			</div>
+		  </div>
+		  <div class="menu-container">
+			<button class="menu-button" onclick="toggleDropdown(this)">Downloads <span>⋯</span></button>
+			<div class="dropdown">
+			  <a href="bhajans.html">Bhajans</a>
+			  <a href="worksheets.html">Worksheets</a>
+			  <a href="board_games.html">Board Games</a>
+			  <a href="yoga.html">Yoga videos</a>
+			  <a href="food_recipes.html">Food recipes</a>
+			  <a href="activities.html">Activities</a>
+			</div>
+		  </div>
 		</div>
 	  </header>
 	  <!-- End Header -->
@@ -416,6 +412,131 @@
 
 	<!-- Template Main JS File -->
 	<script src="assets/js/main.js"></script>
+
+	<script>
+	// Navbar dropdown functionality
+	function toggleDropdown(button) {
+	  // First close all other dropdowns
+	  const allDropdowns = document.querySelectorAll('.menu-container .dropdown');
+	  const allButtons = document.querySelectorAll('.menu-button');
+	  
+	  allDropdowns.forEach((dropdown, index) => {
+	    if (dropdown !== button.nextElementSibling) {
+	      dropdown.classList.remove('show');
+	      allButtons[index].classList.remove('active');
+	    }
+	  });
+	  
+	  // Toggle the clicked dropdown
+	  const dropdown = button.nextElementSibling;
+	  dropdown.classList.toggle('show');
+	  button.classList.toggle('active');
+	  
+	  // Prevent the event from bubbling up to the header
+	  event.stopPropagation();
+	}
+
+	// Close all dropdowns when clicking outside
+	function closeDropdowns() {
+	  const dropdowns = document.querySelectorAll('.dropdown');
+	  const buttons = document.querySelectorAll('.menu-button');
+	  
+	  dropdowns.forEach((dropdown, index) => {
+	    dropdown.classList.remove('show');
+	    buttons[index].classList.remove('active');
+	  });
+	}
+
+	// Close dropdowns when clicking anywhere else on the document
+	document.addEventListener('click', function(event) {
+	  if (!event.target.closest('.menu-container')) {
+	    closeDropdowns();
+	  }
+	});
+
+	// Function to open the video modal
+	function openVideoModal(videoUrl) {
+	    const modal = document.getElementById('videoModal');
+	    const iframe = document.getElementById('videoIframe');
+	    iframe.src = videoUrl; // Set the video URL
+	    modal.classList.add('is-active'); // Show the modal
+	}
+
+	// Function to close the video modal
+	function closeVideoModal() {
+	    const modal = document.getElementById('videoModal');
+	    const iframe = document.getElementById('videoIframe');
+	    iframe.src = ''; // Stop the video
+	    modal.classList.remove('is-active'); // Hide the modal
+	}
+	</script>
+
+	<style>
+	/* Navbar styling */
+	.header {
+	  display: flex;
+	  justify-content: space-between;
+	  align-items: center;
+	  padding: 10px 20px;
+	  position: sticky;
+	  top: 0;
+	  z-index: 1000;
+	  background-color: rgba(25, 25, 25, 0.9);
+	}
+
+	.nav-buttons {
+	  display: flex;
+	  align-items: center;
+	  gap: 10px;
+	}
+
+	.talk-button, .menu-button {
+	  background-color: transparent;
+	  color: white;
+	  border: none;
+	  padding: 8px 15px;
+	  cursor: pointer;
+	  font-size: 16px;
+	  transition: all 0.3s ease;
+	}
+
+	.talk-button:hover, .menu-button:hover, .menu-button.active {
+	  background-color: rgba(255, 255, 255, 0.1);
+	  border-radius: 5px;
+	}
+
+	.menu-container {
+	  position: relative;
+	  display: inline-block;
+	}
+
+	.dropdown {
+	  display: none;
+	  position: absolute;
+	  background-color: #2d2d2d;
+	  min-width: 160px;
+	  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	  z-index: 1;
+	  border-radius: 5px;
+	  overflow: hidden;
+	}
+
+	.dropdown.show {
+	  display: block;
+	}
+
+	.dropdown a {
+	  color: white;
+	  padding: 12px 16px;
+	  text-decoration: none;
+	  display: block;
+	  transition: background-color 0.3s ease;
+	}
+
+	.dropdown a:hover {
+	  background-color: #383838;
+	}
+	</style>
 
 </body>
 

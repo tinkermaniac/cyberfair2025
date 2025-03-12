@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Umeed - Hope for Elders</title>
+  <meta content="Umeed initiative for connecting with elders" name="description">
+  <meta content="umeed, elders, community, initiative" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/logo2.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Roboto:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://tinkermaniac.github.io/cyberfairconfig/passkey.js"></script>
+  <script src="assets/js/loader.js"></script>
+  <script>
+	  var a=30;
+  </script>
+  <!-- Template Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <style>
+    /* Dark Theme Styles */
+    :root {
+      --dark-bg: #121212;
+      --dark-surface: #1e1e1e;
+      --dark-card: #181818;
+      --dark-accent: #ffffff;
+      --dark-text-primary: #cccccc;
+      --dark-text-secondary: #ffffff;
+      --dark-border: #d7d7d7;
+    }
+    
+    body {
+      background-color: var(--dark-bg);
+      color: var(--dark-text-primary);
+      font-family: 'Roboto', sans-serif;
+    }
+    
+    .header {
+      background-color: rgba(18, 18, 18, 0.9) !important;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+      position: fixed;
+      width: 100%;
+      z-index: 1000;
+    }
+    
+    .video-container {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+      background-color: var(--dark-bg);
+    }
+    
+    .video-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to bottom, rgba(18, 18, 18, 0.3), rgba(18, 18, 18, 0.8));
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0 20px;
+    }
+    
+    .video-overlay h1 {
+      font-size: 4rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+      color: #ffffff;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    
+    .video-overlay p {
+      font-size: 1.5rem;
+      max-width: 800px;
+      margin-bottom: 30px;
+      color: #f0f0f0;
+    }
+    
+    .content-section {
+      padding: 100px 0;
+      background-color: var(--dark-surface);
+    }
+    
+    .content-section:nth-child(even) {
+      background-color: var(--dark-bg);
+    }
+    
+    .section-title {
+      font-size: 2.5rem;
+      margin-bottom: 50px;
+      text-align: center;
+      color: var(--dark-accent);
+      position: relative;
+    }
+    
+    .section-title:after {
+      content: '';
+      position: absolute;
+      bottom: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 3px;
+      background-color: var(--dark-accent);
+    }
+    
+    .card {
+      background-color: var(--dark-card);
+      border: 1px solid var(--dark-border);
+      border-radius: 10px;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      height: 100%;
+    }
+    
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    }
+    
+    .card-img {
+      height: 200px;
+      object-fit: cover;
+    }
+    
+    .card-body {
+      padding: 25px;
+    }
+    
+    .card-title {
+      color: var(--dark-text-primary);
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+    }
+    
+    .card-text {
+      color: var(--dark-text-secondary);
+      margin-bottom: 20px;
+    }
+    
+    .btn-primary {
+      background-color: var(--dark-accent);
+      border: none;
+      padding: 10px 25px;
+      border-radius: 30px;
+      transition: all 0.3s ease;
+    }
+    
+    .btn-primary:hover {
+      background-color: #000000;
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
+    }
+    
+    .quote-section {
+      background-color: var(--dark-card);
+      padding: 80px 0;
+      text-align: center;
+    }
+    
+    .quote {
+      font-size: 2rem;
+      font-style: italic;
+      max-width: 800px;
+      margin: 0 auto 20px;
+      color: var(--dark-text-primary);
+    }
+    
+    .quote-author {
+      font-size: 1.2rem;
+      color: var(--dark-accent);
+    }
+    
+    .stats-item {
+      text-align: center;
+      padding: 30px;
+      border-radius: 10px;
+      background-color: var(--dark-card);
+      transition: transform 0.3s ease;
+    }
+    
+    .stats-item:hover {
+      transform: translateY(-5px);
+    }
+    
+    .stats-number {
+      font-size: 3rem;
+      font-weight: 700;
+      color: var(--dark-accent);
+      margin-bottom: 10px;
+    }
+    
+    .stats-text {
+      font-size: 1.2rem;
+      color: var(--dark-text-secondary);
+    }
+    
+    .footer {
+      background-color: var(--dark-bg) !important;
+      color: var(--dark-text-secondary) !important;
+      padding-top: 70px;
+    }
+    
+    /* Navbar styling */
+    .nav-buttons {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .talk-button, .menu-button {
+      background-color: transparent;
+      color: white;
+      border: none;
+      padding: 8px 15px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: all 0.3s ease;
+    }
+    
+    .talk-button:hover, .menu-button:hover, .menu-button.active {
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 5px;
+    }
+    
+    .menu-container {
+      position: relative;
+      display: inline-block;
+    }
+    
+    .dropdown {
+      display: none;
+      position: absolute;
+      background-color: var(--dark-card);
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.3);
+      z-index: 1;
+      border-radius: 5px;
+      overflow: hidden;
+    }
+    
+    .dropdown.show {
+      display: block;
+    }
+    
+    .dropdown a {
+      color: white;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      transition: background-color 0.3s ease;
+    }
+    
+    .dropdown a:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+    
+    /* Timeline styling */
+    .timeline {
+      position: relative;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .timeline::after {
+      content: '';
+      position: absolute;
+      width: 6px;
+      background-color: var(--dark-accent);
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      margin-left: -3px;
+    }
+    
+    .timeline-container {
+      padding: 10px 40px;
+      position: relative;
+      background-color: inherit;
+      width: 50%;
+    }
+    
+    .timeline-container::after {
+      content: '';
+      position: absolute;
+      width: 25px;
+      height: 25px;
+      right: -13px;
+      background-color: var(--dark-surface);
+      border: 4px solid var(--dark-accent);
+      top: 15px;
+      border-radius: 50%;
+      z-index: 1;
+    }
+    
+    .left {
+      left: 0;
+    }
+    
+    .right {
+      left: 50%;
+    }
+    
+    .left::before {
+      content: " ";
+      height: 0;
+      position: absolute;
+      top: 22px;
+      width: 0;
+      z-index: 1;
+      right: 30px;
+      border: medium solid var(--dark-card);
+      border-width: 10px 0 10px 10px;
+      border-color: transparent transparent transparent var(--dark-card);
+    }
+    
+    .right::before {
+      content: " ";
+      height: 0;
+      position: absolute;
+      top: 22px;
+      width: 0;
+      z-index: 1;
+      left: 30px;
+      border: medium solid var(--dark-card);
+      border-width: 10px 10px 10px 0;
+      border-color: transparent var(--dark-card) transparent transparent;
+    }
+    
+    .right::after {
+      left: -12px;
+    }
+    
+    .timeline-content {
+      padding: 20px 30px;
+      background-color: var(--dark-card);
+      position: relative;
+      border-radius: 6px;
+    }
+    
+    .timeline-content h2 {
+      color: var(--dark-accent);
+    }
+    
+    @media screen and (max-width: 600px) {
+      .timeline::after {
+        left: 31px;
+      }
+      
+      .timeline-container {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+      }
+      
+      .timeline-container::before {
+        left: 60px;
+        border: medium solid var(--dark-card);
+        border-width: 10px 10px 10px 0;
+        border-color: transparent var(--dark-card) transparent transparent;
+      }
+      
+      .left::after, .right::after {
+        left: 18px;
+      }
+      
+      .right {
+        left: 0%;
+      }
+    }
+  </style>
+
+  <!-- =======================================================
+  * Template Name: UpConstruction - v1.3.0
+  * Template URL: https://bootstrapmade.com/upconstruction-bootstrap-construction-website-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+  
+</head>
+
+<body id="page">
+
+  <!-- ======= Header ======= -->
+  <header class="header" onclick="closeDropdowns()">
+    <a href="index.html">
+      <img height="70px" style="border-radius: 10px;" src="assets/img/topleftcyberfairlogo.jpeg" alt="Logo">
+    </a>
+    <div class="nav-buttons">
+      <button id="button" class="talk-button" onclick="location.href='index.html'">Home•</button>
+      <div class="menu-container">
+        <button class="menu-button" onclick="toggleDropdown(this)">Project Summary <span>⋯</span></button>
+        <div class="dropdown">
+          <a href="narrative.html">Narrative</a>
+          <a href="learning.html">Learning</a>
+          <a href="layout.html">Layout</a>
+        </div>
+      </div>
+      <button id="button" class="talk-button" onclick="location.href='umeed.html'">Umeed •</button>
+      <button id="button" class="talk-button" onclick="location.href='initiatives.html'">Initiatives •</button>
+      <div class="menu-container">
+        <button class="menu-button" onclick="toggleDropdown(this)">Untold <span>⋯</span></button>
+        <div class="dropdown">
+          <a href="echoes.html">Echoes</a>
+          <a href="resonance.html">Resonance</a>
+        </div>
+      </div>
+      <button id="button" class="talk-button" onclick="location.href='rejuvenation.html'">Rejuvenation •</button>
+      <button id="button" class="talk-button" onclick="location.href='research.html'">Research •</button>
+      <div class="menu-container">
+        <button class="menu-button" onclick="toggleDropdown(this)">Collaborators <span>⋯</span></button>
+        <div class="dropdown">
+          <a href="students.html">Students</a>
+          <a href="fecilitators.html">Facilitators</a>
+        </div>
+      </div>
+      <div class="menu-container">
+        <button class="menu-button" onclick="toggleDropdown(this)">Palette <span>⋯</span></button>
+        <div class="dropdown">
+          <a href="palette_panache.html">Palette Panache</a>
+          <a href="impressions.html">Impressions</a>
+          <a href="#">Downloads</a>
+        </div>
+      </div>
+      <div class="menu-container">
+        <button class="menu-button" onclick="toggleDropdown(this)">Downloads <span>⋯</span></button>
+        <div class="dropdown">
+          <a href="bhajans.html">Bhajans</a>
+          <a href="worksheets.html">Worksheets</a>
+          <a href="board_games.html">Board Games</a>
+          <a href="yoga.html">Yoga videos</a>
+          <a href="food_recipes.html">Food recipes</a>
+          <a href="activities.html">Activities</a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- End Header -->
+
+  <!-- Hero Video Section -->
+  <div class="video-container">
+    <div id="youtube-player"></div>
+    <div class="video-overlay">
+      <h1>UMEED</h1>
+      <p>Bridging generations, creating connections, and bringing hope to our elders</p>
+      <a href="#about" style="background-color: #181818;" class="btn btn-primary btn-lg">Learn More</a>
+    </div>
+  </div>
+
+  <!-- About Section -->
+  <section id="about" class="content-section">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">About Umeed</h2>
+      <div class="row">
+        <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
+          <img src="assets/img/krishna.jpeg" class="img-fluid rounded" alt="Umeed Initiative">
+        </div>
+        <!-- YAHAPE VO HAATH PAKADNE WALI PHOTU CLICKED BY ARYAN -->
+        <div class="col-lg-6" data-aos="fade-left" data-aos-delay="100">
+          <h3 style="color: var(--dark-accent);">Our Mission</h3>
+          <p>Umeed is a heartfelt initiative aimed at reconnecting our society with its elders. In a rapidly changing world where the elderly often feel isolated and forgotten, we strive to create meaningful connections between generations.</p>
+          <p>Through various programs and activities, we aim to honor the wisdom of our elders, learn from their experiences, and ensure they remain an integral part of our community.</p>
+          <h3 style="color: var(--dark-accent); margin-top: 30px;">Our Vision</h3>
+          <p>We envision a society where elders are respected, included, and celebrated for their contributions. Where the gap between generations is bridged through understanding, empathy, and shared experiences.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote Section -->
+  <section class="quote-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-12" data-aos="fade-up">
+          <p class="quote">"The wisdom of the elderly is a beacon that guides the path of the young."</p>
+          <p class="quote-author">- Ancient Proverb</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Initiatives Section -->
+  <section class="content-section">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Our Initiatives</h2>
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="card">
+            <img src="assets/img/bengal.jpeg" class="card-img" alt="Elder Connect">
+            <div class="card-body">
+              <h5 class="card-title">Elder Connect</h5>
+              <p class="card-text">Regular visits to elderly homes to spend quality time with seniors, engaging them in conversations, games, and activities.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="card">
+            <img src="assets/img/gujarat.jpg" class="card-img" alt="Wisdom Exchange">
+            <div class="card-body">
+              <h5 class="card-title">Wisdom Exchange</h5>
+              <p class="card-text">Interactive sessions where elders share their life experiences, skills, and knowledge with younger generations.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+          <div class="card">
+            <img src="assets/img/bengal.jpeg" class="card-img" alt="Digital Literacy">
+            <div class="card-body">
+              <h5 class="card-title">Digital Literacy</h5>
+              <p class="card-text">Teaching elders how to use technology to stay connected with family, access information, and enjoy digital entertainment.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="content-section">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Our Impact</h2>
+      <div class="row g-4">
+        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="stats-item">
+            <div class="stats-number" data-purecounter-start="0" data-purecounter-end="150" data-purecounter-duration="1">150</div>
+            <p class="stats-text">Elders Reached</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="stats-item">
+            <div class="stats-number" data-purecounter-start="0" data-purecounter-end="50" data-purecounter-duration="1">50</div>
+            <p class="stats-text">Volunteers</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+          <div class="stats-item">
+            <div class="stats-number" data-purecounter-start="0" data-purecounter-end="30" data-purecounter-duration="1">30</div>
+            <p class="stats-text">Events Organized</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
+          <div class="stats-item">
+            <div class="stats-number" data-purecounter-start="0" data-purecounter-end="10" data-purecounter-duration="1">10</div>
+            <p class="stats-text">Partner Organizations</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Timeline Section -->
+  <section class="content-section">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Our Journey</h2>
+      <div class="timeline">
+        <div class="timeline-container left" data-aos="fade-right">
+          <div class="timeline-content">
+            <h2>2021</h2>
+            <p>Umeed was founded with a vision to bridge the gap between generations and bring joy to the lives of elders.</p>
+          </div>
+        </div>
+        <div class="timeline-container right" data-aos="fade-left">
+          <div class="timeline-content">
+            <h2>2022</h2>
+            <p>Expanded our reach to multiple elder care homes and organized our first intergenerational cultural event.</p>
+          </div>
+        </div>
+        <div class="timeline-container left" data-aos="fade-right">
+          <div class="timeline-content">
+            <h2>2023</h2>
+            <p>Launched digital literacy program and established partnerships with local schools and colleges.</p>
+          </div>
+        </div>
+        <div class="timeline-container right" data-aos="fade-left">
+          <div class="timeline-content">
+            <h2>2024</h2>
+            <p>Expanded to new regions and introduced innovative programs to enhance elder engagement and well-being.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Umeed Content Section -->
+  <section class="content-section">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Understanding Umeed</h2>
+      <div class="row">
+        <div class="col-12" data-aos="fade-up">
+          <div class="card">
+            <div class="card-body">
+              <h3 style="color: var(--dark-accent);">What is 'Umeed'?</h3>
+              <p>Ummeed is a profound and essential human emotion, deeply intertwined with resilience, life's challenges, failures, and disappointments. It is the invisible force that allows individuals to persevere despite adversity, reminding them that hardships are temporary and that better days lie ahead.</p>
+              <p>Ultimately, hope is more than just wishful thinking; it is a force that keeps the world moving forward. It is what allows people to dream, to fight, and to believe in something greater than their present circumstances. As long as there is hope, there is the possibility of change, growth, and renewal.</p>
+              
+              <h3 style="color: var(--dark-accent); margin-top: 30px;">Why 'Umeed'?</h3>
+              <blockquote class="blockquote">
+                <p>"To live without hope is to cease to live."</p>
+                <footer class="blockquote-footer" style="color: var(--dark-accent);">Fyodor Dostoyevsky</footer>
+              </blockquote>
+              <p>The title "Umeed" translates to "Hope" in Hindi, which perfectly reflects the mission and vision of this project. For the Team Umeed, it is a hope to be dedicated, to love and contribute selflessly to our community, and a hope to join hands for comprehensive change.</p>
+              <p>Through this initiative, we aim to bring hope and joy to elderly citizens who need it the most. The title adds a layer of cultural sensitivity, making the website more relatable and accessible to its target audience. Ultimately, it aligns perfectly with the website's values of providing support, comfort, resources, and hope to elderly individuals, making 'ummeed' a fitting and impactful choice.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Community Description Section -->
+  <section class="content-section">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Our Community</h2>
+      <div class="row">
+        <div class="col-lg-6" data-aos="fade-right">
+          <img src="assets/img/bengal.jpeg" class="img-fluid rounded" alt="Indian Community">
+        </div>
+        <div class="col-lg-6" data-aos="fade-left">
+          <div class="card">
+            <div class="card-body">
+              <h3 style="color: var(--dark-accent);">Description of Our Community</h3>
+              <p>Our community is a reflection of India's deep-rooted cultural values, where love, respect, and care for the elderly are at the core of family life. In every corner of this diverse country, elders are regarded with the utmost reverence, their wisdom and presence seen as treasures.</p>
+              <p>The bond between the younger and older generations is at the core of our culture, ensuring that the elderly are never forgotten or overlooked. From the meals prepared with love to the stories shared over chai, our community thrives on compassion and respect for those who came before us. This sense of care extends beyond our homes, as we work together to create a world where every elder is valued and loved.</p>
+              <p>This is our community—a place where love for our elders is a tradition and a way of life.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Project Summary Section -->
+  <section class="content-section">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Project Summary</h2>
+      <div class="row">
+        <div class="col-12" data-aos="fade-up">
+          <div class="card">
+            <div class="card-body">
+              <p>'Umeed' is a Hindi word and, here, it is driven by a simple yet powerful goal: to create an opportunity for youngsters to fulfil the hopes of elderly individuals.</p>
+              <p>Thus, Umeed aims to be a one-stop platform for young individuals to connect with old age homes, visit the elderly, and engage them in meaningful activities. Rooted in the deep respect for elders that Indian traditions uphold, Umeed seeks to bridge the growing disconnect between generations and provide care, companionship, and engagement for senior citizens.</p>
+              <p>Extensive research, including visits to old age homes, has shed light on the challenges faced by the elderly, particularly the loneliness that often surrounds them. To address this, a variety of activities have been designed to keep them engaged while also enhancing their mental and physical well-being.</p>
+              <p>Beyond supporting senior citizens, Umeed is also working towards connecting orphanages with old age homes. Plans are underway to establish an NGO that will bring both orphans and the elderly under one roof—creating a nurturing environment filled with love, care, and companionship for all.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+    <div class="footer-content position-relative">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 col-md-6" style="display: flex; justify-content: center; width:100vw; margin-top: 5px;">
+            <div class="footer-info">
+              <div class="iconh">
+                <img class="icon" src="assets/img/logo2.png" />
+                <h3 style="font-size: 40px;">CyberFair 2025</h3>
+              </div>
+              <p style="text-align: center;">
+                Aravali International School<br>
+                Sector 43 Badkal Surajkund Road, Faridabad <br>
+                Pin Code: 121003<br><br>
+              </p>
+            </div>
+          </div><!-- End footer info column-->
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-legal text-center position-relative">
+      <div class="container">
+        <div class="copyright">
+          <a href="http://www.globalschoolnet.org/" target="_blank"><img src="assets/img/cyberflogofooter.JPG" /></a>
+        </div>
+        <div class="credits">
+          E-mail - <a href="mailto:cyberfair23@gmail.com">cyberfair23@gmail.com</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- End Footer -->
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+  <!-- YouTube API and Custom Scripts -->
+  <script>
+    // Load YouTube API
+    var tag = document.createElement('script');
+    tag.src = "https://www.youtube.com/iframe_api";
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+    var player;
+    function onYouTubeIframeAPIReady() {
+      player = new YT.Player('youtube-player', {
+        height: '100%',
+        width: '100%',
+        videoId: 'ZGwnnpXQ7FM', // Updated YouTube video ID
+        playerVars: {
+          'autoplay': 1,
+          'controls': 0,
+          'showinfo': 0,
+          'rel': 0,
+          'loop': 1,
+          'playlist': 'ZGwnnpXQ7FM', // Same as videoId for looping
+          'mute': 1 // Muted by default to allow autoplay
+        },
+        events: {
+          'onReady': onPlayerReady,
+          'onStateChange': onPlayerStateChange
+        }
+      });
+    }
+
+    function onPlayerReady(event) {
+      event.target.playVideo();
+    }
+
+    function onPlayerStateChange(event) {
+      if (event.data == YT.PlayerState.ENDED) {
+        player.playVideo();
+      }
+    }
+
+    // Pause video when scrolling down
+    window.addEventListener('scroll', function() {
+      var videoContainer = document.querySelector('.video-container');
+      var videoContainerBottom = videoContainer.getBoundingClientRect().bottom;
+      
+      if (videoContainerBottom <= 0 && player && typeof player.pauseVideo === 'function') {
+        player.pauseVideo();
+      } else if (videoContainerBottom > 0 && player && typeof player.playVideo === 'function') {
+        player.playVideo();
+      }
+    });
+
+    // Navbar dropdown functionality
+    function toggleDropdown(button) {
+      // First close all other dropdowns
+      const allDropdowns = document.querySelectorAll('.menu-container .dropdown');
+      const allButtons = document.querySelectorAll('.menu-button');
+      
+      allDropdowns.forEach((dropdown, index) => {
+        if (dropdown !== button.nextElementSibling) {
+          dropdown.classList.remove('show');
+          allButtons[index].classList.remove('active');
+        }
+      });
+      
+      // Toggle the clicked dropdown
+      const dropdown = button.nextElementSibling;
+      dropdown.classList.toggle('show');
+      button.classList.toggle('active');
+      
+      // Prevent the event from bubbling up to the header
+      event.stopPropagation();
+    }
+
+    // Close all dropdowns when clicking outside
+    function closeDropdowns() {
+      const dropdowns = document.querySelectorAll('.dropdown');
+      const buttons = document.querySelectorAll('.menu-button');
+      
+      dropdowns.forEach((dropdown, index) => {
+        dropdown.classList.remove('show');
+        buttons[index].classList.remove('active');
+      });
+    }
+
+    // Close dropdowns when clicking anywhere else on the document
+    document.addEventListener('click', function(event) {
+      if (!event.target.closest('.menu-container')) {
+        closeDropdowns();
+      }
+    });
+
+    // Initialize AOS
+    document.addEventListener('DOMContentLoaded', function() {
+      AOS.init({
+        duration: 1000,
+        easing: 'ease-in-out',
+        once: true,
+        mirror: false
+      });
+
+      // Initialize PureCounter
+      new PureCounter();
+    });
+  </script>
+</body>
+
+</html>

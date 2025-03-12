@@ -107,7 +107,7 @@
 			show_popup();
 			pop_up = document.getElementById("pop-up-content");
 
-			pop_up.src = ⁠ recipes_data/${content}.html ⁠;
+			pop_up.src = `recipes_data/${content}.html`;
 		}
 	</script>
 
@@ -120,7 +120,7 @@
 
 </head>
 
-<body style="color: black;">
+<body style="color: #ffffff;">
 
 	 <!-- ======= Header ======= -->
 <header class="header" onclick="closeDropdowns()">
@@ -307,7 +307,8 @@
 		}
 	
 		.modal-content {
-			background: #fff;
+			background-color: #2d2d2d;
+			color: #ffffff;
 			padding: 20px;
 			border-radius: 8px;
 			width: 80%;
@@ -332,6 +333,71 @@
 			color: #fff;
 			font-size: 24px;
 			cursor: pointer;
+		}
+
+		/* Navbar styling */
+		.header {
+		  display: flex;
+		  justify-content: space-between;
+		  align-items: center;
+		  padding: 10px 20px;
+		  position: sticky;
+		  top: 0;
+		  z-index: 1000;
+		  background-color: rgba(25, 25, 25, 0.9) !important;
+		}
+
+		.nav-buttons {
+		  display: flex;
+		  align-items: center;
+		  gap: 10px;
+		}
+
+		.talk-button, .menu-button {
+		  background-color: transparent;
+		  color: white;
+		  border: none;
+		  padding: 8px 15px;
+		  cursor: pointer;
+		  font-size: 16px;
+		  transition: all 0.3s ease;
+		}
+
+		.talk-button:hover, .menu-button:hover, .menu-button.active {
+		  background-color: rgba(255, 255, 255, 0.1);
+		  border-radius: 5px;
+		}
+
+		.menu-container {
+		  position: relative;
+		  display: inline-block;
+		}
+
+		.dropdown {
+		  display: none;
+		  position: absolute;
+		  background-color: #2d2d2d;
+		  min-width: 160px;
+		  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+		  z-index: 1;
+		  border-radius: 5px;
+		  overflow: hidden;
+		}
+
+		.dropdown.show {
+		  display: block;
+		}
+
+		.dropdown a {
+		  color: white;
+		  padding: 12px 16px;
+		  text-decoration: none;
+		  display: block;
+		  transition: background-color 0.3s ease;
+		}
+
+		.dropdown a:hover {
+		  background-color: #383838;
 		}
 	</style>
 	
@@ -400,6 +466,48 @@
 
 	<!-- Template Main JS File -->
 	<script src="assets/js/main.js"></script>
+
+	<script>
+	// Navbar dropdown functionality
+	function toggleDropdown(button) {
+	  // First close all other dropdowns
+	  const allDropdowns = document.querySelectorAll('.menu-container .dropdown');
+	  const allButtons = document.querySelectorAll('.menu-button');
+	  
+	  allDropdowns.forEach((dropdown, index) => {
+	    if (dropdown !== button.nextElementSibling) {
+	      dropdown.classList.remove('show');
+	      allButtons[index].classList.remove('active');
+	    }
+	  });
+	  
+	  // Toggle the clicked dropdown
+	  const dropdown = button.nextElementSibling;
+	  dropdown.classList.toggle('show');
+	  button.classList.toggle('active');
+	  
+	  // Prevent the event from bubbling up to the header
+	  event.stopPropagation();
+	}
+
+	// Close all dropdowns when clicking outside
+	function closeDropdowns() {
+	  const dropdowns = document.querySelectorAll('.dropdown');
+	  const buttons = document.querySelectorAll('.menu-button');
+	  
+	  dropdowns.forEach((dropdown, index) => {
+	    dropdown.classList.remove('show');
+	    buttons[index].classList.remove('active');
+	  });
+	}
+
+	// Close dropdowns when clicking anywhere else on the document
+	document.addEventListener('click', function(event) {
+	  if (!event.target.closest('.menu-container')) {
+	    closeDropdowns();
+	  }
+	});
+	</script>
 
 </body>
 
