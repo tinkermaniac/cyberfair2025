@@ -55,14 +55,6 @@
       font-family: 'Roboto', sans-serif;
     }
     
-    .header {
-      background-color: rgba(18, 18, 18, 0.9) !important;
-      backdrop-filter: blur(10px);
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-      position: fixed;
-      width: 100%;
-      z-index: 1000;
-    }
     
     .video-container {
       position: relative;
@@ -226,61 +218,7 @@
       color: var(--dark-text-secondary) !important;
       padding-top: 70px;
     }
-    
-    /* Navbar styling */
-    .nav-buttons {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-    
-    .talk-button, .menu-button {
-      background-color: transparent;
-      color: white;
-      border: none;
-      padding: 8px 15px;
-      cursor: pointer;
-      font-size: 16px;
-      transition: all 0.3s ease;
-    }
-    
-    .talk-button:hover, .menu-button:hover, .menu-button.active {
-      background-color: rgba(255, 255, 255, 0.1);
-      border-radius: 5px;
-    }
-    
-    .menu-container {
-      position: relative;
-      display: inline-block;
-    }
-    
-    .dropdown {
-      display: none;
-      position: absolute;
-      background-color: var(--dark-card);
-      min-width: 160px;
-      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.3);
-      z-index: 1;
-      border-radius: 5px;
-      overflow: hidden;
-    }
-    
-    .dropdown.show {
-      display: block;
-    }
-    
-    .dropdown a {
-      color: white;
-      padding: 12px 16px;
-      text-decoration: none;
-      display: block;
-      transition: background-color 0.3s ease;
-    }
-    
-    .dropdown a:hover {
-      background-color: rgba(255, 255, 255, 0.1);
-    }
-    
+   
     /* Timeline styling */
     .timeline {
       position: relative;
@@ -409,56 +347,77 @@
 
   <!-- ======= Header ======= -->
   <header class="header" onclick="closeDropdowns()">
-    <a href="index.html">
-      <img height="70px" style="border-radius: 10px;" src="assets/img/topleftcyberfairlogo.jpeg" alt="Logo">
-    </a>
+  
+    <h1 class="logo">UMEED</h1>
     <div class="nav-buttons">
-      <button id="button" class="talk-button" onclick="location.href='index.html'">Home•</button>
+      <button id="button" class="talk-button" onclick="location.href='file:///Users/ritwik/Code/cyberfair2025/index.html'">Home</button>
       <div class="menu-container">
-        <button class="menu-button" onclick="toggleDropdown(this)">Project Summary <span>⋯</span></button>
+        <button class="menu-button">Project Summary <span>⋯</span></button>
         <div class="dropdown">
-          <a href="narrative.html">Narrative</a>
-          <a href="learning.html">Learning</a>
-          <a href="layout.html">Layout</a>
+          <a href="file:///Users/ritwik/Code/cyberfair2025/narrative.html">Narrative</a>
+          <a href="file:///Users/ritwik/Code/cyberfair2025/learning.html">Learning</a>
+          <a href="file:///Users/ritwik/Code/cyberfair2025/layout.html">Layout</a>
+  
         </div>
       </div>
-      <button id="button" class="talk-button" onclick="location.href='umeed.html'">Umeed •</button>
-      <button id="button" class="talk-button" onclick="location.href='initiatives.html'">Initiatives •</button>
+      <button id="button" class="talk-button" onclick="location.href='file:///Users/ritwik/Code/cyberfair2025/umeed.html'">Umeed </button>
       <div class="menu-container">
-        <button class="menu-button" onclick="toggleDropdown(this)">Untold <span>⋯</span></button>
+        <button class="menu-button">Initiatives <span>⋯</span></button>
         <div class="dropdown">
-          <a href="echoes.html">Echoes</a>
-          <a href="resonance.html">Resonance</a>
-        </div>
-      </div>
-      <button id="button" class="talk-button" onclick="location.href='rejuvenation.html'">Rejuvenation •</button>
-      <button id="button" class="talk-button" onclick="location.href='research.html'">Research •</button>
-      <div class="menu-container">
-        <button class="menu-button" onclick="toggleDropdown(this)">Collaborators <span>⋯</span></button>
-        <div class="dropdown">
-          <a href="students.html">Students</a>
-          <a href="fecilitators.html">Facilitators</a>
+          <a href="file:///Users/ritwik/Code/cyberfair2025/old_age_home_connect.html">OldAge Home Connect</a>
+          <a href="file:///Users/ritwik/Code/cyberfair2025/orphanage_connect.html">Orphanage Connect</a>
+          <a href="file:///Users/ritwik/Code/cyberfair2025/organ_donation.html">Organ Donation</a>
+          <a href="file:///Users/ritwik/Code/cyberfair2025/joy_of_giving.html">Joy of Giving</a>
+          <a href="file:///Users/ritwik/Code/cyberfair2025/volunteering.html">Volunteering</a>
+          <a href="file:///Users/ritwik/Code/cyberfair2025/.vintage_veterans_app.html">Vintage Veterans app</a>
         </div>
       </div>
       <div class="menu-container">
-        <button class="menu-button" onclick="toggleDropdown(this)">Palette <span>⋯</span></button>
+        <button class="menu-button" >Untold <span>⋯</span></button>
         <div class="dropdown">
-          <a href="palette_panache.html">Palette Panache</a>
-          <a href="impressions.html">Impressions</a>
-          <a href="#">Downloads</a>
+          <a href="file:///Users/ritwik/Code/cyberfair2025/echoes.html">Echoes</a>
+          <a href="file:///Users/ritwik/Code/cyberfair2025/resonance.html">Resonance</a>
+        </div>
+      </div>
+      <button id="button" class="talk-button" onclick="location.href='file:///Users/ritwik/Code/cyberfair2025/rejuvenation.html'">Rejuvenation</button>
+      <div class="menu-container">
+        <button class="menu-button">Research <span>⋯</span></button>
+        <div class="dropdown">
+          <a href="file:///Users/ritwik/Code/cyberfair2025/indian_culture.html">Indian Culture</a>
+          <a href="file:///Users/ritwik/Code/cyberfair2025/worksheets.html">Interaction 1</a>
+          <a href="file:///Users/ritwik/Code/cyberfair2025/board_games.html">Interaction  2</a>
+          <a href="file:///Users/ritwik/Code/cyberfair2025/yoga.html">Interaction 3</a>
+          <a href="file:///Users/ritwik/Code/cyberfair2025/food_recipes.html">Analysis</a>
+          <a href="file:///Users/ritwik/Code/cyberfair2025/yoga.html">Bibliography</a>
         </div>
       </div>
       <div class="menu-container">
-        <button class="menu-button" onclick="toggleDropdown(this)">Downloads <span>⋯</span></button>
+        <button class="menu-button">Collaborators <span>⋯</span></button>
         <div class="dropdown">
-          <a href="bhajans.html">Bhajans</a>
-          <a href="worksheets.html">Worksheets</a>
-          <a href="board_games.html">Board Games</a>
-          <a href="yoga.html">Yoga videos</a>
-          <a href="food_recipes.html">Food recipes</a>
-          <a href="activities.html">Activities</a>
+          <a href="file:///Users/ritwik/Code/cyberfair2025/students.html">Students</a>
+          <a href="file:///Users/ritwik/Code/cyberfair2025/fecilitators.html">Facilitators</a>
+  
         </div>
       </div>
+      
+     
+      <div class="menu-container">
+        <button class="menu-button">Palette <span>⋯</span></button>
+        <div class="dropdown">
+          <a href="file:///Users/ritwik/Code/cyberfair2025/food_recipes.html">Palate Panache</a>
+          <a href="file:///Users/ritwik/Code/cyberfair2025/impressions.html">Impressions</a>
+        </div>
+      </div>
+      <div class="menu-container">
+        <button class="menu-button">Downloads <span>⋯</span></button>
+        <div class="dropdown">
+          <a href="file:///Users/ritwik/Code/cyberfair2025/bhajans.html">Bhajans</a>
+          <a href="file:///Users/ritwik/Code/cyberfair2025/worksheets.html">Worksheets</a>
+          <a href="file:///Users/ritwik/Code/cyberfair2025/yoga.html">Yoga videos</a>
+          <a href="file:///Users/ritwik/Code/cyberfair2025/movies.html">Old Movies</a>
+        </div>
+      </div>
+  
     </div>
   </header>
   <!-- End Header -->
@@ -486,7 +445,7 @@
           <h3 style="color: var(--dark-accent);">Our Mission</h3>
           <p>Umeed is a heartfelt initiative aimed at reconnecting our society with its elders. In a rapidly changing world where the elderly often feel isolated and forgotten, we strive to create meaningful connections between generations.</p>
           <p>Through various programs and activities, we aim to honor the wisdom of our elders, learn from their experiences, and ensure they remain an integral part of our community.</p>
-          <h3 style="color: var(--dark-accent); margin-top: 30px;">Our Vision</h3>
+          <h3 style="color: var(--dark-accent); margin-top: 30px;">Who are we ?</h3>
           <p>We envision a society where elders are respected, included, and celebrated for their contributions. Where the gap between generations is bridged through understanding, empathy, and shared experiences.</p>
         </div>
       </div>
@@ -548,19 +507,19 @@
       <div class="row g-4">
         <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
           <div class="stats-item">
-            <div class="stats-number" data-purecounter-start="0" data-purecounter-end="150" data-purecounter-duration="1">150</div>
+            <div class="stats-number" data-purecounter-start="0" data-purecounter-end="150" data-purecounter-duration="1">100+</div>
             <p class="stats-text">Elders Reached</p>
           </div>
         </div>
         <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
           <div class="stats-item">
-            <div class="stats-number" data-purecounter-start="0" data-purecounter-end="50" data-purecounter-duration="1">50</div>
+            <div class="stats-number" data-purecounter-start="0" data-purecounter-end="50" data-purecounter-duration="1">87</div>
             <p class="stats-text">Volunteers</p>
           </div>
         </div>
         <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
           <div class="stats-item">
-            <div class="stats-number" data-purecounter-start="0" data-purecounter-end="30" data-purecounter-duration="1">30</div>
+            <div class="stats-number" data-purecounter-start="0" data-purecounter-end="30" data-purecounter-duration="1">23</div>
             <p class="stats-text">Events Organized</p>
           </div>
         </div>
@@ -601,6 +560,12 @@
           <div class="timeline-content">
             <h2>2024</h2>
             <p>Expanded to new regions and introduced innovative programs to enhance elder engagement and well-being.</p>
+          </div>
+        </div>
+        <div class="timeline-container left" data-aos="fade-right">
+          <div class="timeline-content">
+            <h2>2025</h2>
+            <p>Launched digital literacy program and established partnerships with local schools and colleges.</p>
           </div>
         </div>
       </div>

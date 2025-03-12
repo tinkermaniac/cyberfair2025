@@ -314,7 +314,7 @@ button {
   border: none;
   outline: none;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 15px;
   border-radius: 20px;
   transition: background 0.3s, transform 0.2s;
 }
@@ -323,7 +323,7 @@ button {
 .icon-button {
   background: rgba(255, 255, 255, 0.2);
   color: white;
-  font-size: 16px;
+  font-size: 15px;
   width: 40px;
   height: 40px;
   display: flex;
@@ -336,7 +336,7 @@ button {
 .talk-button {
   background: #ffffff33;
   color: white;
-  font-size: 16px;
+  font-size: 15px;
 }
 
 /* Menu Button */
