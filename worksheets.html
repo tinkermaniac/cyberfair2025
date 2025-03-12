@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Curry Katha - The lost Recipes</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/logo2.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Roboto:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://tinkermaniac.github.io/cyberfairconfig/passkey.js"></script>
+  <script src="assets/js/loader.js"></script>
+  <script>
+	  var a=30;
+  </script>
+  <!-- Template Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: UpConstruction - v1.3.0
+  * Template URL: https://bootstrapmade.com/upconstruction-bootstrap-construction-website-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+  
+  <style>
+    :root {
+      --dark-bg: #121212;
+      --dark-surface: #1e1e1e;
+      --dark-card: #2d2d2d;
+      --dark-accent: #fbfbfb;
+      --dark-text-primary: #ffffff;
+      --dark-text-secondary: #b0b0b0;
+    }
+
+    body {
+      background-color: var(--dark-bg);
+      color: var(--dark-text-primary);
+    }
+
+    .worksheets-section {
+      padding: 80px 0;
+      background-color: var(--dark-surface);
+    }
+
+    .section-title {
+      color: var(--dark-accent);
+      margin-bottom: 50px;
+      text-align: center;
+      font-size: 2.5rem;
+      position: relative;
+    }
+
+    .section-title:after {
+      content: '';
+      position: absolute;
+      bottom: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 3px;
+      background-color: var(--dark-accent);
+    }
+
+    .worksheet-card {
+      background-color: var(--dark-card);
+      border-radius: 15px;
+      overflow: hidden;
+      margin-bottom: 30px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .worksheet-card:hover {
+      transform: translateY(-10px);
+    }
+
+    .worksheet-card img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      border-bottom: 3px solid var(--dark-accent);
+    }
+
+    .worksheet-content {
+      padding: 25px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .worksheet-content h3 {
+      color: var(--dark-accent);
+      margin-bottom: 15px;
+      font-size: 1.5rem;
+    }
+
+    .worksheet-content p {
+      color: var(--dark-text-secondary);
+      margin-bottom: 20px;
+      flex-grow: 1;
+    }
+
+    .download-btn {
+      background-color: var(--dark-accent);
+      color: var(--dark-bg);
+      padding: 12px 25px;
+      border-radius: 8px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    .download-btn:hover {
+      background-color: #9d65df;
+      transform: translateY(-2px);
+      color: var(--dark-bg);
+    }
+
+    .download-btn i {
+      margin-right: 8px;
+    }
+  </style>
+</head>
+
+<body id="page">
+
+  <!-- ======= Header ======= -->
+  <header class="header">
+    <h1 class="logo">Curry Katha</h1>
+    <div class="nav-buttons">
+        <button id="button" class="talk-button">Home•</button>
+        <div class="menu-container">
+            <button class="menu-button">Project Summary <span>⋯</span></button>
+            <div class="dropdown">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Services</a>
+                <a href="#">Contact</a>
+            </div>
+        </div>
+        <button id="button" class="talk-button">Umeed •</button>
+        <button id="button" class="talk-button">Initiatives •</button>
+        <div class="menu-container">
+            <button class="menu-button">Untold <span>⋯</span></button>
+            <div class="dropdown">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Services</a>
+                <a href="#">Contact</a>
+            </div>
+        </div>
+        <button id="button" class="talk-button">Rejuvenation •</button>
+        <button id="button" class="talk-button">Research •</button>
+        <div class="menu-container">
+            <button class="menu-button">Collaborators <span>⋯</span></button>
+            <div class="dropdown">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Services</a>
+                <a href="#">Contact</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="#">Palate Panache</a>
+            <a href="#">Impressions</a>
+            <a href="#">
+                downloads
+                <div class="dropdown">
+                    <a href="#">File 1</a>
+                    <a href="#">File 2</a>
+                    <a href="#">File 3</a>
+                </div>
+            </a>
+        </div>
+    </div>
+</header>
+
+  
+  <!-- End Header -->
+
+
+
+ 
+<!-- End Hero Section -->
+
+  <!-- Worksheets Section -->
+   <br>
+   <br>
+   <br>
+  <section class="worksheets-section">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Educational Worksheets</h2>
+      <div class="row g-4">
+        <!-- Worksheet 1 -->
+        <div class="col-lg-3 col-md-6" data-aos="fade-up">
+          <div class="worksheet-card">
+            <img src="assets/img/worksheet1.jpg" alt="Memory Activities">
+            <div class="worksheet-content">
+              <h3>Memory Activities</h3>
+              <p>Engaging exercises designed to enhance cognitive function and memory retention in elderly individuals.</p>
+              <a href="assets/worksheets/memory_activities.pdf" class="download-btn" download>
+                <i class="bi bi-download"></i> Download PDF
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Worksheet 2 -->
+        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="worksheet-card">
+            <img src="assets/img/worksheet2.jpg" alt="Physical Exercises">
+            <div class="worksheet-content">
+              <h3>Physical Exercises</h3>
+              <p>Simple and safe physical activities that can be performed while seated or standing, promoting mobility.</p>
+              <a href="assets/worksheets/physical_exercises.pdf" class="download-btn" download>
+                <i class="bi bi-download"></i> Download PDF
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Worksheet 3 -->
+        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="worksheet-card">
+            <img src="assets/img/worksheet3.jpg" alt="Creative Activities">
+            <div class="worksheet-content">
+              <h3>Creative Activities</h3>
+              <p>Art and craft activities that encourage self-expression and maintain fine motor skills.</p>
+              <a href="assets/worksheets/creative_activities.pdf" class="download-btn" download>
+                <i class="bi bi-download"></i> Download PDF
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Worksheet 4 -->
+        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+          <div class="worksheet-card">
+            <img src="assets/img/worksheet4.jpg" alt="Social Activities">
+            <div class="worksheet-content">
+              <h3>Social Activities</h3>
+              <p>Engage your mind and enhance your mental clarity with our fun and stimulating cognitive worksheets</p>
+              <a href="assets/worksheets/social_activities.pdf" class="download-btn" download>
+                <i class="bi bi-download"></i> Download PDF
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- ======= Footer ======= -->
+<footer id="footer" class="footer" style="background-color: azure;">
+
+  <div class="footer-content position-relative">
+      <div class="container">
+          <div class="row">
+
+              <div class="col-lg-4 col-md-6"
+                  style="display: flex; justify-content: center; width:100vw; margin-top: 5px;">
+                  <div class="footer-info">
+                      <div class="iconh">
+                          <img class="icon" src="assets/img/logo2.png" />
+                          <h3 style="font-size: 40px;">CyberFair  2025</h3>
+                      </div>
+                      <p style="text-align: center;">
+                          Aravali International School<br>
+                          Sector 43 Badkal Surajkund Road,Faridabad <br>
+                          Pin Code: 121003<br><br>
+                      </p>
+                  </div>
+              </div><!-- End footer info column-->
+
+          </div>
+      </div>
+  </div>
+
+  <div class="footer-legal text-center position-relative">
+      <div class="container">
+          <div class="copyright">
+              <a href="http://www.globalschoolnet.org/" target="_blank"><img
+                      src="assets/img/cyberflogofooter.JPG" /></a>
+          </div>
+          <div class="credits">
+              <!-- All the links in the footer should remain intact. -->
+              <!-- You can delete the links only if you purchased the pro version. -->
+              <!-- Licensing information: https://bootstrapmade.com/license/ -->
+              <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/upconstruction-bootstrap-construction-website-template/ -->
+              E-mail - <a href="https://bootstrapmade.com/">cyberfair23@gmail.com</a>
+          </div>
+      </div>
+  </div>
+
+</footer>
+  <!-- End Footer -->
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
+
