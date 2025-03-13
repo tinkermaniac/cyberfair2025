@@ -34,10 +34,10 @@
 
 
 	<!-- Template Main CSS File -->
+	<link rel="stylesheet" href="css/bulma.min.css">
 	<link href="assets/css/main.css" rel="stylesheet">
 
 	<!-- custom css -->
-	<link rel="stylesheet" href="css/bulma.min.css">
 	<style>
 		figure.image > img {
 			object-fit: cover;
@@ -126,77 +126,80 @@
 <body style="color: black;">
 
 	 <!-- ======= Header ======= -->
-	 <header class="header" onclick="closeDropdowns()">
-  
-		<a href="index.html">
-			<img height="70px" style="border-radius: 10px;" src="assets/img/topleftcyberfairlogo.jpeg" alt="Logo">
-		</a> 
+	<header class="header" onclick="closeDropdowns()">
+	
+		<h1 class="logo">UMEED</h1>
 		<div class="nav-buttons">
-		  <button id="button" class="talk-button" onclick="location.href='index.html'">Home•</button>
-		  <div class="menu-container">
-			<button class="menu-button" onclick="toggleDropdown(this)">Project Summary <span>⋯</span></button>
-			<div class="dropdown">
-			  <a href="narrative.html">Narrative</a>
-			  <a href="learning.html">Learning</a>
-			  <a href="layout.html">Layout</a>
+			<button id="button" class="talk-button" onclick="location.href='/index.html'">Home</button>
+			<div class="menu-container">
+				<button class="menu-button">Project Summary <span>⋯</span></button>
+				<div class="dropdown">
+					<a href="/narrative.html">Narrative</a>
+					<a href="/learning.html">Learning</a>
+					<a href="/layout.html">Layout</a>
+	
+				</div>
 			</div>
-		  </div>
-		  <button id="button" class="talk-button" onclick="location.href='umeed.html'">Umeed •</button>
-		  <div class="menu-container">
-			<button class="menu-button" onclick="toggleDropdown(this)">Initiatives <span>⋯</span></button>
-			<div class="dropdown">
-			  <a href="old_age_home_connect.html">OldAge Home Connect</a>
-			  <a href="orphanage_connect.html">Orphanage Connect</a>
-			  <a href="joy_of_giving.html">Joy of Giving</a>
-			  <a href="volunteering.html">Volunteering</a>
+			<button id="button" class="talk-button" onclick="location.href='/umeed.html'">Umeed </button>
+			<div class="menu-container">
+				<button class="menu-button">Initiatives <span>⋯</span></button>
+				<div class="dropdown">
+					<a href="/forms/elder_connect.html">Elder Connect</a>
+					<a href="/forms/orphanage_connect.html">Orphanage Connect</a>
+					<a href="/forms/organ_donation.html">Organ Donation</a>
+					<a href="/forms/joy_of_giving.html">Joy of Giving</a>
+					<a href="/forms/volunteering.html">Volunteering</a>
+					<a href="/forms/vintage_veterans_app.html">Vintage Veterans app</a>
+				</div>
 			</div>
-		  </div>
-		  <div class="menu-container">
-			<button class="menu-button" onclick="toggleDropdown(this)">Untold <span>⋯</span></button>
-			<div class="dropdown">
-			  <a href="echoes.html">Echoes</a>
-			  <a href="resonance.html">Resonance</a>
+			<div class="menu-container">
+				<button class="menu-button">Untold <span>⋯</span></button>
+				<div class="dropdown">
+					<a href="/echoes.html">Echoes</a>
+					<a href="/resonance.html">Resonance</a>
+				</div>
 			</div>
-		  </div>
-		  <button id="button" class="talk-button" onclick="location.href='rejuvenation.html'">Rejuvenation •</button>
-		  <div class="menu-container">
-			<button class="menu-button" onclick="toggleDropdown(this)">Research <span>⋯</span></button>
-			<div class="dropdown">
-			  <a href="bhajans.html">Indian Culture</a>
-			  <a href="worksheets.html">Interaction 1</a>
-			  <a href="board_games.html">Interaction 2</a>
-			  <a href="yoga.html">Interaction 3</a>
-			  <a href="food_recipes.html">Analysis</a>
-			  <a href="#">Bibliography</a>
+			<button id="button" class="talk-button" onclick="location.href='/rejuvenation.html'">Rejuvenation</button>
+			<div class="menu-container">
+				<button class="menu-button">Research <span>⋯</span></button>
+				<div class="dropdown">
+					<a href="/indian_culture.html">Indian Culture</a>
+					<a href="/interaction_1.html">Interaction 1</a>
+					<a href="/interaction_2.html">Interaction 2</a>
+					<a href="/interaction_3.html">Interaction 3</a>
+					<a href="/analysis.html">Analysis</a>
+					<a href="/bibliography.html">Bibliography</a>
+				</div>
 			</div>
-		  </div>
-		  <div class="menu-container">
-			<button class="menu-button" onclick="toggleDropdown(this)">Collaborators <span>⋯</span></button>
-			<div class="dropdown">
-			  <a href="students.html">Students</a>
-			  <a href="fecilitators.html">Facilitators</a>
+			<div class="menu-container">
+				<button class="menu-button">Collaborators <span>⋯</span></button>
+				<div class="dropdown">
+					<a href="./cyberfair-gp/team.html">Students</a>
+					<a href="/facilitators.html">Facilitators</a>
+	
+				</div>
 			</div>
-		  </div>
-		  <div class="menu-container">
-			<button class="menu-button" onclick="toggleDropdown(this)">Palette <span>⋯</span></button>
-			<div class="dropdown">
-			  <a href="palette_panache.html">Palette Panache</a>
-			  <a href="impressions.html">Impressions</a>
+	
+	
+			<div class="menu-container">
+				<button class="menu-button">Palette <span>⋯</span></button>
+				<div class="dropdown">
+					<a href="/food_recipes.html">Palate Panache</a>
+					<a href="/impressions.html">Impressions</a>
+				</div>
 			</div>
-		  </div>
-		  <div class="menu-container">
-			<button class="menu-button" onclick="toggleDropdown(this)">Downloads <span>⋯</span></button>
-			<div class="dropdown">
-			  <a href="bhajans.html">Bhajans</a>
-			  <a href="worksheets.html">Worksheets</a>
-			  <a href="board_games.html">Board Games</a>
-			  <a href="yoga.html">Yoga videos</a>
-			  <a href="food_recipes.html">Food recipes</a>
-			  <a href="activities.html">Activities</a>
+			<div class="menu-container">
+				<button class="menu-button">Downloads <span>⋯</span></button>
+				<div class="dropdown">
+					<a href="/bhajans.html">Bhajans</a>
+					<a href="/worksheets.html">Worksheets</a>
+					<a href="/yoga.html">Yoga videos</a>
+					<a href="/movies.html">Old Movies</a>
+				</div>
 			</div>
-		  </div>
+	
 		</div>
-	  </header>
+	</header>
 	  <!-- End Header -->
     
 	<!-- ======= Breadcrumbs ======= -->
@@ -479,72 +482,7 @@
 	}
 	</script>
 
-	<style>
-	/* Navbar styling */
-	.header {
-	  display: flex;
-	  justify-content: space-between;
-	  align-items: center;
-	  padding: 10px 20px;
-	  position: sticky;
-	  top: 0;
-	  z-index: 1000;
-	  background-color: rgba(25, 25, 25, 0.9);
-	}
-
-	.nav-buttons {
-	  display: flex;
-	  align-items: center;
-	  gap: 10px;
-	}
-
-	.talk-button, .menu-button {
-	  background-color: transparent;
-	  color: white;
-	  border: none;
-	  padding: 8px 15px;
-	  cursor: pointer;
-	  font-size: 16px;
-	  transition: all 0.3s ease;
-	}
-
-	.talk-button:hover, .menu-button:hover, .menu-button.active {
-	  background-color: rgba(255, 255, 255, 0.1);
-	  border-radius: 5px;
-	}
-
-	.menu-container {
-	  position: relative;
-	  display: inline-block;
-	}
-
-	.dropdown {
-	  display: none;
-	  position: absolute;
-	  background-color: #2d2d2d;
-	  min-width: 160px;
-	  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-	  z-index: 1;
-	  border-radius: 5px;
-	  overflow: hidden;
-	}
-
-	.dropdown.show {
-	  display: block;
-	}
-
-	.dropdown a {
-	  color: white;
-	  padding: 12px 16px;
-	  text-decoration: none;
-	  display: block;
-	  transition: background-color 0.3s ease;
-	}
-
-	.dropdown a:hover {
-	  background-color: #383838;
-	}
-	</style>
+	
 
 </body>
 
