@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Ecchoes - Untold Stories</title>
+  <meta content="Ecchoes - Untold stories and cultural heritage" name="description">
+  <meta content="ecchoes, culture, heritage, stories" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/logo2.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Roboto:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://tinkermaniac.github.io/cyberfairconfig/passkey.js"></script>
+  <script src="assets/js/loader.js"></script>
+  <script>
+	  var a=30;
+  </script>
+  <!-- Template Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+  <script src="navbar-fix.js"></script>
+
+  <style>
+    /* Custom styles for content section */
+    .content-section {
+      background-color: rgba(0, 0, 0, 0.7);
+      border-radius: 15px;
+      padding: 40px;
+      margin: 80px auto;
+      max-width: 1200px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #fff;
+    }
+
+    .section-title {
+      color: #fff;
+      font-size: 2.5rem;
+      margin-bottom: 30px;
+      text-align: center;
+      font-weight: 700;
+    }
+
+    .section-subtitle {
+      color: #ccc;
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .content-text {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      margin-bottom: 30px;
+      text-align: justify;
+    }
+
+    .video-wrapper {
+      position: relative;
+      padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+      height: 0;
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+      margin: 40px 0;
+    }
+
+    .video-wrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    #hero-section {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      padding: 100px 0;
+    }
+
+    #video-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      overflow: hidden;
+    }
+
+    #video-background {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.4;
+    }
+
+    /* Background image styling */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("./bg.png"); /* Using the bg.png file in the root directory */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      opacity: 0.3; /* Adjust opacity as needed */
+      z-index: -2;
+    }
+
+    /* Fade-in animation */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Gradient border styling */
+    .gradient-border {
+      position: relative;
+      border-radius: 15px;
+      padding: 30px;
+      margin: 40px 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    /* Background toggle button */
+    .bg-toggle {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: rgba(0, 0, 0, 0.6);
+      color: white;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 100;
+      transition: all 0.3s ease;
+    }
+
+    .bg-toggle:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+      transform: scale(1.1);
+    }
+
+    .bg-toggle i {
+      font-size: 18px;
+    }
+  </style>
+
+  <!-- =======================================================
+  * Template Name: UpConstruction - v1.3.0
+  * Template URL: https://bootstrapmade.com/upconstruction-bootstrap-construction-website-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+  
+</head>
+
+<body id="page" style="background-color: black;">
+
+  <!-- ======= Header ======= -->
+  <header class="header" onclick="closeDropdowns()">
+  
+		<a href="index.html">
+			<img height="70px" style="border-radius: 10px;" src="assets/img/topleftcyberfairlogo.jpeg" alt="Logo">
+		</a> 
+    <div class="nav-buttons">
+      <button id="button" class="talk-button" onclick="location.href='index.html'">Home</button>
+      <div class="menu-container">
+        <button class="menu-button">Project Summary <span>⋯</span></button>
+        <div class="dropdown">
+          <a href="narrative.html">Narrative</a>
+          <a href="learning.html">Learning</a>
+          <a href="layout.html">Layout</a>
+  
+        </div>
+      </div>
+      <button id="button" class="talk-button" onclick="location.href='umeed.html'">Umeed </button>
+      <div class="menu-container">
+        <button class="menu-button">Initiatives <span>⋯</span></button>
+        <div class="dropdown">
+          <a href="forms/elder_connect.html">Elder Connect</a>
+          <a href="forms/orphanage_connect.html">Orphanage Connect</a>
+          <a href="forms/organ_donation.html">Organ Donation</a>
+          <a href="forms/joy_of_giving.html">Joy of Giving</a>
+          <a href="forms/volunteering.html">Volunteering</a>
+          <a href="forms/vintage_veterans_app.html">Vintage Veterans app</a>
+        </div>
+      </div>
+      <div class="menu-container">
+        <button class="menu-button" >Untold <span>⋯</span></button>
+        <div class="dropdown">
+          <a href="echoes.html">Echoes</a>
+          <a href="resonance.html">Resonance</a>
+        </div>
+      </div>
+      <button id="button" class="talk-button" onclick="location.href='rejuvenation.html'">Rejuvenation</button>
+      <div class="menu-container">
+        <button class="menu-button">Research <span>⋯</span></button>
+        <div class="dropdown">
+          <a href="indian_culture.html">Indian Culture</a>
+          <a href="interaction_1.html">Interaction 1</a>
+          <a href="interaction_2.html">Interaction 2</a>
+          <a href="interaction_3.html">Interaction 3</a>
+          <a href="analysis.html">Analysis</a>
+          <a href="bibliography.html">Bibliography</a>
+        </div>
+      </div>
+      <div class="menu-container">
+        <button class="menu-button">Collaborators <span>⋯</span></button>
+        <div class="dropdown">
+          <a href="./cyberfair-gp/team.html">Students</a>
+          <a href="facilitators.html">Facilitators</a>
+  
+        </div>
+      </div>
+      
+     
+      <div class="menu-container">
+        <button class="menu-button">Palette <span>⋯</span></button>
+        <div class="dropdown">
+          <a href="food_recipes.html">Palate Panache</a>
+          <a href="impressions.html">Impressions</a>
+        </div>
+      </div>
+      <div class="menu-container">
+        <button class="menu-button">Downloads <span>⋯</span></button>
+        <div class="dropdown">
+          <a href="bhajans.html">Bhajans</a>
+          <a href="worksheets.html">Worksheets</a>
+          <a href="yoga.html">Yoga videos</a>
+          <a href="movies.html">Old Movies</a>
+        </div>
+      </div>
+  
+    </div>
+  </header>
+  <!-- End Header -->
+
+  <!-- ======= Video Background ======= -->
+  
+
+  <!-- ======= Main Content Section ======= -->
+  <main id="main">
+    <section id="hero-section">
+      <div class="container">
+        <div class="content-section fade-in">
+          <h1 class="section-title">Ecchoes of Wisdom</h1>
+          <h2 class="section-subtitle">Voices from the Twilight Years</h2>
+          
+          <div class="gradient-border">
+            <p class="content-text">
+              Some experiences touch the soul, leaving us forever changed. This project was not just about research—it was about understanding life, love, and the silent pain of those often forgotten.
+            </p>
+            <p class="content-text">
+              As we stepped into the old age home, we were met with weary eyes filled with stories of sacrifice and loss. Many had given their whole lives to their families, only to find themselves alone in their final years, waiting for visits that never came. Their voices trembled with longing, their hearts heavy with memories of a home they once called their own.
+            </p>
+            <p class="content-text">
+              Yet, even in their sorrow, they welcomed us with warmth, sharing wisdom, laughter, and life lessons we could never find in books. Their resilience moved us, their loneliness broke us, and their love reminded us of the irreplaceable value of human connection.
+            </p>
+          </div>
+
+          <!-- Featured Video Section -->
+          <h3 class="section-subtitle">Featured Story</h3>
+          <div class="video-wrapper">
+            <!-- Replace the src with your actual video embed URL -->
+            <iframe src="https://www.youtube.com/embed/your-video-id" title="Featured Story" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+
+          <div class="gradient-border">
+            <p class="content-text">
+              The video above captures just one of the many heartfelt encounters we experienced during our visits. Each conversation revealed layers of emotion, wisdom, and perspective that have profoundly shaped our understanding of aging and human dignity.
+            </p>
+            <p class="content-text">
+              These ecchoes of experience continue to resonate within us, reminding us that behind every aging face is a lifetime of stories waiting to be heard. By listening with open hearts, we not only preserve their legacy but also enrich our own lives with the depth of their wisdom and the power of their resilience.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+<!-- ======= Footer ======= -->
+<footer id="footer" class="footer" style="background-color: azure;">
+
+  <div class="footer-content position-relative">
+      <div class="container">
+          <div class="row">
+
+              <div class="col-lg-4 col-md-6"
+                  style="display: flex; justify-content: center; width:100vw; margin-top: 5px;">
+                  <div class="footer-info">
+                      <div class="iconh">
+                          <img class="icon" src="assets/img/logo2.png" />
+                          <h3 style="font-size: 40px;">CyberFair  2025</h3>
+                      </div>
+                      <p style="text-align: center;">
+                          Aravali International School<br>
+                          Sector 43 Badkal Surajkund Road,Faridabad <br>
+                          Pin Code: 121003<br><br>
+                      </p>
+                  </div>
+              </div><!-- End footer info column-->
+
+          </div>
+      </div>
+  </div>
+
+  <div class="footer-legal text-center position-relative">
+      <div class="container">
+          <div class="copyright">
+              <a href="http://www.globalschoolnet.org/" target="_blank"><img
+                      src="assets/img/cyberflogofooter.JPG" /></a>
+          </div>
+          <div class="credits">
+              E-mail - <a href="mailto:cyberfair23@gmail.com">cyberfair23@gmail.com</a>
+          </div>
+      </div>
+  </div>
+
+</footer>
+  <!-- End Footer -->
+
+  <!-- Background Toggle Button -->
+  <div class="bg-toggle" onclick="toggleBackground()" title="Toggle Background">
+    <i class="bi bi-image"></i>
+  </div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+  <!-- Custom JS for animations -->
+  <script>
+    // Fade-in animation for content sections
+    document.addEventListener('DOMContentLoaded', function() {
+      const fadeElements = document.querySelectorAll('.fade-in');
+      
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, { threshold: 0.1 });
+      
+      fadeElements.forEach(element => {
+        observer.observe(element);
+      });
+    });
+
+    // Toggle between video and image background
+    let showingVideo = true;
+    function toggleBackground() {
+      const videoContainer = document.getElementById('video-container');
+      const toggleButton = document.querySelector('.bg-toggle i');
+      
+      if (showingVideo) {
+        // Switch to image background
+        videoContainer.style.display = 'none';
+        document.body.classList.add('image-bg');
+        toggleButton.className = 'bi bi-film';
+      } else {
+        // Switch to video background
+        videoContainer.style.display = 'block';
+        document.body.classList.remove('image-bg');
+        toggleButton.className = 'bi bi-image';
+      }
+      
+      showingVideo = !showingVideo;
+    }
+
+    // Fix for dropdown menu
+    function closeDropdowns() {
+      const dropdowns = document.querySelectorAll('.dropdown');
+      dropdowns.forEach(dropdown => {
+        dropdown.style.display = 'none';
+      });
+    }
+
+    document.querySelectorAll('.menu-button').forEach(button => {
+      button.addEventListener('click', function(e) {
+        e.stopPropagation();
+        const dropdown = this.nextElementSibling;
+        const isDisplayed = dropdown.style.display === 'block';
+        
+        // Close all dropdowns first
+        document.querySelectorAll('.dropdown').forEach(d => {
+          d.style.display = 'none';
+        });
+        
+        // Toggle current dropdown
+        dropdown.style.display = isDisplayed ? 'none' : 'block';
+      });
+    });
+
+    // Close dropdowns when clicking outside
+    document.addEventListener('click', function() {
+      closeDropdowns();
+    });
+  </script>
+
+</body>
+
+</html>
