@@ -18,7 +18,9 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Roboto:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Roboto:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+    rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -32,7 +34,7 @@
   <script src="https://tinkermaniac.github.io/cyberfairconfig/passkey.js"></script>
   <script src="assets/js/loader.js"></script>
   <script>
-	  var a=30;
+    var a = 30;
   </script>
   <!-- Template Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
@@ -43,7 +45,7 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
-  
+
   <style>
     :root {
       --dark-bg: #121212;
@@ -86,7 +88,8 @@
     .worksheet-card {
       background-color: var(--dark-card);
       border-radius: 15px;
-      overflow: hidden;
+      /* Changed overflow to visible to allow dropdown to show */
+      overflow: visible;
       margin-bottom: 30px;
       box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
       transition: transform 0.3s ease;
@@ -142,7 +145,7 @@
     }
 
     .download-btn:hover {
-      background-color: #9d65df;
+      background-color: #787878;
       transform: translateY(-2px);
       color: var(--dark-bg);
     }
@@ -150,74 +153,117 @@
     .download-btn i {
       margin-right: 8px;
     }
+
+    .menu-container {
+      position: relative;
+    }
+
+    .menu-container .dropdown {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      z-index: 9999999;
+      /* Use an extremely high value */
+    }
+
+    .footer {
+      position: relative;
+      z-index: 1;
+      /* Ensure footer has a lower z-index */
+    }
   </style>
 </head>
 
 <body id="page">
 
   <!-- ======= Header ======= -->
-  <header class="header">
-    <h1 class="logo">Curry Katha</h1>
-    <div class="nav-buttons">
-        <button id="button" class="talk-button">Home•</button>
-        <div class="menu-container">
-            <button class="menu-button">Project Summary <span>⋯</span></button>
-            <div class="dropdown">
-                <a href="#">Home</a>
-                <a href="#">About</a>
-                <a href="#">Services</a>
-                <a href="#">Contact</a>
-            </div>
-        </div>
-        <button id="button" class="talk-button">Umeed •</button>
-        <button id="button" class="talk-button">Initiatives •</button>
-        <div class="menu-container">
-            <button class="menu-button">Untold <span>⋯</span></button>
-            <div class="dropdown">
-                <a href="#">Home</a>
-                <a href="#">About</a>
-                <a href="#">Services</a>
-                <a href="#">Contact</a>
-            </div>
-        </div>
-        <button id="button" class="talk-button">Rejuvenation •</button>
-        <button id="button" class="talk-button">Research •</button>
-        <div class="menu-container">
-            <button class="menu-button">Collaborators <span>⋯</span></button>
-            <div class="dropdown">
-                <a href="#">Home</a>
-                <a href="#">About</a>
-                <a href="#">Services</a>
-                <a href="#">Contact</a>
-            </div>
-        </div>
-        <div class="dropdown">
-            <a href="#">Palate Panache</a>
-            <a href="#">Impressions</a>
-            <a href="#">
-                downloads
-                <div class="dropdown">
-                    <a href="#">File 1</a>
-                    <a href="#">File 2</a>
-                    <a href="#">File 3</a>
-                </div>
-            </a>
-        </div>
-    </div>
-</header>
+  <header class="header" onclick="closeDropdowns()">
 
-  
+    <h1 class="logo">UMEED</h1>
+    <div class="nav-buttons">
+      <button id="button" class="talk-button" onclick="location.href='/index.html'">Home</button>
+      <div class="menu-container">
+        <button class="menu-button">Project Summary <span>⋯</span></button>
+        <div class="dropdown">
+          <a href="./narrative.html">Narrative</a>
+          <a href="./learning.html">Learning</a>
+          <a href="./layout.html">Layout</a>
+
+        </div>
+      </div>
+      <button id="button" class="talk-button" onclick="location.href='/umeed.html'">Umeed </button>
+      <div class="menu-container">
+        <button class="menu-button">Initiatives <span>⋯</span></button>
+        <div class="dropdown">
+          <a href="./old_age_home_connect.html">OldAge Home Connect</a>
+          <a href="./orphanage_connect.html">Orphanage Connect</a>
+          <a href="./organ_donation.html">Organ Donation</a>
+          <a href="./joy_of_giving.html">Joy of Giving</a>
+          <a href="./volunteering.html">Volunteering</a>
+          <a href="./.vintage_veterans_app.html">Vintage Veterans app</a>
+        </div>
+      </div>
+      <div class="menu-container">
+        <button class="menu-button">Untold <span>⋯</span></button>
+        <div class="dropdown">
+          <a href="./echoes.html">Echoes</a>
+          <a href="./resonance.html">Resonance</a>
+        </div>
+      </div>
+      <button id="button" class="talk-button" onclick="location.href='/rejuvenation.html'">Rejuvenation</button>
+      <div class="menu-container">
+        <button class="menu-button">Research <span>⋯</span></button>
+        <div class="dropdown">
+          <a href="./indian_culture.html">Indian Culture</a>
+          <a href="./worksheets.html">Interaction 1</a>
+          <a href="./board_games.html">Interaction 2</a>
+          <a href="./yoga.html">Interaction 3</a>
+          <a href="./food_recipes.html">Analysis</a>
+          <a href="./yoga.html">Bibliography</a>
+        </div>
+      </div>
+      <div class="menu-container">
+        <button class="menu-button">Collaborators <span>⋯</span></button>
+        <div class="dropdown">
+          <a href="./students.html">Students</a>
+          <a href="./fecilitators.html">Facilitators</a>
+
+        </div>
+      </div>
+
+
+      <div class="menu-container">
+        <button class="menu-button">Palette <span>⋯</span></button>
+        <div class="dropdown">
+          <a href="./food_recipes.html">Palate Panache</a>
+          <a href="./impressions.html">Impressions</a>
+        </div>
+      </div>
+      <div class="menu-container">
+        <button class="menu-button">Downloads <span>⋯</span></button>
+        <div class="dropdown">
+          <a href="./bhajans.html">Bhajans</a>
+          <a href="./worksheets.html">Worksheets</a>
+          <a href="./yoga.html">Yoga videos</a>
+          <a href="./movies.html">Old Movies</a>
+        </div>
+      </div>
+
+    </div>
+  </header>
+
+
   <!-- End Header -->
 
 
 
- 
-<!-- End Hero Section -->
+
+  <!-- End Hero Section -->
 
   <!-- Worksheets Section -->
-   <br>
-   <br>
-   <br>
+  <br>
+  <br>
+  <br>
   <section class="worksheets-section">
     <div class="container">
       <h2 class="section-title" data-aos="fade-up">Educational Worksheets</h2>
@@ -225,13 +271,23 @@
         <!-- Worksheet 1 -->
         <div class="col-lg-3 col-md-6" data-aos="fade-up">
           <div class="worksheet-card">
-            <img src="assets/img/worksheet1.jpg" alt="Memory Activities">
+            <img src="assets/img/memory.png" alt="Memory Activities">
             <div class="worksheet-content">
               <h3>Memory Activities</h3>
-              <p>Engaging exercises designed to enhance cognitive function and memory retention in elderly individuals.</p>
-              <a href="assets/worksheets/memory_activities.pdf" class="download-btn" download>
-                <i class="bi bi-download"></i> Download PDF
-              </a>
+              <p>Engaging exercises designed to enhance cognitive function and memory retention in elderly individuals.
+              </p>
+              <div class="menu-container">
+                <a class="download-btn">
+                  <i class="bi bi-download"></i>Download PDF</a>
+                <div class="dropdown">
+                  <a href="assets/pdf/memory1.pdf" class="" download>
+                    <i class="bi bi-download"></i> File 1
+                  </a>
+                  <a href="assets/pdf/memory2.pdf" class="" download>
+                    <i class="bi bi-download"></i> File 2
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -239,27 +295,46 @@
         <!-- Worksheet 2 -->
         <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
           <div class="worksheet-card">
-            <img src="assets/img/worksheet2.jpg" alt="Physical Exercises">
+            <img src="assets/img/physical.png" alt="Physical Exercises">
             <div class="worksheet-content">
               <h3>Physical Exercises</h3>
-              <p>Simple and safe physical activities that can be performed while seated or standing, promoting mobility.</p>
-              <a href="assets/worksheets/physical_exercises.pdf" class="download-btn" download>
-                <i class="bi bi-download"></i> Download PDF
-              </a>
+              <p>Simple and safe physical activities that can be performed while seated or standing, promoting mobility.
+              </p>
+              <div class="menu-container">
+                <a class="download-btn">
+                  <i class="bi bi-download"></i>Download PDF</a>
+                <div class="dropdown">
+                  <a href="assets/pdf/physical1.pdf" class="" download>
+                    <i class="bi bi-download"></i> File 1
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
 
         <!-- Worksheet 3 -->
-        <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="col-lg-3 col-md=6" data-aos="fade-up" data-aos-delay="200">
           <div class="worksheet-card">
-            <img src="assets/img/worksheet3.jpg" alt="Creative Activities">
+            <img src="assets/img/cognitive.png" alt="Creative Activities">
             <div class="worksheet-content">
-              <h3>Creative Activities</h3>
-              <p>Art and craft activities that encourage self-expression and maintain fine motor skills.</p>
-              <a href="assets/worksheets/creative_activities.pdf" class="download-btn" download>
-                <i class="bi bi-download"></i> Download PDF
-              </a>
+              <h3>Cognitive Activities</h3>
+              <p>Engage your mind and enhance your mental clarity with our fun and stimulating cognitive worksheets</p>
+              <div class="menu-container">
+                <a class="download-btn"> 
+                  <i class="bi bi-download"></i>Download PDF</a>
+                <div class="dropdown">
+                  <a href="assets/pdf/cognitive1.pdf" class="" download>
+                    <i class="bi bi-download"></i> File 1
+                  </a>
+                  <a href="assets/pdf/cognitive2.pdf" class="" download>
+                    <i class="bi bi-download"></i> File 2
+                  </a>
+                  <a href="assets/pdf/cognitive3.pdf" class="" download>
+                    <i class="bi bi-download"></i> File 3
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -267,11 +342,11 @@
         <!-- Worksheet 4 -->
         <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
           <div class="worksheet-card">
-            <img src="assets/img/worksheet4.jpg" alt="Social Activities">
+            <img src="assets/img/creative.png" alt="Social Activities">
             <div class="worksheet-content">
-              <h3>Social Activities</h3>
-              <p>Engage your mind and enhance your mental clarity with our fun and stimulating cognitive worksheets</p>
-              <a href="assets/worksheets/social_activities.pdf" class="download-btn" download>
+              <h3>Creative Activities</h3>
+              <p>Art and craft activities that encourage self-expression and maintain fine motor skills.</p>
+              <a href="assets/pdf/colouring1.pdf" class="download-btn" download>
                 <i class="bi bi-download"></i> Download PDF
               </a>
             </div>
@@ -279,51 +354,53 @@
         </div>
       </div>
     </div>
+    <br>
+    <br>
+    <br>
   </section>
 
-<!-- ======= Footer ======= -->
-<footer id="footer" class="footer" style="background-color: azure;">
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer" style="background-color: azure;">
 
-  <div class="footer-content position-relative">
+    <div class="footer-content position-relative">
       <div class="container">
-          <div class="row">
+        <div class="row">
 
-              <div class="col-lg-4 col-md-6"
-                  style="display: flex; justify-content: center; width:100vw; margin-top: 5px;">
-                  <div class="footer-info">
-                      <div class="iconh">
-                          <img class="icon" src="assets/img/logo2.png" />
-                          <h3 style="font-size: 40px;">CyberFair  2025</h3>
-                      </div>
-                      <p style="text-align: center;">
-                          Aravali International School<br>
-                          Sector 43 Badkal Surajkund Road,Faridabad <br>
-                          Pin Code: 121003<br><br>
-                      </p>
-                  </div>
-              </div><!-- End footer info column-->
+          <div class="col-lg-4 col-md-6" style="display: flex; justify-content: center; width:100vw; margin-top: 5px;">
+            <div class="footer-info">
+              <div class="iconh">
+                <img class="icon" src="assets/img/logo2.png" />
+                <h3 style="font-size: 40px;">CyberFair 2025</h3>
+              </div>
+              <p style="text-align: center;">
+                Aravali International School<br>
+                Sector 43 Badkal Surajkund Road,Faridabad <br>
+                Pin Code: 121003<br><br>
+              </p>
+            </div>
+          </div><!-- End footer info column-->
 
-          </div>
+        </div>
       </div>
-  </div>
+    </div>
 
-  <div class="footer-legal text-center position-relative">
+
+    <div class="footer-legal text-center position-relative">
       <div class="container">
-          <div class="copyright">
-              <a href="http://www.globalschoolnet.org/" target="_blank"><img
-                      src="assets/img/cyberflogofooter.JPG" /></a>
-          </div>
-          <div class="credits">
-              <!-- All the links in the footer should remain intact. -->
-              <!-- You can delete the links only if you purchased the pro version. -->
-              <!-- Licensing information: https://bootstrapmade.com/license/ -->
-              <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/upconstruction-bootstrap-construction-website-template/ -->
-              E-mail - <a href="https://bootstrapmade.com/">cyberfair23@gmail.com</a>
-          </div>
+        <div class="copyright">
+          <a href="http://www.globalschoolnet.org/" target="_blank"><img src="assets/img/cyberflogofooter.JPG" /></a>
+        </div>
+        <div class="credits">
+          <!-- All the links in the footer should remain intact. -->
+          <!-- You can delete the links only if you purchased the pro version. -->
+          <!-- Licensing information: https://bootstrapmade.com/license/ -->
+          <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/upconstruction-bootstrap-construction-website-template/ -->
+          E-mail - <a href="https://bootstrapmade.com/">cyberfair23@gmail.com</a>
+        </div>
       </div>
-  </div>
+    </div>
 
-</footer>
+  </footer>
   <!-- End Footer -->
 
   <!-- Vendor JS Files -->
@@ -341,4 +418,3 @@
 </body>
 
 </html>
-
