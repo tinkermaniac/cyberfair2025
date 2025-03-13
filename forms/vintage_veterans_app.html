@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Vintage Veteran App</title>
+  <meta content="Vintage Veteran App - Supporting our elderly community" name="description">
+  <meta content="vintage, veteran, elderly, app, support" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/logo2.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Roboto:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://tinkermaniac.github.io/cyberfairconfig/passkey.js"></script>
+  <script src="assets/js/loader.js"></script>
+  
+  <!-- Template Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+  <script src="navbar-fix.js"></script>
+
+  <style>
+    body {
+      background-color: #000000;
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      overflow: hidden;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    .video-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1;
+    }
+
+    video {
+      max-width: 90%;
+      max-height: 90%;
+      box-shadow: 0 0 50px rgba(255, 255, 255, 0.1);
+      border-radius: 8px;
+    }
+
+    .back-button {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      z-index: 100;
+      background-color: rgba(0, 0, 0, 0.6);
+      color: white;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+
+    .back-button:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+      transform: scale(1.1);
+    }
+
+    .back-button i {
+      font-size: 18px;
+    }
+
+    /* Subtle background animation */
+    .bg-animation {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      background: radial-gradient(circle at center, #101010 0%, #000000 100%);
+      opacity: 0.8;
+    }
+
+    .bg-animation::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('assets/img/noise.png');
+      opacity: 0.05;
+      animation: noise 8s infinite;
+    }
+
+    @keyframes noise {
+      0%, 100% { transform: translate(0, 0); }
+      10% { transform: translate(-5%, -5%); }
+      20% { transform: translate(-10%, 5%); }
+      30% { transform: translate(5%, -10%); }
+      40% { transform: translate(-5%, 15%); }
+      50% { transform: translate(-10%, 5%); }
+      60% { transform: translate(15%, 0); }
+      70% { transform: translate(0, 10%); }
+      80% { transform: translate(-15%, 0); }
+      90% { transform: translate(10%, 5%); }
+    }
+
+    /* Video controls styling */
+    video::-webkit-media-controls {
+      background-color: rgba(0, 0, 0, 0.5);
+      border-radius: 5px;
+      padding: 5px;
+    }
+
+    video::-webkit-media-controls-play-button,
+    video::-webkit-media-controls-volume-slider,
+    video::-webkit-media-controls-mute-button,
+    video::-webkit-media-controls-timeline,
+    video::-webkit-media-controls-fullscreen-button {
+      color: white;
+    }
+
+    /* Loading animation */
+    .loader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+      transition: opacity 0.5s ease;
+    }
+
+    .loader.hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .loader-circle {
+      width: 50px;
+      height: 50px;
+      border: 3px solid rgba(255, 255, 255, 0.1);
+      border-top: 3px solid #ffffff;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Loading Animation -->
+  <div class="loader" id="loader">
+    <div class="loader-circle"></div>
+  </div>
+
+  <!-- Background Animation -->
+  <div class="bg-animation"></div>
+
+  <!-- Back Button -->
+  <a href="index.html" class="back-button" title="Back to Home">
+    <i class="bi bi-arrow-left"></i>
+  </a>
+
+  <!-- Video Container -->
+  <div class="video-container">
+    <video id="vintage-video" controls autoplay>
+      <source src="./vintage_veteran.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <!-- Scripts -->
+  <script>
+    // Hide loader when video is ready to play
+    document.getElementById('vintage-video').addEventListener('canplay', function() {
+      document.getElementById('loader').classList.add('hidden');
+    });
+
+    // Fallback if video takes too long to load
+    setTimeout(function() {
+      document.getElementById('loader').classList.add('hidden');
+    }, 5000);
+
+    // Make video responsive
+    function resizeVideo() {
+      const video = document.getElementById('vintage-video');
+      const container = document.querySelector('.video-container');
+      const aspectRatio = 16 / 9; // Assuming 16:9 video
+      
+      const containerWidth = container.clientWidth;
+      const containerHeight = container.clientHeight;
+      
+      let width = containerWidth * 0.9;
+      let height = width / aspectRatio;
+      
+      if (height > containerHeight * 0.9) {
+        height = containerHeight * 0.9;
+        width = height * aspectRatio;
+      }
+      
+      video.style.width = width + 'px';
+      video.style.height = height + 'px';
+    }
+
+    // Resize video on load and window resize
+    window.addEventListener('load', resizeVideo);
+    window.addEventListener('resize', resizeVideo);
+  </script>
+</body>
+
+</html> 

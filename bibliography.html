@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Bibliography - References</title>
+  <meta content="Bibliography and references for the CyberFair 2025 project" name="description">
+  <meta content="bibliography, references, research, sources" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/logo2.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Roboto:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://tinkermaniac.github.io/cyberfairconfig/passkey.js"></script>
+  <script src="assets/js/loader.js"></script>
+  
+  <!-- Template Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+  <script src="navbar-fix.js"></script>
+
+  <style>
+    body {
+      background-color: #0a0a0a;
+      color: #f5f5f5;
+    }
+
+    .bibliography-section {
+      background-color: rgba(0, 0, 0, 0.7);
+      border-radius: 15px;
+      padding: 40px;
+      margin: 80px auto;
+      max-width: 1200px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .section-title {
+      color: #fff;
+      font-size: 2.5rem;
+      margin-bottom: 30px;
+      text-align: center;
+      font-weight: 700;
+      position: relative;
+      padding-bottom: 20px;
+    }
+
+    .section-title:after {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 50px;
+      height: 3px;
+      background: #faf9f8;
+      bottom: 0;
+      left: calc(50% - 25px);
+    }
+
+    .reference-category {
+      margin-bottom: 40px;
+    }
+
+    .category-title {
+      color: #f8f8f8;
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      padding-bottom: 10px;
+    }
+
+    .reference-item {
+      background-color: rgba(30, 30, 30, 0.7);
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border-left: 4px solid #e7e5de;
+    }
+
+    .reference-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .reference-title {
+      color: #ffffff;
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+
+    .reference-link {
+      color: #0e0afa;
+      word-break: break-word;
+      transition: color 0.3s ease;
+    }
+
+    .reference-link:hover {
+      color: #ffffff;
+      text-decoration: underline;
+    }
+
+    .reference-description {
+      color: #cccccc;
+      margin-top: 10px;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    /* Background image styling */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("bg.png");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      opacity: 0.2;
+      z-index: -1;
+    }
+
+    /* Fade-in animation */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .reference-icon {
+      margin-right: 10px;
+      color: #ffffff;
+    }
+
+    .breadcrumbs {
+      background-blend-mode: multiply;
+      background-color: rgba(0, 0, 0, 0.7);
+    }
+  </style>
+</head>
+
+<body id="page">
+
+  <!-- ======= Header ======= -->
+  <header class="header" onclick="closeDropdowns()">
+  
+    <a href="index.html">
+      <img height="70px" style="border-radius: 10px;" src="assets/img/topleftcyberfairlogo.jpeg" alt="Logo">
+    </a> 
+    <div class="nav-buttons">
+      <button id="button" class="talk-button" onclick="location.href='index.html'">Home</button>
+      <div class="menu-container">
+        <button class="menu-button">Project Summary <span>⋯</span></button>
+        <div class="dropdown">
+          <a href="narrative.html">Narrative</a>
+          <a href="learning.html">Learning</a>
+          <a href="layout.html">Layout</a>
+  
+        </div>
+      </div>
+      <button id="button" class="talk-button" onclick="location.href='umeed.html'">Umeed </button>
+      <div class="menu-container">
+        <button class="menu-button">Initiatives <span>⋯</span></button>
+        <div class="dropdown">
+          <a href="forms/elder_connect.html">Elder Connect</a>
+          <a href="forms/orphanage_connect.html">Orphanage Connect</a>
+          <a href="forms/organ_donation.html">Organ Donation</a>
+          <a href="forms/joy_of_giving.html">Joy of Giving</a>
+          <a href="forms/volunteering.html">Volunteering</a>
+          <a href="forms/vintage_veterans_app.html">Vintage Veterans app</a>
+        </div>
+      </div>
+      <div class="menu-container">
+        <button class="menu-button" >Untold <span>⋯</span></button>
+        <div class="dropdown">
+          <a href="echoes.html">Echoes</a>
+          <a href="resonance.html">Resonance</a>
+        </div>
+      </div>
+      <button id="button" class="talk-button" onclick="location.href='rejuvenation.html'">Rejuvenation</button>
+      <div class="menu-container">
+        <button class="menu-button">Research <span>⋯</span></button>
+        <div class="dropdown">
+          <a href="indian_culture.html">Indian Culture</a>
+          <a href="interaction_1.html">Interaction 1</a>
+          <a href="interaction_2.html">Interaction 2</a>
+          <a href="interaction_3.html">Interaction 3</a>
+          <a href="analysis.html">Analysis</a>
+          <a href="bibliography.html">Bibliography</a>
+        </div>
+      </div>
+      <div class="menu-container">
+        <button class="menu-button">Collaborators <span>⋯</span></button>
+        <div class="dropdown">
+          <a href="./cyberfair-gp/team.html">Students</a>
+          <a href="facilitators.html">Facilitators</a>
+  
+        </div>
+      </div>
+      
+     
+      <div class="menu-container">
+        <button class="menu-button">Palette <span>⋯</span></button>
+        <div class="dropdown">
+          <a href="food_recipes.html">Palate Panache</a>
+          <a href="impressions.html">Impressions</a>
+        </div>
+      </div>
+      <div class="menu-container">
+        <button class="menu-button">Downloads <span>⋯</span></button>
+        <div class="dropdown">
+          <a href="bhajans.html">Bhajans</a>
+          <a href="worksheets.html">Worksheets</a>
+          <a href="yoga.html">Yoga videos</a>
+          <a href="movies.html">Old Movies</a>
+        </div>
+      </div>
+  
+    </div>
+  </header>
+  <!-- End Header -->
+
+  <!-- ======= Breadcrumbs ======= -->
+  <div class="breadcrumbs d-flex align-items-center" style="background-image: url('assets/img/breadcrumbs-bg.jpg');">
+    <div class="container position-relative d-flex flex-column align-items-center" data-aos="fade">
+      <h2>Bibliography</h2>
+      <ol>
+        <li><a href="index.html">Home</a></li>
+        <li>Bibliography</li>
+      </ol>
+    </div>
+  </div><!-- End Breadcrumbs -->
+
+  <!-- ======= Main Content Section ======= -->
+  <main id="main">
+    <section id="bibliography-section">
+      <div class="container">
+        <div class="bibliography-section fade-in">
+          <h1 class="section-title">Research References</h1>
+          
+          <!-- Cultural References -->
+          <div class="reference-category">
+            <h2 class="category-title"><i class="bi bi-book reference-icon"></i>Cultural Studies</h2>
+            
+            <div class="reference-item">
+              <h3 class="reference-title">The Meaning of "Umeed" in Urdu</h3>
+              <a href="https://www.quora.com/What-does-the-Urdu-word-umeed-mean" target="_blank" class="reference-link">
+                <i class="bi bi-link-45deg"></i> https://www.quora.com/What-does-the-Urdu-word-umeed-mean
+              </a>
+              <p class="reference-description">
+                An exploration of the Urdu word "Umeed," which means hope, expectation, or aspiration. This source provides cultural context for our project's name and mission.
+              </p>
+            </div>
+
+            <div class="reference-item">
+              <h3 class="reference-title">A Beacon of Hope</h3>
+              <a href="https://faithgateway.com/blogs/christian-books/a-beacon-of-hope" target="_blank" class="reference-link">
+                <i class="bi bi-link-45deg"></i> https://faithgateway.com/blogs/christian-books/a-beacon-of-hope
+              </a>
+              <p class="reference-description">
+                This article explores the concept of hope as a guiding light in difficult times, which aligns with our project's mission to bring hope to the elderly.
+              </p>
+            </div>
+
+            <div class="reference-item">
+              <h3 class="reference-title">Differences Between Indian Culture and Western Culture</h3>
+              <a href="https://avanigo.com/difference-between-indian-culture-and-western-culture/" target="_blank" class="reference-link">
+                <i class="bi bi-link-45deg"></i> https://avanigo.com/difference-between-indian-culture-and-western-culture/
+              </a>
+              <p class="reference-description">
+                A comparative analysis of Indian and Western cultural values, particularly regarding family structures and elder care, which informed our understanding of cultural contexts.
+              </p>
+            </div>
+
+            <div class="reference-item">
+              <h3 class="reference-title">Culture of India</h3>
+              <a href="https://en.wikipedia.org/wiki/Culture_of_India" target="_blank" class="reference-link">
+                <i class="bi bi-link-45deg"></i> https://en.wikipedia.org/wiki/Culture_of_India
+              </a>
+              <p class="reference-description">
+                A comprehensive overview of Indian culture, traditions, and values that provided background knowledge for our project's cultural context.
+              </p>
+            </div>
+          </div>
+
+          <!-- Mythological References -->
+          <div class="reference-category">
+            <h2 class="category-title"><i class="bi bi-journal-richtext reference-icon"></i>Mythological & Historical References</h2>
+            
+            <div class="reference-item">
+              <h3 class="reference-title">Shravana Kumara</h3>
+              <a href="https://en.wikipedia.org/wiki/Shravana_Kumara" target="_blank" class="reference-link">
+                <i class="bi bi-link-45deg"></i> https://en.wikipedia.org/wiki/Shravana_Kumara
+              </a>
+              <p class="reference-description">
+                Information about Shravana Kumara, a figure from Hindu mythology known for his devotion to his elderly parents, which serves as an inspiration for our project.
+              </p>
+            </div>
+
+            <div class="reference-item">
+              <h3 class="reference-title">The Story of Shravan Kumar</h3>
+              <a href="https://www.chivukulas.com/2019/03/the-story-of-shravan-kumar.html" target="_blank" class="reference-link">
+                <i class="bi bi-link-45deg"></i> https://www.chivukulas.com/2019/03/the-story-of-shravan-kumar.html
+              </a>
+              <p class="reference-description">
+                A detailed narrative of Shravan Kumar's story, highlighting the cultural importance of elder care in Indian tradition.
+              </p>
+            </div>
+
+            <div class="reference-item">
+              <h3 class="reference-title">Valmiki Ramayana - Ayodhya Kanda</h3>
+              <a href="https://www.valmikiramayan.net/utf8/ayodhya/sarga63/ayodhya_63_frame.htm" target="_blank" class="reference-link">
+                <i class="bi bi-link-45deg"></i> https://www.valmikiramayan.net/utf8/ayodhya/sarga63/ayodhya_63_frame.htm
+              </a>
+              <p class="reference-description">
+                Original text from the Ramayana that references the story of Shravan Kumar, providing historical context for our project's values.
+              </p>
+            </div>
+          </div>
+
+          <!-- Elder Care Resources -->
+          <div class="reference-category">
+            <h2 class="category-title"><i class="bi bi-house-heart reference-icon"></i>Elder Care Resources</h2>
+            
+            <div class="reference-item">
+              <h3 class="reference-title">Old Age Homes in Haryana</h3>
+              <a href="https://socialjusticehry.gov.in/old-age-homes/" target="_blank" class="reference-link">
+                <i class="bi bi-link-45deg"></i> https://socialjusticehry.gov.in/old-age-homes/
+              </a>
+              <p class="reference-description">
+                Official information about old age homes in Haryana, which helped us identify facilities for our outreach program.
+              </p>
+            </div>
+
+            <div class="reference-item">
+              <h3 class="reference-title">Old Age Homes in Faridabad</h3>
+              <a href="https://care24.co.in/old-age-home/faridabad/" target="_blank" class="reference-link">
+                <i class="bi bi-link-45deg"></i> https://care24.co.in/old-age-home/faridabad/
+              </a>
+              <p class="reference-description">
+                A directory of old age homes in Faridabad, which we used to locate and connect with local facilities for our project.
+              </p>
+            </div>
+          </div>
+
+          <!-- Culinary Resources -->
+          <div class="reference-category">
+            <h2 class="category-title"><i class="bi bi-cup-hot reference-icon"></i>Culinary Resources</h2>
+            
+            <div class="reference-item">
+              <h3 class="reference-title">Potato Pancakes Recipe</h3>
+              <a href="https://lilluna.com/potato-pancakes/" target="_blank" class="reference-link">
+                <i class="bi bi-link-45deg"></i> https://lilluna.com/potato-pancakes/
+              </a>
+              <p class="reference-description">
+                Recipe for potato pancakes featured in our Palate Panache section, selected for its soft texture and nutritional value for elderly individuals.
+              </p>
+            </div>
+
+            <div class="reference-item">
+              <h3 class="reference-title">Soft Food Recipes for the Elderly</h3>
+              <a href="https://www.seniorly.com/resource-center/health-and-lifestyle/40-delicious-soft-food-recipes-for-the-elderly" target="_blank" class="reference-link">
+                <i class="bi bi-link-45deg"></i> https://www.seniorly.com/resource-center/health-and-lifestyle/40-delicious-soft-food-recipes-for-the-elderly
+              </a>
+              <p class="reference-description">
+                A collection of soft food recipes specifically designed for elderly individuals, which informed our recipe selections.
+              </p>
+            </div>
+
+            <div class="reference-item">
+              <h3 class="reference-title">Tropical Summer Party Fruit Salad</h3>
+              <a href="https://gardeninthekitchen.com/tropical-summer-party-fruit-salad/" target="_blank" class="reference-link">
+                <i class="bi bi-link-45deg"></i> https://gardeninthekitchen.com/tropical-summer-party-fruit-salad/
+              </a>
+              <p class="reference-description">
+                Recipe for a nutritious and easy-to-eat fruit salad that we included in our culinary resources for elderly care.
+              </p>
+            </div>
+
+            <div class="reference-item">
+              <h3 class="reference-title">Baked Peaches Recipe</h3>
+              <a href="https://www.wellplated.com/baked-peaches/" target="_blank" class="reference-link">
+                <i class="bi bi-link-45deg"></i> https://www.wellplated.com/baked-peaches/
+              </a>
+              <p class="reference-description">
+                Recipe for baked peaches, a soft and nutritious dessert option that we featured in our food recommendations.
+              </p>
+            </div>
+
+            <div class="reference-item">
+              <h3 class="reference-title">Recipes for Elderly Parents</h3>
+              <a href="https://freedomcare.com/recipes-for-elderly-parents/" target="_blank" class="reference-link">
+                <i class="bi bi-link-45deg"></i> https://freedomcare.com/recipes-for-elderly-parents/
+              </a>
+              <p class="reference-description">
+                A resource guide for preparing appropriate meals for elderly individuals, which informed our culinary recommendations.
+              </p>
+            </div>
+          </div>
+
+          <!-- Activity Resources -->
+          <div class="reference-category">
+            <h2 class="category-title"><i class="bi bi-puzzle reference-icon"></i>Activity Resources</h2>
+            
+            <div class="reference-item">
+              <h3 class="reference-title">Word Search Puzzles for Seniors</h3>
+              <a href="https://www.surewise.com/wp-content/uploads/2023/03/Surewise-wordsearch-2023-5-4.pdf" target="_blank" class="reference-link">
+                <i class="bi bi-link-45deg"></i> https://www.surewise.com/wp-content/uploads/2023/03/Surewise-wordsearch-2023-5-4.pdf
+              </a>
+              <p class="reference-description">
+                Word search puzzles designed for seniors, which we included in our activity resources to promote cognitive engagement.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer" style="background-color: #1a1a1a;">
+    <div class="footer-content position-relative">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 col-md-6" style="display: flex; justify-content: center; width:100vw; margin-top: 5px;">
+            <div class="footer-info">
+              <div class="iconh">
+                <img class="icon" src="assets/img/logo2.png" />
+                <h3 style="font-size: 40px; color: #ffffff;">CyberFair 2025</h3>
+              </div>
+              <p style="text-align: center; color: #e0e0e0;">
+                Aravali International School<br>
+                Sector 43 Badkal Surajkund Road, Faridabad <br>
+                Pin Code: 121003<br><br>
+              </p>
+            </div>
+          </div><!-- End footer info column-->
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-legal text-center position-relative">
+      <div class="container">
+        <div class="copyright">
+          <a href="http://www.globalschoolnet.org/" target="_blank"><img src="assets/img/cyberflogofooter.JPG" /></a>
+        </div>
+        <div class="credits" style="color: #cccccc;">
+          E-mail - <a href="mailto:cyberfair23@gmail.com" style="color: #e0a800;">cyberfair23@gmail.com</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- End Footer -->
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+  <!-- Custom JS for animations -->
+  <script>
+    // Fade-in animation for content sections
+    document.addEventListener('DOMContentLoaded', function() {
+      const fadeElements = document.querySelectorAll('.fade-in');
+      
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, { threshold: 0.1 });
+      
+      fadeElements.forEach(element => {
+        observer.observe(element);
+      });
+    });
+
+    // Fix for dropdown menu
+    function closeDropdowns() {
+      const dropdowns = document.querySelectorAll('.dropdown');
+      dropdowns.forEach(dropdown => {
+        dropdown.style.display = 'none';
+      });
+    }
+
+    document.querySelectorAll('.menu-button').forEach(button => {
+      button.addEventListener('click', function(e) {
+        e.stopPropagation();
+        const dropdown = this.nextElementSibling;
+        const isDisplayed = dropdown.style.display === 'block';
+        
+        // Close all dropdowns first
+        document.querySelectorAll('.dropdown').forEach(d => {
+          d.style.display = 'none';
+        });
+        
+        // Toggle current dropdown
+        dropdown.style.display = isDisplayed ? 'none' : 'block';
+      });
+    });
+
+    // Close dropdowns when clicking outside
+    document.addEventListener('click', function() {
+      closeDropdowns();
+    });
+  </script>
+
+</body>
+
+</html> 
