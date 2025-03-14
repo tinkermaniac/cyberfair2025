@@ -354,7 +354,7 @@
 			top: 0;
 			width: 100%;
 			height: 100%;
-			background-color:grey);
+			background-color:grey ;
 			justify-content: center;
 			align-items: center;
 		}
@@ -397,77 +397,104 @@
 		  display: flex;
 		  justify-content: space-between;
 		  align-items: center;
-		  padding: 12px 20px;
+		  padding: 8px 20px;
 		  position: sticky;
 		  top: 0;
 		  z-index: 1000;
 		  background-color: rgba(25, 25, 25, 0.9) !important;
+		  height: 80px;
 		}
 
 		.nav-buttons {
 		  display: flex;
 		  align-items: center;
 		  gap: 12px;
+		  height: 100%;
 		}
 
 		.talk-button, .menu-button {
-		  background-color: transparent;
-		  color: white;
-		  border: 2px solid grey;
+		  background-color: #404040 !important;
+		  color: white !important;
+		  border: 2px solid #404040;
 		  border-radius: 25px;
-		  padding: 8px 20px;
+		  padding: 10px 20px;
 		  cursor: pointer;
-		  font-size: 16px;
+		  font-size: 14px;
+		  font-weight: 600;
 		  transition: all 0.3s ease;
-		  margin: 0 5px;
+		  margin: 0 6px;
 		}
 
 		.talk-button:hover, .menu-button:hover, .menu-button.active {
-		  background-color: grey;
-		  color: white;
+		  background-color: #404040 !important;
+		  border-color: #404040;
+		  color: white !important;
 		}
 
 		.menu-container {
 		  position: relative;
 		  display: inline-block;
+		  transition: all 0.3s ease;
 		}
 
 		.dropdown {
 		  display: none;
 		  position: absolute;
-		  background-color: #2d2d2d;
-		  min-width: 200px;
-		  box-shadow: 0px 8px 16px 0px gray;
-		  z-index: 1;
-		  border-radius: 12px;
+		  background-color: rgba(25, 25, 25, 0.9);
+		  min-width: 180px;
+		  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+		  z-index: 1000;
+		  border-radius: 10px;
 		  overflow: hidden;
 		  margin-top: 5px;
+		  border: 1px solid #404040;
+		  padding: 6px 0;
+		  transition: all 0.3s ease;
+		  opacity: 0;
+		  visibility: hidden;
+		  transform: translateY(10px);
 		}
 
 		.dropdown.show {
 		  display: block;
+		  opacity: 1;
+		  visibility: visible;
+		  transform: translateY(0);
+		  transition-delay: 0.1s;
+		}
+
+		.menu-container:hover .dropdown {
+		  display: block;
+		  opacity: 1;
+		  visibility: visible;
+		  transform: translateY(0);
 		}
 
 		.dropdown a {
-		  color: white;
-		  padding: 12px 20px;
+		  color: white !important;
+		  padding: 10px 18px;
 		  text-decoration: none;
 		  display: block;
 		  transition: background-color 0.3s ease;
-		  font-size: 12px;
+		  font-size: 14px;
+		  font-weight: 600;
 		}
 
 		.dropdown a:hover {
-		  background-color: white;
-		  color: grey !important;
+		  background-color: rgba(64, 64, 64, 0.9);
+		  color: white !important;
 		}
 
-		.logo {
-		  color: white;
-		  font-size: 24px;
-		  font-weight: bold;
-		  margin: 0;
-		  padding: 0 20px;
+		.menu-button {
+		  display: flex;
+		  align-items: center;
+		  gap: 6px;
+		  font-weight: 600;
+		}
+
+		.menu-button span {
+		  font-size: 16px;
+		  line-height: 1;
 		}
 	</style>
 	
@@ -536,7 +563,325 @@
 
 	<!-- Template Main JS File -->
 	<script src="assets/js/main.js"></script>
+	<script src="assets/js/main.js"></script>
 
+	<script>
+	// Navbar dropdown functionality with hover support
+	function setupHoverBehavior() {
+		const menuContainers = document.querySelectorAll('.menu-container');
+		
+		menuContainers.forEach(container => {
+			let timeoutId;
+			
+			container.addEventListener('mouseenter', function() {
+				clearTimeout(timeoutId);
+				const dropdown = this.querySelector('.dropdown');
+				const button = this.querySelector('.menu-button');
+				dropdown.classList.add('show');
+				button.classList.add('active');
+			});
+			
+			container.addEventListener('mouseleave', function() {
+				const dropdown = this.querySelector('.dropdown');
+				const button = this.querySelector('.menu-button');
+				timeoutId = setTimeout(() => {
+					dropdown.classList.remove('show');
+					button.classList.remove('active');
+				}, 200); // 200ms delay before closing
+			});
+			
+			// Keep dropdown open when hovering over it
+			const dropdown = container.querySelector('.dropdown');
+			if (dropdown) {
+				dropdown.addEventListener('mouseenter', () => clearTimeout(timeoutId));
+				dropdown.addEventListener('mouseleave', () => {
+					dropdown.classList.remove('show');
+					container.querySelector('.menu-button').classList.remove('active');
+				});
+			}
+		});
+	}
+	
+	// Initialize hover behavior
+	document.addEventListener('DOMContentLoaded', setupHoverBehavior);
+	
+	// Close dropdowns when clicking anywhere else on the document
+	document.addEventListener('click', function(event) {
+		if (!event.target.closest('.menu-container')) {
+			closeDropdowns();
+		}
+	});
+	
+	// Rest of your existing JavaScript...
+	</script>
+	<style>
+		/* Add this to your existing CSS */
+.menu-container {
+    position: relative;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    transition: all 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+}
+
+.dropdown.show {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    transition-delay: 0.1s;
+}
+
+.menu-container:hover .dropdown {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+	/* Custom styling for recipe cards */
+	.recipe-card {
+	  transition: transform 0.3s ease, box-shadow 0.3s ease;
+	  cursor: pointer;
+	  overflow: hidden;
+	}
+	
+	.recipe-card:hover {
+	  transform: translateY(-5px);
+	  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
+	}
+	
+	.recipe-card .card-image img {
+	  transition: transform 0.5s ease;
+	  height: 250px;
+	  object-fit: cover;
+	}
+	
+	.recipe-card:hover .card-image img {
+	  transform: scale(1.05);
+	}
+	
+	/* Modal styling - Fixed to ensure proper interaction */
+	.modal {
+	  z-index: 1050 !important;
+	}
+	
+	.modal-backdrop {
+	  z-index: 1040 !important;
+	}
+	
+	.modal-content {
+	  border: none;
+	  border-radius: 15px;
+	  background-color: #2d2d2d !important;
+	  color: #ffffff !important;
+	  position: relative;
+	  z-index: 1051 !important;
+	}
+	
+	.modal-header {
+	  border-bottom: 1px solid #404040;
+	}
+	
+	.modal-header .btn-close {
+	  color: white;
+	  opacity: 0.8;
+	}
+	
+	.modal-header .btn-close:hover {
+	  opacity: 1;
+	}
+	
+	#recipeContent {
+	  background-color: #333;
+	  max-height: 300px;
+	  overflow-y: auto;
+	}
+	
+	#recipeContent h4 {
+	  color: #f8f9fa;
+	  margin-bottom: 15px;
+	}
+	
+	#recipeContent p {
+	  color: #e2e2e2;
+	  line-height: 1.6;
+	}
+	
+	#recipeContent strong {
+	  color: #f8f9fa;
+	}
+	
+	/* Navbar styling */
+	.header {
+	  display: flex;
+	  justify-content: space-between;
+	  align-items: center;
+	  padding: 8px 20px;
+	  position: sticky;
+	  top: 0;
+	  z-index: 1000;
+	  background-color: rgba(25, 25, 25, 0.9) !important;
+	  height: 80px;
+	}
+	
+	.logo {
+	  color: white;
+	  font-size: 28px;
+	  font-weight: bold;
+	  margin: 0;
+	}
+	
+	.nav-buttons {
+	  display: flex;
+	  align-items: center;
+	  gap: 12px;
+	  height: 100%;
+	}
+	
+	.talk-button, .menu-button {
+	  background-color: #404040 !important;
+	  color: white !important;
+	  border: 2px solid #404040;
+	  border-radius: 25px;
+	  padding: 10px 20px;
+	  cursor: pointer;
+	  font-size: 14px;
+	  font-weight: 600;
+	  transition: all 0.3s ease;
+	  margin: 0 6px;
+	}
+	
+	.talk-button:hover, .menu-button:hover, .menu-button.active {
+	  background-color: #404040 !important;
+	  border-color: #404040;
+	  color: white !important;
+	}
+	
+	.menu-container {
+	  position: relative;
+	  display: inline-block;
+	}
+	
+	.dropdown {
+	  display: none;
+	  position: absolute;
+	  background-color: rgba(25, 25, 25, 0.9);
+	  min-width: 180px;
+	  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+	  z-index: 1000;
+	  border-radius: 10px;
+	  overflow: hidden;
+	  margin-top: 5px;
+	  border: 1px solid #404040;
+	  padding: 6px 0;
+	  transition: all 0.3s ease;
+	  opacity: 0;
+	  visibility: hidden;
+	  transform: translateY(10px);
+	}
+	
+	.dropdown.show {
+	  display: block;
+	  opacity: 1;
+	  visibility: visible;
+	  transform: translateY(0);
+	  transition-delay: 0.1s;
+	}
+
+	.menu-container:hover .dropdown {
+	  display: block;
+	  opacity: 1;
+	  visibility: visible;
+	  transform: translateY(0);
+	}
+	
+	.dropdown a {
+	  color: white !important;
+	  padding: 10px 18px;
+	  text-decoration: none;
+	  display: block;
+	  transition: background-color 0.3s ease;
+	  font-size: 14px;
+	  font-weight: 600;
+	}
+	
+	.dropdown a:hover {
+	  background-color: rgba(64, 64, 64, 0.9);
+	  color: white !important;
+	}
+	
+	.menu-button {
+	  display: flex;
+	  align-items: center;
+	  gap: 6px;
+	  font-weight: 600;
+	}
+	
+	.menu-button span {
+	  font-size: 16px;
+	  line-height: 1;
+	}
+	
+	/* Dark Theme Additions */
+	body {
+	  background-color: #1a1a1a;
+	  color: #ffffff !important;
+	}
+	
+	.header {
+	  background-color: rgba(25, 25, 25, 0.9) !important;
+	}
+	
+	.card {
+	  background-color: #2d2d2d;
+	  color: #ffffff;
+	  border: 1px solid #404040;
+	}
+	
+	.card-header-title {
+	  color: #ffffff !important;
+	}
+	
+	.breadcrumbs {
+	  background-blend-mode: multiply;
+	  background-color: rgba(0, 0, 0, 0.7);
+	}
+	
+	.modal-content {
+	  background-color: #2d2d2d !important;
+	  color: #ffffff !important;
+	}
+	
+	.footer {
+	  background-color: #1a1a1a !important;
+	  color: #ffffff !important;
+	}
+	
+	.navbar {
+	  background-color: #2d2d2d !important;
+	}
+	
+	.dropdown-menu {
+	  background-color: #2d2d2d;
+	  border: 1px solid #404040;
+	}
+	
+	.dropdown-item {
+	  color: #ffffff !important;
+	}
+	
+	.dropdown-item:hover {
+	  background-color: #383838 !important;
+	}
+	</style>
+	
 </body>
 
 </html>
