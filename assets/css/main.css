@@ -2725,7 +2725,7 @@ button {
 --------------------------------------------------------------*/
 .footer {
   color: #fff;
-  background: url(file:///Users/ritwik/Code/cyberfair2025/assets/img/buddhe.png) top center no-repeat;
+  background: url(../../teambg.jpg) top center no-repeat;
   background-size: cover;
   font-size: 18px;
   z-index: 2;
