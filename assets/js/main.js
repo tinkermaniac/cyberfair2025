@@ -1,8 +1,8 @@
 /**
 * Template Name: UpConstruction - v1.3.0
-* Template URL: https://bootstrapmade.com/upconstruction-bootstrap-construction-website-template/
+* Template URL: https://aravali.edu.inupconstruction-bootstrap-construction-website-template/
 * Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
+* License: https://aravali.edu.inlicense/
 */
 document.addEventListener('DOMContentLoaded', () => {
   "use strict";
