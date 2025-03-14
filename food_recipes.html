@@ -41,12 +41,12 @@
 	<style>
         /* Dark Theme Additions Start ⇦⇨ */
         body {
-            background-color: #1a1a1a;
+            background-color: #808080;
             color: #ffffff !important;
         }
         
         .header {
-            background-color: rgba(25, 25, 25, 0.9) !important;
+            background-color: rgba(128,128,128) !important;
         }
         
 
@@ -62,7 +62,7 @@
         
         .breadcrumbs {
             background-blend-mode: multiply;
-            background-color: rgba(0, 0, 0, 0.7);
+            background-color:rgba(128,128,128);
         }
         
         .modal-content {
@@ -71,7 +71,7 @@
         }
         
         .footer {
-            background-color: #1a1a1a !important;
+            background-color: #808080 !important;
             color: #ffffff !important;
         }
       
@@ -125,12 +125,7 @@
 		}
 	</script>
 
-	<!-- =======================================================
-	* Template Name: UpConstruction - v1.3.0
-	* Template URL: https://bootstrapmade.com/upconstruction-bootstrap-construction-website-template/
-	* Author: BootstrapMade.com
-	* License: https://bootstrapmade.com/license/
-	======================================================== -->
+
 
 </head>
 
@@ -138,60 +133,76 @@
 
 	 <!-- ======= Header ======= -->
 <header class="header" onclick="closeDropdowns()">
-  
-    <a href="index.html">
-        <img height="70px" style="border-radius: 10px;" src="assets/img/topleftcyberfairlogo.jpeg" alt="Logo">
-    </a> 
-    <div class="nav-buttons">
-      <button id="button" class="talk-button" onclick="location.href='index.html'">Home•</button>
-      <div class="menu-container">
-        <button class="menu-button" onclick="toggleDropdown(this)">Project Summary <span>⋯</span></button>
-        <div class="dropdown">
-          <a href="narrative.html">Narrative</a>
-          <a href="learning.html">Learning</a>
-          <a href="layout.html">Layout</a>
-        </div>
-      </div>
-      <button id="button" class="talk-button" onclick="location.href='umeed.html'">Umeed •</button>
-      <button id="button" class="talk-button" onclick="location.href='initiatives.html'">Initiatives •</button>
-      <div class="menu-container">
-        <button class="menu-button" onclick="toggleDropdown(this)">Untold <span>⋯</span></button>
-        <div class="dropdown">
-          <a href="echoes.html">Echoes</a>
-          <a href="resonance.html">Resonance</a>
-        </div>
-      </div>
-      <button id="button" class="talk-button" onclick="location.href='rejuvenation.html'">Rejuvenation •</button>
-      <button id="button" class="talk-button" onclick="location.href='research.html'">Research •</button>
-      <div class="menu-container">
-        <button class="menu-button" onclick="toggleDropdown(this)">Collaborators <span>⋯</span></button>
-        <div class="dropdown">
-          <a href="students.html">Students</a>
-          <a href="fecilitators.html">Facilitators</a>
-        </div>
-      </div>
-      <div class="menu-container">
-        <button class="menu-button" onclick="toggleDropdown(this)">Palette <span>⋯</span></button>
-        <div class="dropdown">
-          <a href="palette_panache.html">Palette Panache</a>
-          <a href="impressions.html">Impressions</a>
-          <a href="#">Downloads</a>
-        </div>
-      </div>
-      <div class="menu-container">
-        <button class="menu-button" onclick="toggleDropdown(this)">Downloads <span>⋯</span></button>
-        <div class="dropdown">
-          <a href="bhajans.html">Bhajans</a>
-          <a href="worksheets.html">Worksheets</a>
-          <a href="board_games.html">Board Games</a>
-          <a href="yoga.html">Yoga videos</a>
-          <a href="food_recipes.html">Food recipes</a>
-          <a href="activities.html">Activities</a>
-        </div>
-      </div>
-    </div>
-  </header>
-  <!-- End Header -->
+	<a href="index.html">
+		<img height="70px" style="border-radius: 10px;" src="assets/img/topleftcyberfairlogo.jpeg" alt="Logo">
+	</a> 
+	<div class="nav-buttons">
+		<button id="button" class="talk-button" onclick="location.href='/index.html'" style="font-size: 12px;">Home</button>
+		<div class="menu-container">
+			<button class="menu-button" style="font-size: 12px;">Project Summary <span>⋯</span></button>
+			<div class="dropdown">
+				<a href="./narrative.html" style="font-size: 12px;">Narrative</a>
+				<a href="./learning.html" style="font-size: 12px;">Learning</a>
+				<a href="./layout.html" style="font-size: 12px;">Layout</a>
+			</div>
+		</div>
+		<button id="button" class="talk-button" onclick="location.href='/umeed.html'" style="font-size: 12px;">Umeed </button>
+		<div class="menu-container">
+			<button class="menu-button" style="font-size: 12px;">Initiatives <span>⋯</span></button>
+			<div class="dropdown">
+				<a href="./forms/elder_connect.html" style="font-size: 12px;">Elder Connect</a>
+				<a href="./forms/orphanage_connect.html" style="font-size: 12px;">Orphanage Connect</a>
+				<a href="./forms/organ_donation.html" style="font-size: 12px;">Organ Donation</a>
+				<a href="./forms/joy_of_giving.html" style="font-size: 12px;">Joy of Giving</a>
+				<a href="./forms/volunteering.html" style="font-size: 12px;">Volunteering</a>
+				<a href="./forms/vintage_veterans_app.html" style="font-size: 12px;">Vintage Veterans app</a>
+			</div>
+		</div>
+		<div class="menu-container">
+			<button class="menu-button" style="font-size: 12px;">Untold <span>⋯</span></button>
+			<div class="dropdown">
+				<a href="./echoes.html" style="font-size: 12px;">Echoes</a>
+				<a href="./resonance.html" style="font-size: 12px;">Resonance</a>
+			</div>
+		</div>
+		<button id="button" class="talk-button" onclick="location.href='/rejuvenation.html'" style="font-size: 12px;">Rejuvenation</button>
+		<div class="menu-container">
+			<button class="menu-button" style="font-size: 12px;">Research <span>⋯</span></button>
+			<div class="dropdown">
+				<a href="./indian_culture.html" style="font-size: 12px;">Indian Culture</a>
+				<a href="./interaction_1.html" style="font-size: 12px;">Interaction 1</a>
+				<a href="./interaction_2.html" style="font-size: 12px;">Interaction 2</a>
+				<a href="./interaction_3.html" style="font-size: 12px;">Interaction 3</a>
+				<a href="./analysis.html" style="font-size: 12px;">Analysis</a>
+				<a href="./bibliography.html" style="font-size: 12px;">Bibliography</a>
+			</div>
+		</div>
+		<div class="menu-container">
+			<button class="menu-button" style="font-size: 12px;">Collaborators <span>⋯</span></button>
+			<div class="dropdown">
+				<a href="./gp/team.html" style="font-size: 12px;">Students</a>
+				<a href="./facilitators.html" style="font-size: 12px;">Facilitators</a>
+			</div>
+		</div>
+		<div class="menu-container">
+			<button class="menu-button" style="font-size: 12px;">Palette <span>⋯</span></button>
+			<div class="dropdown">
+				<a href="/food_recipes.html" style="font-size: 12px;">Palate Panache</a>
+				<a href="/impressions.html" style="font-size: 12px;">Impressions</a>
+			</div>
+		</div>
+		<div class="menu-container">
+			<button class="menu-button" style="font-size: 12px;">Downloads <span>⋯</span></button>
+			<div class="dropdown">
+				<a href="/bhajans.html" style="font-size: 12px;">Bhajans</a>
+				<a href="/worksheets.html" style="font-size: 12px;">Worksheets</a>
+				<a href="/yoga.html" style="font-size: 12px;">Yoga videos</a>
+				<a href="/movies.html" style="font-size: 12px;">Old Movies</a>
+			</div>
+		</div>
+	</div>
+</header>
+<!-- End Header -->
 	<!-- ======= Breadcrumbs ======= -->
 	<!-- ======= Breadcrumbs ======= -->
 <div class="breadcrumbs d-flex align-items-center" style="background-image: url('assets/img/food-collage.webp');">
@@ -212,7 +223,7 @@
       <div class="col-lg-4 col-md-6 mb-4">
         <div class="card h-100 recipe-card" 
              data-video="https://www.youtube.com/embed/nHZsE7T7hwI"
-             data-content="<h4>Patato Pancakes</h4><p><strong>Ingredients:</strong><br>
+             data-content="<h4>Banana Spice Smoothie Recipe</h4><p><strong>Ingredients:</strong><br>
                 • Cheddar cheese<br> 
                 • Dhania (Coriander)<br> 
                 • Eggs<br> 
@@ -231,11 +242,11 @@
             </p>">
           <div class="card-image">
             <figure class="image is-1by1">
-              <img src="assets/img/potato_pancakes.jpg" class="img-fluid rounded" alt="Potato Pancakes">
+              <img src="assets/img/banana-chai-smoothie4-SM.jpg" class="img-fluid rounded" alt="Potato Pancakes">
             </figure>
           </div>
           <div class="card-body">
-            <h5 class="card-title">Patato Pancakes</h5>
+            <h5 class="card-title">Banana Spice Smoothie</h5>
             <p class="card-text text-muted">Traditional potato pancakes with cheese and herbs</p>
           </div>
         </div>
@@ -244,7 +255,7 @@
       <!-- Recipe Card 2 -->
       <div class="col-lg-4 col-md-6 mb-4">
         <div class="card h-100 recipe-card" 
-             data-video="https://www.youtube.com/embed/mtMdb2bP1XM"
+             data-video="https://www.youtube.com/embed/JWIcbLxoGSc"
              data-content="<h4>Pumpkin Oatmeal Recipe</h4><p><strong>Ingredients:</strong><br>
                 • 1 cup rolled oats<br>
                 • 2 cups milk (or water)<br>
@@ -281,27 +292,32 @@
       <!-- Recipe Card 3 -->
       <div class="col-lg-4 col-md-6 mb-4">
         <div class="card h-100 recipe-card" 
-             data-video="https://www.youtube.com/embed/MX1VEsCpmPc"
-             data-content="<h4>Carrot Ginger Juice</h4><p><strong>Ingredients:</strong><br>
-                • 4 large carrots, peeled and chopped
-                <br>
-                • 1-inch piece of fresh ginger, peeled
-                <br>
-                • ½ cup water (adjust for desired consistency)<br>
-                • ½ lemon, juiced (optional, for extra freshness)<br>
-                •1 teaspoon honey (optional, for sweetness)
-                <br>
-               
+             data-video="https://www.youtube.com/embed/x5nQ7K-QWaA"
+             data-content="<h4>Traditional Dal Recipe</h4><p><strong>Ingredients:</strong><br>
+                • 1 cup yellow lentils (toor dal)<br>
+                • 3 cups water<br>
+                • 1 tomato, chopped<br>
+                • 1 onion, finely chopped<br>
+                • 2 green chilies, slit<br>
+                • 1 tsp cumin seeds<br>
+                • 1/2 tsp turmeric powder<br>
+                • 1 tbsp ghee<br>
+                • Fresh coriander leaves<br>
+                • Salt to taste<br><br>
+                
                 <strong>Instructions:</strong><br>
                 
-                1. <strong>Step 1:</strong>  Add carrots, ginger, and water to a blender. Blend until smooth.
-                <br>
+                1. <strong>PREPARE DAL:</strong> Wash lentils thoroughly and pressure cook with water, turmeric and salt for 3-4 whistles.<br>
                 
-                2. <strong>Step 2:</strong> Strain the mixture using a fine mesh strainer or cheesecloth for a smoother juice (optional).<br>
+                2. <strong>TEMPERING:</strong> Heat ghee in a pan, add cumin seeds until they splutter.<br>
                 
-                3. <strong>STEP 3:</strong> Stir in lemon juice and honey if using.<br>
+                3. <strong>SAUTÉ:</strong> Add chopped onions and green chilies, sauté until onions turn translucent.<br>
                 
-                4. <strong>STEP 4:</strong> Add chopped tomatoes and cook until soft.<br>
+                4. <strong>ADD TOMATOES:</strong> Add chopped tomatoes and cook until soft.<br>
+                
+                5. <strong>COMBINE:</strong> Add cooked dal to the tempering, mix well and simmer for 5 minutes.<br>
+                
+                6. <strong>GARNISH:</strong> Garnish with fresh coriander leaves before serving.
             </p>">
           <div class="card-image">
             <figure class="image is-1by1">
@@ -318,26 +334,38 @@
       <!-- Recipe Card 4 -->
       <div class="col-lg-4 col-md-6 mb-4">
         <div class="card h-100 recipe-card" 
-             data-video="https://www.youtube.com/embed/pu7XGUFPQbM"
-             data-content="<h4>Baked Peaches</h4><p><strong>Ingredients:</strong><br>
-              • 4 ripe peaches, halved and pitted<br>
-              • 2 tbsp olive oil<br>
-              • 1 tsp cinnamon<br>
-              • 3 tbsp maple syrup (or honey)<br>
-              • 2 tbsp brown sugar (or coconut sugar, optional)<br>
-              • 1 tbsp bourbon or rum (optional)<br>
-              • Whipped cream, for serving (optional)<br><br>
-              
-              <strong>Instructions:</strong><br>
-              
-              1. <strong>PREPARE PEACHES:</strong> Gently press peaches to check ripeness (they should yield slightly). Halve, remove pits, and leave skins on.<br>
-              
-              2. <strong>MIX FILLING:</strong> In a bowl, whisk olive oil, cinnamon, maple syrup, brown sugar, and bourbon (if using).<br>
-              
-              3. <strong>FILL & BAKE:</strong> Spoon filling into peach halves. Bake at 375°F (190°C) for 25-30 minutes until tender.<br>
-              
-              4. <strong>SERVE:</strong> Top with whipped cream and a drizzle of maple syrup. Garnish with extra cinnamon.
-          </p>">
+             data-video="https://www.youtube.com/embed/HXWtHuoNoXM"
+             data-content="<h4>Vegetable Biryani Recipe</h4><p><strong>Ingredients:</strong><br>
+                • 2 cups basmati rice<br>
+                • Mixed vegetables (carrots, peas, beans)<br>
+                • 2 onions, sliced<br>
+                • 2 tomatoes, chopped<br>
+                • 2 tbsp ginger-garlic paste<br>
+                • 2 tsp biryani masala<br>
+                • 1/2 cup yogurt<br>
+                • Fresh mint and coriander leaves<br>
+                • 3 tbsp ghee or oil<br>
+                • Whole spices (bay leaf, cinnamon, cardamom)<br>
+                • Salt to taste<br><br>
+                
+                <strong>Instructions:</strong><br>
+                
+                1. <strong>PREPARE RICE:</strong> Soak basmati rice for 30 minutes, then cook until 70% done.<br>
+                
+                2. <strong>SAUTÉ VEGETABLES:</strong> Heat ghee, add whole spices, then sauté onions until golden brown.<br>
+                
+                3. <strong>ADD SPICES:</strong> Add ginger-garlic paste, tomatoes, and biryani masala. Cook until oil separates.<br>
+                
+                4. <strong>ADD VEGETABLES:</strong> Add mixed vegetables and yogurt, cook until vegetables are partially done.<br>
+                
+                5. <strong>LAYER:</strong> In a heavy-bottomed pot, layer the vegetable mixture and partially cooked rice.<br>
+                
+                6. <strong>GARNISH:</strong> Sprinkle fresh mint and coriander between layers.<br>
+                
+                7. <strong>DUM COOKING:</strong> Seal the pot with dough or foil and cook on low heat for 20 minutes.<br>
+                
+                8. <strong>SERVE:</strong> Gently mix all layers before serving.
+            </p>">
           <div class="card-image">
             <figure class="image is-1by1">
               <img src="assets/img/baked_peaches.jpg" class="img-fluid rounded" alt="Vegetable Biryani">
@@ -353,34 +381,44 @@
       <!-- Recipe Card 5 -->
       <div class="col-lg-4 col-md-6 mb-4">
         <div class="card h-100 recipe-card" 
-             data-video="https://www.youtube.com/embed/TQXuahlLggo"
-             data-content="<h4>Banana Spice Smoothie</h4><p><strong>Ingredients:</strong><br>
-              • 1 ripe banana<br>
-              • ½ cup Greek yogurt<br>
-              • ½ cup milk (or almond milk)<br>
-              • ¼ tsp cinnamon<br>
-              • ⅛ tsp nutmeg<br>
-              • 1 tsp honey (optional)<br>
-              • ½ tsp flaxseeds or chia seeds<br><br>
-              
-              <strong>Instructions:</strong><br>
-              
-              1. <strong>PREPARE:</strong> Peel and slice banana.<br>
-              
-              2. <strong>BLEND:</strong> Combine all ingredients in a blender.<br>
-              
-              3. <strong>MIX:</strong> Blend until smooth and creamy.<br>
-              
-              4. <strong>SERVE:</strong> Pour into a glass and enjoy immediately.
-             </p>">
+             data-video="https://www.youtube.com/embed/a03U45jFxOI"
+             data-content="<h4>Palak Paneer Recipe</h4><p><strong>Ingredients:</strong><br>
+                • 250g paneer, cubed<br>
+                • 500g spinach (palak), blanched and pureed<br>
+                • 1 onion, finely chopped<br>
+                • 1 tomato, pureed<br>
+                • 2 green chilies<br>
+                • 1 tbsp ginger-garlic paste<br>
+                • 1 tsp cumin seeds<br>
+                • 1/2 tsp garam masala<br>
+                • 1/4 cup cream<br>
+                • 2 tbsp butter or ghee<br>
+                • Salt to taste<br><br>
+                
+                <strong>Instructions:</strong><br>
+                
+                1. <strong>BLANCH SPINACH:</strong> Blanch spinach in hot water for 2-3 minutes, then blend into a smooth puree.<br>
+                
+                2. <strong>SAUTÉ SPICES:</strong> Heat butter, add cumin seeds, then sauté onions until golden brown.<br>
+                
+                3. <strong>ADD AROMATICS:</strong> Add ginger-garlic paste and green chilies, sauté for 2 minutes.<br>
+                
+                4. <strong>ADD TOMATO:</strong> Add tomato puree and cook until oil separates.<br>
+                
+                5. <strong>ADD SPINACH:</strong> Add spinach puree and cook for 5 minutes.<br>
+                
+                6. <strong>ADD PANEER:</strong> Add paneer cubes and garam masala, simmer for 5 minutes.<br>
+                
+                7. <strong>FINISH:</strong> Stir in cream before serving.
+            </p>">
           <div class="card-image">
             <figure class="image is-1by1">
-              <img src="assets/img//banana-chai-smoothie4-SM.jpg" class="img-fluid rounded" alt="Palak Paneer">
+              <img src="assets/img//potato_pancakes.jpg" class="img-fluid rounded" alt="Palak Paneer">
             </figure>
           </div>
           <div class="card-body">
-            <h5 class="card-title">BANANA SPICE SMOOTHIE</h5>
-            <p class="card-text text-muted"></p>
+            <h5 class="card-title">Potato Pancakes</h5>
+            <p class="card-text text-muted">Creamy spinach curry with cottage cheese</p>
           </div>
         </div>
       </div>
@@ -388,28 +426,31 @@
       <!-- Recipe Card 6 -->
       <div class="col-lg-4 col-md-6 mb-4">
         <div class="card h-100 recipe-card" 
-             data-video="https://www.youtube.com/embed/GNRHFjYcGN4"
-             data-content="<h4>Tropical Summer Fruit Salad</h4><p><strong>Ingredients:</strong><br>  
-              • 1 small seedless watermelon, cubed<br>  
-              • 1 cantaloupe, cubed<br>  
-              • 1 lb strawberries, quartered<br>  
-              • 1 pint blueberries<br>  
-              • 6 oz raspberries<br>  
-              • 6 oz blackberries<br>  
-              • 6 oz grapes<br>  
-              • 1 cup orange juice (optional)<br>  
-              • Fresh mint leaves, for garnish<br><br>  
-
-              <strong>Instructions:</strong><br>  
-
-              1. <strong>PREPARE FRUIT:</strong> Cube watermelon and cantaloupe. Quarter strawberries. Halve grapes/blackberries if desired (keep raspberries/blueberries whole).<br>  
-
-              2. <strong>COMBINE:</strong> Add all fruit to a large bowl.<br>  
-
-              3. <strong>ADD JUICE:</strong> Pour orange juice over fruit (skip for a drier salad).<br>  
-
-              4. <strong>TOSS & SERVE:</strong> Gently toss to mix. Garnish with mint leaves.  
-           </p>">
+             data-video="https://www.youtube.com/embed/KhzdMFeCdww"
+             data-content="<h4>Masala Chai Recipe</h4><p><strong>Ingredients:</strong><br>
+                • 2 cups water<br>
+                • 1 cup milk<br>
+                • 2 tbsp tea leaves (or 2 tea bags)<br>
+                • 1-inch ginger, crushed<br>
+                • 4 cardamom pods, crushed<br>
+                • 2 cloves<br>
+                • 1 cinnamon stick<br>
+                • 2-3 tbsp sugar (adjust to taste)<br><br>
+                
+                <strong>Instructions:</strong><br>
+                
+                1. <strong>BOIL WATER:</strong> Bring water to a boil in a saucepan.<br>
+                
+                2. <strong>ADD SPICES:</strong> Add crushed ginger, cardamom, cloves, and cinnamon stick.<br>
+                
+                3. <strong>SIMMER:</strong> Let the spices simmer for 2-3 minutes.<br>
+                
+                4. <strong>ADD TEA:</strong> Add tea leaves or tea bags and boil for another 2 minutes.<br>
+                
+                5. <strong>ADD MILK:</strong> Add milk and sugar, bring to a boil.<br>
+                
+                6. <strong>STRAIN:</strong> Strain the chai into cups and serve hot.
+            </p>">
           <div class="card-image">
             <figure class="image is-1by1">
               <img src="assets/img/tropical_summer_fruit_salad.jpg" class="img-fluid rounded" alt="Masala Chai">
@@ -510,42 +551,42 @@
 <script>
 // Navbar dropdown functionality
 function toggleDropdown(button) {
-  // First close all other dropdowns
-  const allDropdowns = document.querySelectorAll('.menu-container .dropdown');
-  const allButtons = document.querySelectorAll('.menu-button');
-  
-  allDropdowns.forEach((dropdown, index) => {
-    if (dropdown !== button.nextElementSibling) {
-      dropdown.classList.remove('show');
-      allButtons[index].classList.remove('active');
-    }
-  });
-  
-  // Toggle the clicked dropdown
-  const dropdown = button.nextElementSibling;
-  dropdown.classList.toggle('show');
-  button.classList.toggle('active');
-  
-  // Prevent the event from bubbling up to the header
-  event.stopPropagation();
+    // First close all other dropdowns
+    const allDropdowns = document.querySelectorAll('.menu-container .dropdown');
+    const allButtons = document.querySelectorAll('.menu-button');
+    
+    allDropdowns.forEach((dropdown, index) => {
+        if (dropdown !== button.nextElementSibling) {
+            dropdown.classList.remove('show');
+            allButtons[index].classList.remove('active');
+        }
+    });
+    
+    // Toggle the clicked dropdown
+    const dropdown = button.nextElementSibling;
+    dropdown.classList.toggle('show');
+    button.classList.toggle('active');
+    
+    // Prevent the event from bubbling up to the header
+    event.stopPropagation();
 }
 
 // Close all dropdowns when clicking outside
 function closeDropdowns() {
-  const dropdowns = document.querySelectorAll('.dropdown');
-  const buttons = document.querySelectorAll('.menu-button');
-  
-  dropdowns.forEach((dropdown, index) => {
-    dropdown.classList.remove('show');
-    buttons[index].classList.remove('active');
-  });
+    const dropdowns = document.querySelectorAll('.dropdown');
+    const buttons = document.querySelectorAll('.menu-button');
+    
+    dropdowns.forEach((dropdown, index) => {
+        dropdown.classList.remove('show');
+        buttons[index].classList.remove('active');
+    });
 }
 
 // Close dropdowns when clicking anywhere else on the document
 document.addEventListener('click', function(event) {
-  if (!event.target.closest('.menu-container')) {
-    closeDropdowns();
-  }
+    if (!event.target.closest('.menu-container')) {
+        closeDropdowns();
+    }
 });
 
 // JavaScript to handle modal content
@@ -662,6 +703,14 @@ document.addEventListener('DOMContentLoaded', function() {
   position: sticky;
   top: 0;
   z-index: 1000;
+  background-color: rgba(25, 25, 25, 0.9) !important;
+}
+
+.logo {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
 }
 
 .nav-buttons {
@@ -671,18 +720,21 @@ document.addEventListener('DOMContentLoaded', function() {
 }
 
 .talk-button, .menu-button {
-  background-color: transparent;
-  color: white;
-  border: none;
-  padding: 8px 15px;
+  background-color: #404040 !important;
+  color: white !important;
+  border: 2px solid #404040;
+  border-radius: 25px;
+  padding: 8px 20px;
   cursor: pointer;
   font-size: 16px;
   transition: all 0.3s ease;
+  margin: 0 5px;
 }
 
 .talk-button:hover, .menu-button:hover, .menu-button.active {
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 5px;
+  background-color: #404040 !important;
+  border-color: #404040;
+  color: white !important;
 }
 
 .menu-container {
@@ -694,11 +746,13 @@ document.addEventListener('DOMContentLoaded', function() {
   display: none;
   position: absolute;
   background-color: #2d2d2d;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  min-width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
-  border-radius: 5px;
+  border-radius: 10px;
   overflow: hidden;
+  margin-top: 5px;
+  border: 1px solid #404040;
 }
 
 .dropdown.show {
@@ -706,15 +760,68 @@ document.addEventListener('DOMContentLoaded', function() {
 }
 
 .dropdown a {
-  color: white;
-  padding: 12px 16px;
+  color: white !important;
+  padding: 12px 20px;
   text-decoration: none;
   display: block;
   transition: background-color 0.3s ease;
+  font-size: 14px;
 }
 
 .dropdown a:hover {
   background-color: #383838;
+}
+
+/* Dark Theme Additions */
+body {
+  background-color: #1a1a1a;
+  color: #ffffff !important;
+}
+
+.header {
+  background-color: rgba(25, 25, 25, 0.9) !important;
+}
+
+.card {
+  background-color: #2d2d2d;
+  color: #ffffff;
+  border: 1px solid #404040;
+}
+
+.card-header-title {
+  color: #ffffff !important;
+}
+
+.breadcrumbs {
+  background-blend-mode: multiply;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+  background-color: #2d2d2d !important;
+  color: #ffffff !important;
+}
+
+.footer {
+  background-color: #1a1a1a !important;
+  color: #ffffff !important;
+}
+
+.navbar {
+  background-color: #2d2d2d !important;
+}
+
+.dropdown-menu {
+  background-color: #2d2d2d;
+  border: 1px solid #404040;
+}
+
+.dropdown-item {
+  color: #ffffff !important;
+}
+
+.dropdown-item:hover {
+  background-color: #383838 !important;
 }
 </style>
 

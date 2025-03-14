@@ -7,7 +7,7 @@
 	<meta charset="utf-8">
 	<meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-	<title>UMMEED</title>
+	<title>Umeed - Ek Sankalp</title>
 	<meta content="" name="description">
 	<meta content="" name="keywords">
 
@@ -34,63 +34,66 @@
 
 
 	<!-- Template Main CSS File -->
+	<link rel="stylesheet" href="css/bulma.min.css">
 	<link href="assets/css/main.css" rel="stylesheet">
 
 	<!-- custom css -->
-	<link rel="stylesheet" href="css/bulma.min.css">
 	<style>
-		/* Added Dark Theme Styles */
-		body {
-			background-color: #1a1a1a;
-			color: #ffffff;
+		figure.image > img {
+			object-fit: cover;
 		}
-		
-		.header {
-			background-color: #2d2d2d !important;
-			color: #ffffff !important;
+
+		.card:hover {
+			cursor: pointer;
+			box-shadow: 0 0.5em 1em -0.125em hsl(0, 0%, 71%);
 		}
-		
-		.card {
-			background-color: #2d2d2d;
-			color: #ffffff;
-		}
-		
+
 		.card-header-title {
-			color: #ffffff !important;
+			color: #fff;
+		}
+
+		.pop-bg {
+			position: fixed;
+			height: 100%;
+			width: 100%;
+			top: 0%;
+			left: 0%;
+			z-index: 999;
+			background-color: #00000055;
 		}
 		
-		.modal-content {
-			background-color: #2d2d2d;
-			color: #ffffff;
+		.pop-up > .container {
+			position: fixed;
+			height: 70%;
+			width: 70%;
+			top: 15%;
+			left: 15%;
+			z-index: 1000;
+			background-color: #ffffffff;
+			overflow: auto;
 		}
-		
-		.footer {
-			background-color: #2d2d2d !important;
-			color: #ffffff !important;
+
+		.navbar {
+			background: transparent;
 		}
-		
-		.breadcrumbs {
-			background-blend-mode: multiply;
-			background-color: rgba(0, 0, 0, 0.7);
+
+		summary::marker {
+			color: transparent;
+			line-height: 0;
+			font-size: 0;
+			margin: 0;
+			padding: 0;
 		}
-		
-		.btn-close {
-			filter: invert(1);
+
+		summary {
+			display: flex;
 		}
-		
-		.dropdown {
-			background-color: #2d2d2d;
-			border: 1px solid #404040;
+
+		.card{
+			background-image: url('./bg.png');
 		}
-		
-		.dropdown a {
-			color: #ffffff !important;
-		}
-		
-		.menu-button {
-			color: #ffffff !important;
-		}
-		</style>
+	</style>
+
 	<!-- custom js -->
 	<script>
 		function remove_popup() {
@@ -111,87 +114,100 @@
 		}
 	</script>
 
-	<!-- =======================================================
-	* Template Name: UpConstruction - v1.3.0
-	* Template URL: https://bootstrapmade.com/upconstruction-bootstrap-construction-website-template/
-	* Author: BootstrapMade.com
-	* License: https://bootstrapmade.com/license/
-	======================================================== -->
-
 </head>
 
-<body style="color: #ffffff;">
+<body style="background-image: url(./bg.png);">
 
 	 <!-- ======= Header ======= -->
-<header class="header" onclick="closeDropdowns()">
-  
-    <a href="index.html">
-        <img height="70px" style="border-radius: 10px;" src="assets/img/topleftcyberfairlogo.jpeg" alt="Logo">
-    </a> 
-    <div class="nav-buttons">
-      <button id="button" class="talk-button" onclick="location.href='./index.html'">Home•</button>
-      <div class="menu-container">
-        <button class="menu-button" onclick="toggleDropdown(this)">Project Summary <span>⋯</span></button>
-        <div class="dropdown">
-          <a href="./narrative.html">Narrative</a>
-          <a href="./learning.html">Learning</a>
-          <a href="./layout.html">Layout</a>
-        </div>
-      </div>
-      <button id="button" class="talk-button" onclick="location.href='umeed.html'">Umeed •</button>
-      <button id="button" class="talk-button" onclick="location.href='initiatives.html'">Initiatives •</button>
-      <div class="menu-container">
-        <button class="menu-button" onclick="toggleDropdown(this)">Untold <span>⋯</span></button>
-        <div class="dropdown">
-          <a href="echoes.html">Echoes</a>
-          <a href="resonance.html">Resonance</a>
-        </div>
-      </div>
-      <button id="button" class="talk-button" onclick="location.href='rejuvenation.html'">Rejuvenation •</button>
-      <button id="button" class="talk-button" onclick="location.href='research.html'">Research •</button>
-      <div class="menu-container">
-        <button class="menu-button" onclick="toggleDropdown(this)">Collaborators <span>⋯</span></button>
-        <div class="dropdown">
-          <a href="students.html">Students</a>
-          <a href="fecilitators.html">Facilitators</a>
-        </div>
-      </div>
-      <div class="menu-container">
-        <button class="menu-button" onclick="toggleDropdown(this)">Palette <span>⋯</span></button>
-        <div class="dropdown">
-          <a href="palette_panache.html">Palette Panache</a>
-          <a href="impressions.html">Impressions</a>
-          <a href="#">Downloads</a>
-        </div>
-      </div>
-      <div class="menu-container">
-        <button class="menu-button" onclick="toggleDropdown(this)">Downloads <span>⋯</span></button>
-        <div class="dropdown">
-          <a href="bhajans.html">Bhajans</a>
-          <a href="worksheets.html">Worksheets</a>
-          <a href="board_games.html">Board Games</a>
-          <a href="yoga.html">Yoga videos</a>
-          <a href="food_recipes.html">Food recipes</a>
-          <a href="activities.html">Activities</a>
-        </div>
-      </div>
-    </div>
-  </header>
+	<header class="header" onclick="closeDropdowns()" style="background-image: url(./bg.png);">
+	
+		<a href="./index.html">
+			<img height="70px" style="border-radius: 10px; margin-right: 4px;" src="./assets/img/topleftcyberfairlogo.jpeg" alt="Logo">
+		</a>
+		<div class="nav-buttons">
+			<button id="button" class="talk-button" style="font-size: 16px;" onclick="location.href='index.html'">Home</button>
+			<div class="menu-container">
+				<button class="menu-button" onclick="toggleDropdown(this)" style="font-size: 14px;">Project Summary <span>⋯</span></button>
+				<div class="dropdown">
+					<a href="./narrative.html" style="font-size: 16px;">Narrative</a>
+					<a href="./learning.html" style="font-size: 16px;">Learning</a>
+					<a href="./layout.html" style="font-size: 16px;">Layout</a>
+	
+				</div>
+			</div>
+			<button id="button" class="talk-button" onclick="location.href='umeed.html'" style="font-size: 16px;">Umeed</button>
+			<div class="menu-container">
+				<button class="menu-button" onclick="toggleDropdown(this)" style="font-size: 16px;">Initiatives <span>⋯</span></button>
+				<div class="dropdown">
+					<a href="./forms/elder_connect.html" style="font-size: 16px;">Elder Connect</a>
+					<a href="./forms/orphanage_connect.html" style="font-size: 16px;">Orphanage Connect</a>
+					<a href="./forms/organ_donation.html" style="font-size: 16px;">Organ Donation</a>
+					<a href="./forms/joy_of_giving.html" style="font-size: 16px;">Joy of Giving</a>
+					<a href="./forms/volunteering.html" style="font-size: 16px;">Volunteering</a>
+					<a href="./forms/vintage_veterans_app.html" style="font-size: 16px;">Vintage Veterans app</a>
+				</div>
+			</div>
+			<div class="menu-container">
+				<button class="menu-button" onclick="toggleDropdown(this)" style="font-size: 16px;">Untold <span>⋯</span></button>
+				<div class="dropdown">
+					<a href="./echoes.html" style="font-size: 16px;">Echoes</a>
+					<a href="./resonance.html" style="font-size: 16px;">Resonance</a>
+				</div>
+			</div>
+			<button id="button" class="talk-button" onclick="location.href='./rejuvenation.html'" style="font-size: 16px;">Rejuvenation</button>
+			<div class="menu-container">
+				<button class="menu-button" onclick="toggleDropdown(this)" style="font-size: 16px;">Research <span>⋯</span></button>
+				<div class="dropdown">
+					<a href="./indian_culture.html" style="font-size: 16px;">Indian Culture</a>
+					<a href="./interaction_1.html" style="font-size: 16px;">Interaction 1</a>
+					<a href="./interaction_2.html" style="font-size: 16px;">Interaction 2</a>
+					<a href="./interaction_3.html" style="font-size: 16px;">Interaction 3</a>
+					<a href="./analysis.html" style="font-size: 16px;">Analysis</a>
+					<a href="./bibliography.html" style="font-size: 16px;">Bibliography</a>
+				</div>
+			</div>
+			<div class="menu-container">
+				<button class="menu-button" onclick="toggleDropdown(this)" style="font-size: 16px;">Collaborators <span>⋯</span></button>
+				<div class="dropdown">
+					<a href="./gp/team.html" style="font-size: 16px;">Students</a>
+					<a href="./facilitators.html" style="font-size: 16px;">Facilitators</a>
+	
+				</div>
+			</div>
+	
+	
+			<div class="menu-container">
+				<button class="menu-button" onclick="toggleDropdown(this)" style="font-size: 16px;">Palette <span>⋯</span></button>
+				<div class="dropdown">
+					<a href="./food_recipes.html" style="font-size: 16px;">Palate Panache</a>
+					<a href="./impressions.html" style="font-size: 16px;">Impressions</a>
+				</div>
+			</div>
+			<div class="menu-container">
+				<button class="menu-button" onclick="toggleDropdown(this)" style="font-size: 16px;">Downloads <span>⋯</span></button>
+				<div class="dropdown">
+					<a href="./bhajans.html" style="font-size: 16px;">Bhajans</a>
+					<a href="./worksheets.html" style="font-size: 16px;">Worksheets</a>
+					<a href="./yoga.html" style="font-size: 16px;">Yoga videos</a>
+					<a href="./movies.html" style="font-size: 16px;">Old Movies</a>
+				</div>
+			</div>
+	
+		</div>
+	</header>
   <!-- End Header -->
 	
     
 	<!-- ======= Breadcrumbs ======= -->
-	<div class="breadcrumbs d-flex align-items-center" style="background-image: url('assets/img/food-collage.webp');">
-		<div class="container position-relative d-flex flex-column align-items-center" data-aos="fade">
-
+	<div class="breadcrumbs d-flex align-items-center" style="background-image: url(./bg.png);">
+		<div class="container position-relative d-flex flex-column align-items-center" data-aos="fade" style="background-image: url(./bg.png);">
 			<h2>Bhajans</h2>
 			<ol>
-				<li><a href="index.html">Downloads</a></li>
-				<li></li>
+				<li><a href="index.html">Home</a></li>
+				<li>Downloads</li>
 			</ol>
-
 		</div>
-	</div id="map"><!-- End Breadcrumbs -->
+	</div><!-- End Breadcrumbs -->
 	<!-- content -->
 	<div class="container p-6">
 		<div class="columns is-singleline">
@@ -288,7 +304,44 @@
 	</script>
 	
 	<style>
-		/* Basic Modal Styling */
+		/* Card Styling */
+		.card {
+			transition: transform 0.3s ease, box-shadow 0.3s ease;
+			margin-bottom: 1.5rem;
+			background: #fff;
+			border-radius: 8px;
+			overflow: hidden;
+		}
+
+		.card:hover {
+			transform: translateY(-5px);
+			box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+		}
+
+		.card-header {
+			background: #2d2d2d;
+			padding: 1rem;
+		}
+
+		.card-header-title {
+			color: #fff !important;
+			font-size: 1.1rem;
+			font-weight: 500;
+			text-align: center;
+			width: 100%;
+		}
+
+		.image.is-1by1 {
+			height: 250px;
+		}
+
+		.image.is-1by1 img {
+			object-fit: cover;
+			height: 100%;
+			width: 100%;
+		}
+
+		/* Modal Styling */
 		.modal {
 			display: none;
 			position: fixed;
@@ -301,29 +354,28 @@
 			justify-content: center;
 			align-items: center;
 		}
-	
+
 		.modal.is-active {
 			display: flex;
 		}
-	
+
 		.modal-content {
-			background-color: #2d2d2d;
-			color: #ffffff;
+			background: transparent;
 			padding: 20px;
 			border-radius: 8px;
-			width: 80%;
-			max-width: 800px;
+			width: 90%;
+			max-width: 900px;
+			position: relative;
 		}
-	
+
 		.modal-background {
 			position: absolute;
 			top: 0;
 			left: 0;
 			width: 100%;
 			height: 100%;
-			cursor: pointer;
 		}
-	
+
 		.modal-close {
 			position: absolute;
 			top: 20px;
@@ -333,71 +385,85 @@
 			color: #fff;
 			font-size: 24px;
 			cursor: pointer;
+			z-index: 1001;
 		}
 
-		/* Navbar styling */
-		.header {
-		  display: flex;
-		  justify-content: space-between;
-		  align-items: center;
-		  padding: 10px 20px;
-		  position: sticky;
-		  top: 0;
-		  z-index: 1000;
-		  background-color: rgba(25, 25, 25, 0.9) !important;
+		.modal-close:hover {
+			color: #f0f0f0;
 		}
 
-		.nav-buttons {
-		  display: flex;
-		  align-items: center;
-		  gap: 10px;
+		/* Breadcrumbs Styling */
+		.breadcrumbs {
+			padding: 140px 0 60px 0;
+			min-height: 30vh;
+			position: relative;
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
 		}
 
-		.talk-button, .menu-button {
-		  background-color: transparent;
-		  color: white;
-		  border: none;
-		  padding: 8px 15px;
-		  cursor: pointer;
-		  font-size: 16px;
-		  transition: all 0.3s ease;
+		.breadcrumbs:before {
+			content: "";
+			background-color: rgba(0, 0, 0, 0.6);
+			position: absolute;
+			inset: 0;
 		}
 
-		.talk-button:hover, .menu-button:hover, .menu-button.active {
-		  background-color: rgba(255, 255, 255, 0.1);
-		  border-radius: 5px;
+		.breadcrumbs h2 {
+			font-size: 56px;
+			font-weight: 500;
+			color: #fff;
+			font-family: var(--font-secondary);
 		}
 
-		.menu-container {
-		  position: relative;
-		  display: inline-block;
+		.breadcrumbs ol {
+			display: flex;
+			flex-wrap: wrap;
+			list-style: none;
+			padding: 0 0 10px 0;
+			margin: 0;
+			font-size: 16px;
+			font-weight: 600;
+			color: var(--color-primary);
 		}
 
-		.dropdown {
-		  display: none;
-		  position: absolute;
-		  background-color: #2d2d2d;
-		  min-width: 160px;
-		  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-		  z-index: 1;
-		  border-radius: 5px;
-		  overflow: hidden;
+		.breadcrumbs ol a {
+			color: rgba(255, 255, 255, 0.8);
+			transition: 0.3s;
 		}
 
-		.dropdown.show {
-		  display: block;
+		.breadcrumbs ol a:hover {
+			text-decoration: underline;
 		}
 
-		.dropdown a {
-		  color: white;
-		  padding: 12px 16px;
-		  text-decoration: none;
-		  display: block;
-		  transition: background-color 0.3s ease;
+		.breadcrumbs ol li+li {
+			padding-left: 10px;
 		}
 
-		.dropdown a:hover {
-		  background-color: #383838;
+		.breadcrumbs ol li+li::before {
+			display: inline-block;
+			padding-right: 10px;
+			color: #fff;
+			content: "/";
+		}
+
+		@media (max-width: 768px) {
+			.breadcrumbs {
+				padding: 80px 0 40px 0;
+			}
+			
+			.breadcrumbs h2 {
+				font-size: 36px;
+			}
+			
+			.columns {
+				margin: 0;
+			}
+			
+			.column.is-3 {
+				width: 100%;
+				padding: 0.75rem;
+			}
 		}
 	</style>
 	
@@ -422,7 +488,7 @@
 				<div class="footer-info">
 				  <div class="iconh">
 					<img class = "icon" src="assets/img/logo2.png"/>
-					<h3 style="font-size: 40px;">CyberFair 2023</h3>
+					<h3 style="font-size: 40px;">CyberFair 2025</h3>
 				  </div>
 				  <p style="text-align: center;">
 					Aravali International School<br>
@@ -504,6 +570,13 @@
 	// Close dropdowns when clicking anywhere else on the document
 	document.addEventListener('click', function(event) {
 	  if (!event.target.closest('.menu-container')) {
+	    closeDropdowns();
+	  }
+	});
+
+	// Close dropdowns when pressing Escape key
+	document.addEventListener('keydown', function(event) {
+	  if (event.key === 'Escape') {
 	    closeDropdowns();
 	  }
 	});
