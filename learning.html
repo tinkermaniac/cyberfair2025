@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Learing</title>
+    <title>Umeed - Ek Sankalp</title>
     <link rel="stylesheet" href="assets/css/main.css">
 </head>
 
@@ -108,19 +108,19 @@
                 <div style="display: flex; justify-content: center; align-items: center; width: 100%;">
                     <button
                         style="width: 250px; height: 250px; font-size: large; font-weight: 700; background-color: #696969; color: #fff; clip-path: polygon(25% 6.7%, 75% 6.7%, 100% 50%, 75% 93.3%, 25% 93.3%, 0% 50%); border: none;"
-                        onclick="card('COMMUNICATION')">
+                        onclick="card('Research-Analyse-Innovate')">
                         Research-Analyse-Innovate
                     </button>
                 </div>
                 <div style="display: flex; justify-content: center; align-items: center; width: 100%; gap: 385px;">
                     <button
                         style="width: 250px; height: 250px; font-size: 20px; font-weight: 700; background-color: #fff; color: #707070; clip-path: polygon(25% 6.7%, 75% 6.7%, 100% 50%, 75% 93.3%, 25% 93.3%, 0% 50%); border: none;"
-                        onclick="card('ANALYZING')">
+                        onclick="card('Web Development and Technical Skills')">
                         Web Development and Technical Skills
                     </button>
                     <button
                         style="width: 250px; height: 250px; font-size: 20px; font-weight: 700; background-color: #fff; color: #707070; clip-path: polygon(25% 6.7%, 75% 6.7%, 100% 50%, 75% 93.3%, 25% 93.3%, 0% 50%); border: none;"
-                        onclick="card('REPORT MAKING')">
+                        onclick="card('Content Creation and Storytelling')">
                         Content Creation and Storytelling
                     </button>
                 </div>
@@ -132,18 +132,18 @@
                 <div style="display: flex;  justify-content: center; align-items: center; width: 100%; gap: 385px;">
                     <button
                         style="width: 250px; height: 250px; font-size: 20px; font-weight: 700; background-color: #696969; color: #fff; clip-path: polygon(25% 6.7%, 75% 6.7%, 100% 50%, 75% 93.3%, 25% 93.3%, 0% 50%); border: none; "
-                        onclick="card('SOCIAL/EMOTIONAL LEARNINGS')">
+                        onclick="card('Listening to Life, Communicating Compassion')">
                         Listening to Life, Communicating Compassion
                     </button>
                     <button
                         style="width: 250px; height: 250px; font-size: 20px; font-weight: 700; background-color: #696969;color: #fff; clip-path: polygon(25% 6.7%, 75% 6.7%, 100% 50%, 75% 93.3%, 25% 93.3%, 0% 50%); border: none;"
-                        onclick="card('TEAM MANAGEMENT ')">
+                        onclick="card('Cultural Appreciation')">
                         Cultural Appreciation
                     </button>
                 </div>
                 <button
                     style="width: 250px; height: 250px; font-size: 20px; font-weight: 700;  background-color: #fff; color: #696969; clip-path: polygon(25% 6.7%, 75% 6.7%, 100% 50%, 75% 93.3%, 25% 93.3%, 0% 50%); border: none;"
-                    onclick="card('HONEYCOMB')">
+                    onclick="card('Collaboration and Teamwork')">
                     Collaboration and Teamwork
                 </button>
             </div>
@@ -181,18 +181,19 @@
 
         function card(content) {
             let data = {
-                "COMMUNICATION": "The initiative demanded creative solutions to bridge the gap between modern technology and the timeless traditions of elderly care. Whether it was developing interactive features on the website or finding ways to effectively communicate with older generations, we learned how to think outside the box and apply innovative solutions to make a meaningful difference in people’s lives. Through extensive research, we gained a deeper understanding of the unique needs and challenges faced by the elderly, while analyzing the existing methods of care and communication.",
-                "ANALYZING": "From designing the website to ensuring its functionality, we gained hands-on experience with different programming languages, frameworks, and tools. This project gave us practical exposure to creating a user-friendly platform that serves as a virtual bridge between generations.",
-                "REPORT MAKING": "The importance of content creation became evident as we worked to convey the mission and values of Umeed. We learned how to brainstorm, write, and structure content that is not only informed but also emotionally connected with our audience. Crafting compelling narratives around the elderly, our culture, and the initiative itself taught us the power of storytelling.",
+                "Research-Analyse-Innovate": "The initiative demanded creative solutions to bridge the gap between modern technology and the timeless traditions of elderly care. Whether it was developing interactive features on the website or finding ways to effectively communicate with older generations, we learned how to think outside the box and apply innovative solutions to make a meaningful difference in people’s lives. Through extensive research, we gained a deeper understanding of the unique needs and challenges faced by the elderly, while analyzing the existing methods of care and communication.",
+                "Web Development and Technical Skills": "From designing the website to ensuring its functionality, we gained hands-on experience with different programming languages, frameworks, and tools. This project gave us practical exposure to creating a user-friendly platform that serves as a virtual bridge between generations.",
+                "Content Creation and Storytelling": "The importance of content creation became evident as we worked to convey the mission and values of Umeed. We learned how to brainstorm, write, and structure content that is not only informed but also emotionally connected with our audience. Crafting compelling narratives around the elderly, our culture, and the initiative itself taught us the power of storytelling.",
                 "Listening to Life, Communicating Compassion": "Working on this project profoundly deepened our understanding of the value of life. We learned that true compassion is more than just offering help; it’s about actively listening, giving time, and showing empathy. This project instilled in us the importance of being present for others and recognizing them.",
-                "TEAM MANAGEMENT ": "In Indian culture, the bond between generations is sacred. Through this project, we embraced the deep-rooted tradition of caring for our elders, recognizing that our elders are the keepers of wisdom and heritage.",
-                "HONEYCOMB": "The Umeed project emphasized the importance of collaboration. Each step of the way, we worked together—whether in brainstorming ideas, coding the website, or crafting content. We learned that a shared vision, combined with diverse skills and perspectives, can bring out the best results."
+                "Cultural Appreciation": "In Indian culture, the bond between generations is sacred. Through this project, we embraced the deep-rooted tradition of caring for our elders, recognizing that our elders are the keepers of wisdom and heritage.",
+                "Collaboration and Teamwork": "The Umeed project emphasized the importance of collaboration. Each step of the way, we worked together—whether in brainstorming ideas, coding the website, or crafting content. We learned that a shared vision, combined with diverse skills and perspectives, can bring out the best results."
             };
             showPopup();
             document.getElementById('popup_up_content').innerHTML = data[content];
             document.getElementById('information').innerHTML = content;
         }
     </script>
+
 
 </body>
 

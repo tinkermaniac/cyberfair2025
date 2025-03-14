@@ -1,238 +1,252 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
 <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Umeed - Ek Sankalp</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
 
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <!-- Favicons -->
+    <link href="../assets/img/logo2.png" rel="icon">
+    <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-  <title>Curry Katha - The lost Recipes</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Roboto:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
 
-  <!-- Favicons -->
-  <link href="../assets/img/logo2.png" rel="icon">
-  <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <!-- Vendor CSS Files -->
+    <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="../assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Roboto:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
-  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="../assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
-  <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="https://tinkermaniac.github.io/cyberfairconfig/passkey.js"></script>
-  <script src="../assets/js/loader.js"></script>
-  <script>
-	  var a=30;
-  </script>
-  <!-- Template Main CSS File -->
-  <link href="../assets/css/main.css" rel="stylesheet">
-  <script src="../navbar-fix.js"></script>
-
-
-  <!-- =======================================================
-  * Template Name: UpConstruction - v1.3.0
-  * Template URL: https://bootstrapmade.com/upconstruction-bootstrap-construction-website-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
-  <link rel="stylesheet" media="screen" href="css/style.css">
-  <style>
-    /* Add these styles */
-    .form-container {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      z-index: 1000;
-      background: rgba(255, 255, 255, 0.9);
-      padding: 20px;
-      border-radius: 10px;
-      max-width: 90%;
-      width: 600px;
-    }
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://tinkermaniac.github.io/cyberfairconfig/passkey.js"></script>
+    <script src="../assets/js/loader.js"></script>
     
-    iframe {
-      width: 100%;
-      height: 500px;
-      border: none;
-    }
-  </style>
+    <!-- Template Main CSS File -->
+    <link href="../assets/css/main.css" rel="stylesheet">
+    <script src="../navbar-fix.js"></script>
+
+    <style>
+        body {
+            background: url('2.png') no-repeat center center fixed;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            margin-top: 0px;
+            position: absolute;
+            z-index: 1000;
+        }
+
+        .marquee-container {
+          margin-top: 50px;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 10px 0;
+            position: relative;
+            z-index: 999;
+            margin-top: 80px;
+        }
+
+        .marquee-heading {
+            text-align: center;
+            font-size: 24px;
+            color: #ffffff;
+            margin-bottom: 10px;
+        }
+
+        .form-container {
+            position: relative;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 90%;
+            width: 600px;
+            margin: 150px auto;
+        }
+
+        iframe {
+            width: 100%;
+            height: 500px;
+            border: none;
+        }
+
+        #particles-js {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 0;
+        }
+    </style>
 </head>
 
-<body id="page" style="background-color: black;">
+<body id="page">
 
- <!-- ======= Header ======= -->
-<header class="header" onclick="closeDropdowns()" style="z-index: 10;">
-  
-  <a href="index.html">
-    <img height="70px" style="border-radius: 10px;" src="../assets/img/topleftcyberfairlogo.jpeg" alt="Logo">
-  </a> 
-  <div class="nav-buttons">
-    <button id="button" class="talk-button" onclick="location.href='../index.html'">Home</button>
-    <div class="menu-container">
-      <button class="menu-button">Project Summary <span>⋯</span></button>
-      <div class="dropdown">
-        <a href="../narrative.html">Narrative</a>
-        <a href="../learning.html">Learning</a>
-        <a href="../layout.html">Layout</a>
+    <!-- ======= Header ======= -->
+    <header class="header" onclick="closeDropdowns()" style="z-index: 10;">
+        <a href="index.html">
+            <img height="70px" style="border-radius: 10px;" src="../assets/img/topleftcyberfairlogo.jpeg" alt="Logo">
+        </a> 
+        <div class="nav-buttons">
+          <button id="button" class="talk-button" onclick="location.href='../index.html'">Home</button>
+          <div class="menu-container">
+            <button class="menu-button">Project Summary <span>⋯</span></button>
+            <div class="dropdown">
+              <a href="../narrative.html">Narrative</a>
+              <a href="../learning.html">Learning</a>
+              <a href="../layout.html">Layout</a>
+      
+            </div>
+          </div>
+          <button id="button" class="talk-button" onclick="location.href='../umeed.html'">Umeed </button>
+          <div class="menu-container">
+            <button class="menu-button">Initiatives <span>⋯</span></button>
+            <div class="dropdown">
+              <a href="../forms/elder_connect.html">Elder Connect</a>
+              <a href="../forms/orphanage_connect.html">Orphanage Connect</a>
+              <a href="../forms/organ_donation.html">Organ Donation</a>
+              <a href="../forms/joy_of_giving.html">Joy of Giving</a>
+              <a href="../forms/volunteering.html">Volunteering</a>
+              <a href="../forms/vintage_veterans_app.html">Vintage Veterans app</a>
+            </div>
+          </div>
+          <div class="menu-container">
+            <button class="menu-button" >Untold <span>⋯</span></button>
+            <div class="dropdown">
+              <a href="../echoes.html">Echoes</a>
+              <a href="../resonance.html">Resonance</a>
+            </div>
+          </div>
+          <button id="button" class="talk-button" onclick="location.href='./rejuvenation.html'">Rejuvenation</button>
+          <div class="menu-container">
+            <button class="menu-button">Research <span>⋯</span></button>
+            <div class="dropdown">
+              <a href="../indian_culture.html">Indian Culture</a>
+              <a href="../interaction_1.html">Interaction 1</a>
+              <a href="../interaction_2.html">Interaction  2</a>
+              <a href="../interaction_3.html">Interaction 3</a>
+              <a href="../analysis.html">Analysis</a>
+              <a href="../bibliography.html">Bibliography</a>
+            </div>
+          </div>
+          <div class="menu-container">
+            <button class="menu-button">Collaborators <span>⋯</span></button>
+            <div class="dropdown">
+              <a href="../gp/team.html">Students</a>
+              <a href="../facilitators.html">Facilitators</a>
+      
+            </div>
+          </div>
+          
+         
+          <div class="menu-container">
+            <button class="menu-button">Palette <span>⋯</span></button>
+            <div class="dropdown">
+              <a href="../food_recipes.html">Palate Panache</a>
+              <a href="../impressions.html">Impressions</a>
+            </div>
+          </div>
+          <div class="menu-container">
+            <button class="menu-button">Downloads <span>⋯</span></button>
+            <div class="dropdown">
+              <a href="../bhajans.html">Bhajans</a>
+              <a href="../worksheets.html">Worksheets</a>
+              <a href="../yoga.html">Yoga videos</a>
+              <a href="../movies.html">Old Movies</a>
+            </div>
+          </div>
+      
+        </div>
+      </header>
 
-      </div>
-    </div>
-    <button id="button" class="talk-button" onclick="location.href='../umeed.html'">Umeed </button>
-    <div class="menu-container">
-      <button class="menu-button">Initiatives <span>⋯</span></button>
-      <div class="dropdown">
-        <a href="../forms/elder_connect.html">Elder Connect</a>
-        <a href="../forms/orphanage_connect.html">Orphanage Connect</a>
-        <a href="../forms/organ_donation.html">Organ Donation</a>
-        <a href="../forms/joy_of_giving.html">Joy of Giving</a>
-        <a href="../forms/volunteering.html">Volunteering</a>
-        <a href="../forms/vintage_veterans_app.html">Vintage Veterans app</a>
-      </div>
-    </div>
-    <div class="menu-container">
-      <button class="menu-button" >Untold <span>⋯</span></button>
-      <div class="dropdown">
-        <a href="../echoes.html">Echoes</a>
-        <a href="../resonance.html">Resonance</a>
-      </div>
-    </div>
-    <button id="button" class="talk-button" onclick="location.href='./rejuvenation.html'">Rejuvenation</button>
-    <div class="menu-container">
-      <button class="menu-button">Research <span>⋯</span></button>
-      <div class="dropdown">
-        <a href="../indian_culture.html">Indian Culture</a>
-        <a href="../interaction_1.html">Interaction 1</a>
-        <a href="../interaction_2.html">Interaction  2</a>
-        <a href="../interaction_3.html">Interaction 3</a>
-        <a href="../analysis.html">Analysis</a>
-        <a href="../bibliography.html">Bibliography</a>
-      </div>
-    </div>
-    <div class="menu-container">
-      <button class="menu-button">Collaborators <span>⋯</span></button>
-      <div class="dropdown">
-        <a href="../gp/team.html">Students</a>
-        <a href="../facilitators.html">Facilitators</a>
-
-      </div>
-    </div>
     
-   
-    <div class="menu-container">
-      <button class="menu-button">Palette <span>⋯</span></button>
-      <div class="dropdown">
-        <a href="../food_recipes.html">Palate Panache</a>
-        <a href="../impressions.html">Impressions</a>
-      </div>
-    </div>
-    <div class="menu-container">
-      <button class="menu-button">Downloads <span>⋯</span></button>
-      <div class="dropdown">
-        <a href="../bhajans.html">Bhajans</a>
-        <a href="../worksheets.html">Worksheets</a>
-        <a href="../yoga.html">Yoga videos</a>
-        <a href="../movies.html">Old Movies</a>
-      </div>
+
+    <!-- ======= Hero Section ======= -->
+    <div id="particles-js"></div>
+
+    <!-- Google Form container -->
+    <div class="form-container" style="z-index: 5;">
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfiYD_okd2bxQP5z0ehYpJlvTMTin7bgo1seFg3IOj0G6BlHQ/viewform?usp=header 
+        " 
+                frameborder="0" 
+                marginheight="0" 
+                marginwidth="0">Loading…
+        </iframe>
     </div>
 
-  </div>
-</header>
-<!-- End Header -->
+
+    
 
 
 
-<!-- ======= Hero Section ======= -->
-<div id="particles-js"></div>
+    <!-- ======= Footer ======= -->
+    <footer id="footer" class="footer" style="background-color: azure;">
 
-<!-- Google Form container -->
-<div class="form-container" style="z-index: 5;">
-  <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSec-9Yg8U1Uw_p4x_NTUo_cK33k0sidjJPyphbPNBhbRfjY4A/viewform" 
-          frameborder="0" 
-          marginheight="0" 
-          marginwidth="0">Loading…
-  </iframe>
-</div>
-
-<!-- scripts -->
-<script src="../particles.js"></script>
-<script src="js/app.js"></script>
-<script src="js/lib/stats.js"></script>
-<!-- End Hero Section -->
-
-
-<!-- ======= Footer ======= -->
-<footer id="footer" class="footer" style="background-color: azure;">
-
-  <div class="footer-content position-relative">
-      <div class="container">
-          <div class="row">
-
-              <div class="col-lg-4 col-md-6"
-                  style="display: flex; justify-content: center; width:100vw; margin-top: 5px;">
-                  <div class="footer-info">
-                      <div class="iconh">
-                          <img class="icon" src="assets/img/logo2.png" />
-                          <h3 style="font-size: 40px;">CyberFair  2025</h3>
+      <div class="footer-content position-relative">
+          <div class="container">
+              <div class="row">
+    
+                  <div class="col-lg-4 col-md-6"
+                      style="display: flex; justify-content: center; width:100vw; margin-top: 5px;">
+                      <div class="footer-info">
+                          <div class="iconh">
+                              <img class="icon" src="assets/img/logo2.png" />
+                              <h3 style="font-size: 40px;">CyberFair  2025</h3>
+                          </div>
+                          <p style="text-align: center;">
+                              Aravali International School<br>
+                              Sector 43 Badkal Surajkund Road,Faridabad <br>
+                              Pin Code: 121003<br><br>
+                          </p>
                       </div>
-                      <p style="text-align: center;">
-                          Aravali International School<br>
-                          Sector 43 Badkal Surajkund Road,Faridabad <br>
-                          Pin Code: 121003<br><br>
-                      </p>
-                  </div>
-              </div><!-- End footer info column-->
-
+                  </div><!-- End footer info column-->
+    
+              </div>
           </div>
       </div>
-  </div>
-
-  <div class="footer-legal text-center position-relative">
-      <div class="container">
-          <div class="copyright">
-              <a href="http://www.globalschoolnet.org/" target="_blank"><img
-                      src="assets/img/cyberflogofooter.JPG" /></a>
-          </div>
-          <div class="credits">
-              <!-- All the links in the footer should remain intact. -->
-              <!-- You can delete the links only if you purchased the pro version. -->
-              <!-- Licensing information: https://bootstrapmade.com/license/ -->
-              <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/upconstruction-bootstrap-construction-website-template/ -->
-              E-mail - <a href="https://bootstrapmade.com/">cyberfair23@gmail.com</a>
+    
+      <div class="footer-legal text-center position-relative">
+          <div class="container">
+              <div class="copyright">
+                  <a href="http://www.globalschoolnet.org/" target="_blank"><img
+                          src="assets/img/cyberflogofooter.JPG" /></a>
+              </div>
+              <div class="credits">
+                  <!-- All the links in the footer should remain intact. -->
+                  <!-- You can delete the links only if you purchased the pro version. -->
+                  <!-- Licensing information: https://bootstrapmade.com/license/ -->
+                  <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/upconstruction-bootstrap-construction-website-template/ -->
+                  E-mail - <a href="https://bootstrapmade.com/">cyberfair23@gmail.com</a>
+              </div>
           </div>
       </div>
-  </div>
+    
+    </footer>
 
-</footer>
-  <!-- End Footer -->
-  <!-- <div class="preloader">
-    <div class="loading">
-      <img src="loader.gif" width="1600">
-    </div>
-  </div> -->
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
+    <!-- Scripts -->
+    <script src="../particles.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/lib/stats.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/js/main.js"></script>
 
 </body>
-
 </html>

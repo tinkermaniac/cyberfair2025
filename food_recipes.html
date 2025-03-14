@@ -39,72 +39,61 @@
 	<!-- custom css -->
 	<link rel="stylesheet" href="css/bulma.min.css">
 	<style>
-        /* Dark Theme Additions Start ⇦⇨ */
-        body {
-            background-color: #808080;
-            color: #ffffff !important;
-        }
-        
-        .header {
-            background-color: rgba(128,128,128) !important;
-        }
-        
+		figure.image > img {
+			object-fit: cover;
+		}
 
-        .card {
-            background-color: #2d2d2d;
-            color: #ffffff;
-            border: 1px solid #404040;
-        }
-        
-        .card-header-title {
-            color: #ffffff !important;
-        }
-        
-        .breadcrumbs {
-            background-blend-mode: multiply;
-            background-color:rgba(128,128,128);
-        }
-        
-        .modal-content {
-            background-color: #2d2d2d !important;
-            color: #ffffff !important;
-        }
-        
-        .footer {
-            background-color: #808080 !important;
-            color: #ffffff !important;
-        }
-      
-        
-        .navbar {
-            background-color: #2d2d2d !important;
-        }
-        
-        .dropdown-menu {
-            background-color: #2d2d2d;
-            border: 1px solid #404040;
-        }
-        
-        .dropdown-item {
-            color: #ffffff !important;
-        }
-        
-        .dropdown-item:hover {
-            background-color: #383838 !important;
-        }
-        /* Dark Theme Additions End ⇦⇨ */
-        
-        /* Existing CSS remains below */
-        figure.image > img {
-            object-fit: cover;
-        }
-        
-        .card:hover {
-            cursor: pointer;
-            box-shadow: 0 0.5em 1em -0.125em rgba(255, 255, 255, 0.1); /* Adjusted shadow */
-        }
-        /* ... rest of your existing CSS ... */
-        </style>
+		.card:hover {
+			cursor: pointer;
+			box-shadow: 0 0.5em 1em -0.125em hsl(0, 0%, 71%);
+		}
+
+		.card-header-title {
+			color: #fff;
+		}
+
+		.pop-bg {
+			position: fixed;
+			height: 100%;
+			width: 100%;
+			top: 0%;
+			left: 0%;
+			z-index: 999;
+			background-color: #00000055;
+		}
+		
+		.pop-up > .container {
+			position: fixed;
+			height: 70%;
+			width: 70%;
+			top: 15%;
+			left: 15%;
+			z-index: 1000;
+			background-color: #ffffffff;
+			overflow: auto;
+		}
+
+		.navbar {
+			background: transparent;
+		}
+
+		summary::marker {
+			color: transparent;
+			line-height: 0;
+			font-size: 0;
+			margin: 0;
+			padding: 0;
+		}
+
+		summary {
+			display: flex;
+		}
+
+		.card{
+			background-image: url('./bg.png');
+		}
+	</style>
+
 	<!-- custom js -->
 	<script>
 		function remove_popup() {
@@ -126,82 +115,81 @@
 	</script>
 
 
-
 </head>
 
 <body style="color: black;">
 
 	 <!-- ======= Header ======= -->
-<header class="header" onclick="closeDropdowns()">
-	<a href="index.html">
-		<img height="70px" style="border-radius: 10px;" src="assets/img/topleftcyberfairlogo.jpeg" alt="Logo">
-	</a> 
-	<div class="nav-buttons">
-		<button id="button" class="talk-button" onclick="location.href='/index.html'" style="font-size: 12px;">Home</button>
-		<div class="menu-container">
-			<button class="menu-button" style="font-size: 12px;">Project Summary <span>⋯</span></button>
-			<div class="dropdown">
-				<a href="./narrative.html" style="font-size: 12px;">Narrative</a>
-				<a href="./learning.html" style="font-size: 12px;">Learning</a>
-				<a href="./layout.html" style="font-size: 12px;">Layout</a>
-			</div>
-		</div>
-		<button id="button" class="talk-button" onclick="location.href='/umeed.html'" style="font-size: 12px;">Umeed </button>
-		<div class="menu-container">
-			<button class="menu-button" style="font-size: 12px;">Initiatives <span>⋯</span></button>
-			<div class="dropdown">
-				<a href="./forms/elder_connect.html" style="font-size: 12px;">Elder Connect</a>
-				<a href="./forms/orphanage_connect.html" style="font-size: 12px;">Orphanage Connect</a>
-				<a href="./forms/organ_donation.html" style="font-size: 12px;">Organ Donation</a>
-				<a href="./forms/joy_of_giving.html" style="font-size: 12px;">Joy of Giving</a>
-				<a href="./forms/volunteering.html" style="font-size: 12px;">Volunteering</a>
-				<a href="./forms/vintage_veterans_app.html" style="font-size: 12px;">Vintage Veterans app</a>
-			</div>
-		</div>
-		<div class="menu-container">
-			<button class="menu-button" style="font-size: 12px;">Untold <span>⋯</span></button>
-			<div class="dropdown">
-				<a href="./echoes.html" style="font-size: 12px;">Echoes</a>
-				<a href="./resonance.html" style="font-size: 12px;">Resonance</a>
-			</div>
-		</div>
-		<button id="button" class="talk-button" onclick="location.href='/rejuvenation.html'" style="font-size: 12px;">Rejuvenation</button>
-		<div class="menu-container">
-			<button class="menu-button" style="font-size: 12px;">Research <span>⋯</span></button>
-			<div class="dropdown">
-				<a href="./indian_culture.html" style="font-size: 12px;">Indian Culture</a>
-				<a href="./interaction_1.html" style="font-size: 12px;">Interaction 1</a>
-				<a href="./interaction_2.html" style="font-size: 12px;">Interaction 2</a>
-				<a href="./interaction_3.html" style="font-size: 12px;">Interaction 3</a>
-				<a href="./analysis.html" style="font-size: 12px;">Analysis</a>
-				<a href="./bibliography.html" style="font-size: 12px;">Bibliography</a>
-			</div>
-		</div>
-		<div class="menu-container">
-			<button class="menu-button" style="font-size: 12px;">Collaborators <span>⋯</span></button>
-			<div class="dropdown">
-				<a href="./gp/team.html" style="font-size: 12px;">Students</a>
-				<a href="./facilitators.html" style="font-size: 12px;">Facilitators</a>
-			</div>
-		</div>
-		<div class="menu-container">
-			<button class="menu-button" style="font-size: 12px;">Palette <span>⋯</span></button>
-			<div class="dropdown">
-				<a href="/food_recipes.html" style="font-size: 12px;">Palate Panache</a>
-				<a href="/impressions.html" style="font-size: 12px;">Impressions</a>
-			</div>
-		</div>
-		<div class="menu-container">
-			<button class="menu-button" style="font-size: 12px;">Downloads <span>⋯</span></button>
-			<div class="dropdown">
-				<a href="/bhajans.html" style="font-size: 12px;">Bhajans</a>
-				<a href="/worksheets.html" style="font-size: 12px;">Worksheets</a>
-				<a href="/yoga.html" style="font-size: 12px;">Yoga videos</a>
-				<a href="/movies.html" style="font-size: 12px;">Old Movies</a>
-			</div>
-		</div>
-	</div>
-</header>
+   <header class="header" onclick="closeDropdowns()">
+    <a href="index.html">
+      <img height="70px" style="border-radius: 10px;" src="assets/img/topleftcyberfairlogo.jpeg" alt="Logo">
+    </a> 
+      <div class="nav-buttons">
+          <button id="button" class="talk-button" onclick="location.href='./index.html'" style="font-size: 12px;">Home</button>
+          <div class="menu-container">
+              <button class="menu-button" onclick="toggleDropdown(this)" style="font-size: 12px;">Project Summary <span>⋯</span></button>
+              <div class="dropdown">
+                  <a href="./narrative.html" style="font-size: 12px;">Narrative</a>
+                  <a href="./learning.html" style="font-size: 12px;">Learning</a>
+                  <a href="./layout.html" style="font-size: 12px;">Layout</a>
+              </div>
+          </div>
+          <button id="button" class="talk-button" onclick="location.href='umeed.html'" style="font-size: 12px;">Umeed</button>
+          <div class="menu-container">
+              <button class="menu-button" onclick="toggleDropdown(this)" style="font-size: 12px;">Initiatives <span>⋯</span></button>
+              <div class="dropdown">
+                  <a href="./forms/elder_connect.html" style="font-size: 12px;">Elder Connect</a>
+                  <a href="./forms/orphanage_connect.html" style="font-size: 12px;">Orphanage Connect</a>
+                  <a href="./forms/organ_donation.html" style="font-size: 12px;">Organ Donation</a>
+                  <a href="./forms/joy_of_giving.html" style="font-size: 12px;">Joy of Giving</a>
+                  <a href="./forms/volunteering.html" style="font-size: 12px;">Volunteering</a>
+                  <a href="./forms/vintage_veterans_app.html" style="font-size: 12px;">Vintage Veterans app</a>
+              </div>
+          </div>
+          <div class="menu-container">
+              <button class="menu-button" onclick="toggleDropdown(this)" style="font-size: 12px;">Untold <span>⋯</span></button>
+              <div class="dropdown">
+                  <a href="./echoes.html" style="font-size: 12px;">Echoes</a>
+                  <a href="./resonance.html" style="font-size: 12px;">Resonance</a>
+              </div>
+          </div>
+          <button id="button" class="talk-button" onclick="location.href='rejuvenation.html'" style="font-size: 12px;">Rejuvenation</button>
+          <div class="menu-container">
+              <button class="menu-button" onclick="toggleDropdown(this)" style="font-size: 10px;">Research <span>⋯</span></button>
+              <div class="dropdown">
+                  <a href="./indian_culture.html" style="font-size: 12px;">Indian Culture</a>
+                  <a href="./interaction_1.html" style="font-size: 12px;">Interaction 1</a>
+                  <a href="./interaction_2.html" style="font-size: 12px;">Interaction 2</a>
+                  <a href="./interaction_3.html" style="font-size: 12px;">Interaction 3</a>
+                  <a href="./analysis.html" style="font-size: 12px;">Analysis</a>
+                  <a href="./bibliography.html" style="font-size: 12px;">Bibliography</a>
+              </div>
+          </div>
+          <div class="menu-container">
+              <button class="menu-button" onclick="toggleDropdown(this)" style="font-size: 12px;">Collaborators <span>⋯</span></button>
+              <div class="dropdown">
+                  <a href="./gp/team.html" style="font-size: 12px;">Students</a>
+                  <a href="./facilitators.html" style="font-size: 12px;">Facilitators</a>
+              </div>
+          </div>
+          <div class="menu-container">
+              <button class="menu-button" onclick="toggleDropdown(this)" style="font-size: 12px;">Palette <span>⋯</span></button>
+              <div class="dropdown">
+                  <a href="./food_recipes.html" style="font-size: 12px;">Palate Panache</a>
+                  <a href="./impressions.html" style="font-size: 12px;">Impressions</a>
+              </div>
+          </div>
+          <div class="menu-container">
+              <button class="menu-button" onclick="toggleDropdown(this)" style="font-size: 12px;">Downloads <span>⋯</span></button>
+              <div class="dropdown">
+                  <a href="./bhajans.html" style="font-size: 12px;">Bhajans</a>
+                  <a href="./worksheets.html" style="font-size: 12px;">Worksheets</a>
+                  <a href="./yoga.html" style="font-size: 12px;">Yoga videos</a>
+                  <a href="./movies.html" style="font-size: 12px;">Old Movies</a>
+              </div>
+          </div>
+      </div>
+  </header>
 <!-- End Header -->
 	<!-- ======= Breadcrumbs ======= -->
 	<!-- ======= Breadcrumbs ======= -->
@@ -699,16 +687,17 @@ document.addEventListener('DOMContentLoaded', function() {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
+  padding: 8px 20px;
   position: sticky;
   top: 0;
   z-index: 1000;
   background-color: rgba(25, 25, 25, 0.9) !important;
+  height: 80px;
 }
 
 .logo {
   color: white;
-  font-size: 24px;
+  font-size: 28px;
   font-weight: bold;
   margin: 0;
 }
@@ -716,7 +705,8 @@ document.addEventListener('DOMContentLoaded', function() {
 .nav-buttons {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
+  height: 100%;
 }
 
 .talk-button, .menu-button {
@@ -724,11 +714,12 @@ document.addEventListener('DOMContentLoaded', function() {
   color: white !important;
   border: 2px solid #404040;
   border-radius: 25px;
-  padding: 8px 20px;
+  padding: 10px 20px;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 14px;
+  font-weight: 600;
   transition: all 0.3s ease;
-  margin: 0 5px;
+  margin: 0 6px;
 }
 
 .talk-button:hover, .menu-button:hover, .menu-button.active {
@@ -745,14 +736,15 @@ document.addEventListener('DOMContentLoaded', function() {
 .dropdown {
   display: none;
   position: absolute;
-  background-color: #2d2d2d;
-  min-width: 200px;
+  background-color: rgba(25, 25, 25, 0.9);
+  min-width: 180px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
+  z-index: 1000;
   border-radius: 10px;
   overflow: hidden;
   margin-top: 5px;
   border: 1px solid #404040;
+  padding: 6px 0;
 }
 
 .dropdown.show {
@@ -761,15 +753,29 @@ document.addEventListener('DOMContentLoaded', function() {
 
 .dropdown a {
   color: white !important;
-  padding: 12px 20px;
+  padding: 10px 18px;
   text-decoration: none;
   display: block;
   transition: background-color 0.3s ease;
   font-size: 14px;
+  font-weight: 600;
 }
 
 .dropdown a:hover {
-  background-color: #383838;
+  background-color: rgba(64, 64, 64, 0.9);
+  color: white !important;
+}
+
+.menu-button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 600;
+}
+
+.menu-button span {
+  font-size: 16px;
+  line-height: 1;
 }
 
 /* Dark Theme Additions */
